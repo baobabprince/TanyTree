@@ -4,5 +4,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-## [ ] Track: Core Scraping and GEDCOM Conversion Engine
+## [~] Track: Core Scraping and GEDCOM Conversion Engine
 *Link: [./conductor/tracks/scraping_engine_20251227/](./conductor/tracks/scraping_engine_20251227/)*
