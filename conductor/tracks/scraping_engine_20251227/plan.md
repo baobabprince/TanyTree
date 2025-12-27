@@ -1,6 +1,6 @@
 # Track Plan: Core Scraping and GEDCOM Conversion Engine
 
-## Phase 1: Foundation and Scaffolding
+## Phase 1: Foundation and Scaffolding [checkpoint: 8a5f0eb]
 - [x] Task: Project initialization and dependency setup (b830e3e)
 - [x] Task: Define SQLite database schema and implement database helper (7c76eca)
 - [x] Task: Conductor - User Manual Verification 'Foundation and Scaffolding' (Protocol in workflow.md) (f683d7e)
