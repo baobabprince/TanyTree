@@ -9,9 +9,9 @@
 - [x] Task: Implement core scraper for individual biographical data (f142a76)
 - [x] Task: Write Tests: Scraper extraction logic (f142a76)
 - [x] Task: Implement Feature: Individual data extraction (f142a76)
-- [ ] Task: Implement relationship mapping (parents, children, spouses)
-- [ ] Task: Write Tests: Relationship mapping logic
-- [ ] Task: Implement Feature: Relationship extraction and storage
+- [x] Task: Implement relationship mapping (parents, children, spouses) (de70391)
+- [x] Task: Write Tests: Relationship mapping logic (de70391)
+- [~] Task: Implement Feature: Relationship extraction and storage
 - [ ] Task: Conductor - User Manual Verification 'Scraping and Extraction' (Protocol in workflow.md)
 
 ## Phase 3: GEDCOM Conversion and CLI
