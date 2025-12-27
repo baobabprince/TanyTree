@@ -6,9 +6,9 @@
 - [x] Task: Conductor - User Manual Verification 'Foundation and Scaffolding' (Protocol in workflow.md) (f683d7e)
 
 ## Phase 2: Scraping and Extraction
-- [ ] Task: Implement core scraper for individual biographical data
-- [ ] Task: Write Tests: Scraper extraction logic
-- [ ] Task: Implement Feature: Individual data extraction
+- [x] Task: Implement core scraper for individual biographical data (f142a76)
+- [x] Task: Write Tests: Scraper extraction logic (f142a76)
+- [x] Task: Implement Feature: Individual data extraction (f142a76)
 - [ ] Task: Implement relationship mapping (parents, children, spouses)
 - [ ] Task: Write Tests: Relationship mapping logic
 - [ ] Task: Implement Feature: Relationship extraction and storage
