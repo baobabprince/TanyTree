@@ -14,9 +14,9 @@
 - [x] Task: Implement Feature: Relationship extraction and storage (24b8208)
 - [x] Task: Conductor - User Manual Verification 'Scraping and Extraction' (Protocol in workflow.md) (85b138e)
 
-## Phase 3: GEDCOM Conversion and CLI
+## Phase 3: GEDCOM Conversion and CLI [checkpoint: 48e2c3a]
 - [x] Task: Implement GEDCOM export logic using python-gedcom (b48ab07)
 - [x] Task: Write Tests: GEDCOM generation from database (b48ab07)
 - [x] Task: Implement Feature: GEDCOM file generation (b48ab07)
 - [x] Task: Implement CLI commands for scraping and export (a70933c)
-- [ ] Task: Conductor - User Manual Verification 'GEDCOM Conversion and CLI' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'GEDCOM Conversion and CLI' (Protocol in workflow.md) (48e2c3a)
