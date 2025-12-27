@@ -2,7 +2,7 @@
 
 ## Phase 1: Foundation and Scaffolding
 - [x] Task: Project initialization and dependency setup (b830e3e)
-- [ ] Task: Define SQLite database schema and implement database helper
+- [x] Task: Define SQLite database schema and implement database helper (7c76eca)
 - [ ] Task: Conductor - User Manual Verification 'Foundation and Scaffolding' (Protocol in workflow.md)
 
 ## Phase 2: Scraping and Extraction
