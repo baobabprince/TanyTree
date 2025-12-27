@@ -24,3 +24,38 @@ class Scraper:
         }
         
         return data
+
+    def extract_relationships(self, html_content, person_id):
+        soup = BeautifulSoup(html_content, 'html.parser')
+        relationships = []
+        
+        rel_container = soup.find(class_='relationships')
+        if not rel_container:
+            return relationships
+            
+        # Father
+        father_elem = rel_container.find(class_='father')
+        if father_elem and father_elem.find('a'):
+            related_id = father_elem.find('a')['href'].split('/')[-1]
+            relationships.append({"person_id": person_id, "related_id": related_id, "type": "father"})
+            
+        # Mother
+        mother_elem = rel_container.find(class_='mother')
+        if mother_elem and mother_elem.find('a'):
+            related_id = mother_elem.find('a')['href'].split('/')[-1]
+            relationships.append({"person_id": person_id, "related_id": related_id, "type": "mother"})
+            
+        # Spouse
+        spouse_elem = rel_container.find(class_='spouse')
+        if spouse_elem and spouse_elem.find('a'):
+            related_id = spouse_elem.find('a')['href'].split('/')[-1]
+            relationships.append({"person_id": person_id, "related_id": related_id, "type": "spouse"})
+            
+        # Children
+        children_elem = rel_container.find(class_='children')
+        if children_elem:
+            for child_link in children_elem.find_all('a'):
+                related_id = child_link['href'].split('/')[-1]
+                relationships.append({"person_id": person_id, "related_id": related_id, "type": "child"})
+                
+        return relationships
