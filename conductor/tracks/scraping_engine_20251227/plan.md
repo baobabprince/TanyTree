@@ -18,5 +18,5 @@
 - [x] Task: Implement GEDCOM export logic using python-gedcom (b48ab07)
 - [x] Task: Write Tests: GEDCOM generation from database (b48ab07)
 - [x] Task: Implement Feature: GEDCOM file generation (b48ab07)
-- [~] Task: Implement CLI commands for scraping and export
+- [x] Task: Implement CLI commands for scraping and export (a70933c)
 - [ ] Task: Conductor - User Manual Verification 'GEDCOM Conversion and CLI' (Protocol in workflow.md)
