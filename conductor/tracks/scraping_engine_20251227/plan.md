@@ -11,7 +11,7 @@
 - [x] Task: Implement Feature: Individual data extraction (f142a76)
 - [x] Task: Implement relationship mapping (parents, children, spouses) (de70391)
 - [x] Task: Write Tests: Relationship mapping logic (de70391)
-- [~] Task: Implement Feature: Relationship extraction and storage
+- [x] Task: Implement Feature: Relationship extraction and storage (24b8208)
 - [ ] Task: Conductor - User Manual Verification 'Scraping and Extraction' (Protocol in workflow.md)
 
 ## Phase 3: GEDCOM Conversion and CLI
