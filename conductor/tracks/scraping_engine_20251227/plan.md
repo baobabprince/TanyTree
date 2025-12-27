@@ -15,8 +15,8 @@
 - [x] Task: Conductor - User Manual Verification 'Scraping and Extraction' (Protocol in workflow.md) (85b138e)
 
 ## Phase 3: GEDCOM Conversion and CLI
-- [ ] Task: Implement GEDCOM export logic using python-gedcom
-- [ ] Task: Write Tests: GEDCOM generation from database
-- [ ] Task: Implement Feature: GEDCOM file generation
-- [ ] Task: Implement CLI commands for scraping and export
+- [x] Task: Implement GEDCOM export logic using python-gedcom (b48ab07)
+- [x] Task: Write Tests: GEDCOM generation from database (b48ab07)
+- [x] Task: Implement Feature: GEDCOM file generation (b48ab07)
+- [~] Task: Implement CLI commands for scraping and export
 - [ ] Task: Conductor - User Manual Verification 'GEDCOM Conversion and CLI' (Protocol in workflow.md)
