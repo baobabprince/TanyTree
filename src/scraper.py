@@ -4,8 +4,14 @@ from urllib.parse import urlparse, parse_qs
 from src.utils import hebrew_to_civil
 
 class Scraper:
+    def _get_soup(self, html_content):
+        try:
+            return BeautifulSoup(html_content, 'lxml')
+        except Exception:
+            return BeautifulSoup(html_content, 'html.parser')
+
     def extract_biographical_data(self, html_content, url):
-        soup = BeautifulSoup(html_content, 'html.parser')
+        soup = self._get_soup(html_content)
         
         # Extract ID from URL query parameter 'i'
         parsed_url = urlparse(url)
@@ -71,7 +77,7 @@ class Scraper:
 
     def extract_relationships(self, html_content, person_id, base_url=None):
         from urllib.parse import urljoin
-        soup = BeautifulSoup(html_content, 'html.parser')
+        soup = self._get_soup(html_content)
         relationships = []
         
         # Parents

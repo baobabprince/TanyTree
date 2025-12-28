@@ -27,7 +27,7 @@ def sample_html():
     """
 
 def test_scrape_and_store(mock_db, sample_html):
-    with patch("requests.get") as mock_get:
+    with patch("requests.Session.get") as mock_get:
         mock_get.return_value.text = sample_html
         mock_get.return_value.status_code = 200
         

@@ -36,7 +36,7 @@ def test_cli_full_flow(runner, tmp_path):
     </div>
     """
     
-    with patch("requests.get") as mock_get:
+    with patch("requests.Session.get") as mock_get:
         mock_get.return_value.text = sample_html
         mock_get.return_value.status_code = 200
         
