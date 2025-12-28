@@ -21,6 +21,19 @@ def scrape(url, db):
     db_helper.close()
 
 @main.command()
+@click.argument('url')
+@click.option('--limit', default=100, help='Maximum number of people to scrape.')
+@click.option('--db', default='genealogy.db', help='Database file path.')
+def crawl(url, limit, db):
+    """Crawl genealogical data starting from a URL."""
+    db_helper = DatabaseHelper(db)
+    engine = ScraperEngine(db_helper)
+    click.echo(f"Crawling starting from {url} with limit {limit}...")
+    engine.crawl(url, limit=limit)
+    click.echo("Crawl complete.")
+    db_helper.close()
+
+@main.command()
 @click.argument('output')
 @click.option('--db', default='genealogy.db', help='Database file path.')
 def export(output, db):

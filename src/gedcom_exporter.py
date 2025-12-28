@@ -96,10 +96,14 @@ class GedcomExporter:
                 if row['birth_date']:
                     f.write("1 BIRT\n")
                     f.write(f"2 DATE {row['birth_date']}\n")
+                    if row['birth_place']:
+                        f.write(f"2 PLAC {row['birth_place']}\n")
                     
                 if row['death_date']:
                     f.write("1 DEAT\n")
                     f.write(f"2 DATE {row['death_date']}\n")
+                    if row['death_place']:
+                        f.write(f"2 PLAC {row['death_place']}\n")
                 
                 if db_id in person_famc:
                     f.write(f"1 FAMC @{person_famc[db_id]}@\n")

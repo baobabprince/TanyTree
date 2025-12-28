@@ -24,13 +24,16 @@ def test_cli_full_flow(runner, tmp_path):
     # Mock requests for scrape
     from unittest.mock import patch
     sample_html = """
-    <html>
-        <body>
-            <div class="person-name">Test Person</div>
-            <div class="birth-date">2000</div>
-            <div class="gender">M</div>
-        </body>
-    </html>
+    <div class="current-view">
+        <div class="person male">
+            <div class="info">
+                <h2>Test Person</h2>
+                <ul>
+                    <li><strong>תאריך לידה: </strong>2000</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     """
     
     with patch("requests.get") as mock_get:
@@ -38,7 +41,7 @@ def test_cli_full_flow(runner, tmp_path):
         mock_get.return_value.status_code = 200
         
         # Scrape
-        result = runner.invoke(main, ["scrape", "http://example.com/p1", "--db", str(db_path)])
+        result = runner.invoke(main, ["scrape", "http://example.com/?i=p1", "--db", str(db_path)])
         assert result.exit_code == 0
         assert "Scrape complete" in result.output
         

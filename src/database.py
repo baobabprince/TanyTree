@@ -14,7 +14,9 @@ class DatabaseHelper:
                 id TEXT PRIMARY KEY,
                 name TEXT,
                 birth_date TEXT,
+                birth_place TEXT,
                 death_date TEXT,
+                death_place TEXT,
                 gender TEXT,
                 url TEXT
             )
@@ -33,13 +35,15 @@ class DatabaseHelper:
         cursor = self.conn.cursor()
         cursor.execute("""
             INSERT OR REPLACE INTO individuals
-            (id, name, birth_date, death_date, gender, url)
-            VALUES (?, ?, ?, ?, ?, ?)
+            (id, name, birth_date, birth_place, death_date, death_place, gender, url)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """, (
             data.get("id"),
             data.get("name"),
             data.get("birth_date"),
+            data.get("birth_place"),
             data.get("death_date"),
+            data.get("death_place"),
             data.get("gender"),
             data.get("url")
         ))

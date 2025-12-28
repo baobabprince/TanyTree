@@ -11,16 +11,19 @@ def mock_db(tmp_path):
 @pytest.fixture
 def sample_html():
     return """
-    <html>
-        <body>
-            <div class="person-name">שניאור זלמן</div>
-            <div class="birth-date">1745</div>
-            <div class="gender">זכר</div>
-            <div class="relationships">
-                <div class="father"><a href="/p2">ברוך</a></div>
+    <div class="current-view">
+        <div class="person male">
+            <div class="info">
+                <h2>שניאור זלמן</h2>
+                <ul>
+                    <li><strong>תאריך לידה: </strong>1745</li>
+                </ul>
             </div>
-        </body>
-    </html>
+        </div>
+        <ul class="parents">
+            <li><a href="?i=p2" class="male"><h3>ברוך</h3></a></li>
+        </ul>
+    </div>
     """
 
 def test_scrape_and_store(mock_db, sample_html):
@@ -29,7 +32,7 @@ def test_scrape_and_store(mock_db, sample_html):
         mock_get.return_value.status_code = 200
         
         engine = ScraperEngine(mock_db)
-        engine.scrape_person("http://example.com/p1")
+        engine.scrape_person("http://example.com/?i=p1")
         
         # Verify individual stored
         person = mock_db.get_individual("p1")

@@ -4,47 +4,44 @@ from src.scraper import Scraper
 @pytest.fixture
 def sample_html():
     return """
-    <html>
-        <body>
-            <div class="person-name">אדמו"ר הזקן - רבי שניאור זלמן</div>
-            <div class="birth-date">י"ח אלול ה'תק"ה</div>
-            <div class="death-date">כ"ד טבת ה'תקע"ג</div>
-            <div class="gender">זכר</div>
-        </body>
-    </html>
+    <div class="current-view">
+        <ul class="parents">
+            <li><a href="?i=111813" class="male"><h3>ברוך</h3></a></li>
+        </ul>
+        <div class="person male">
+            <div class="info">
+                <h2>שניאור זלמן</h2>
+                <h4><a href="?i=111820">סטערנא</a></h4>
+                <ul>
+                    <li><strong>תאריך לידה: </strong>1745</li>
+                    <li><strong>תאריך פטירה: </strong>1812</li>
+                </ul>
+            </div>
+        </div>
+        <ul class="kids">
+            <li><a href="?i=111821" class="female"><h3>פריידא</h3></a></li>
+        </ul>
+    </div>
     """
 
 def test_extract_individual_data(sample_html):
     scraper = Scraper()
-    data = scraper.extract_biographical_data(sample_html, url="http://example.com/person1")
+    data = scraper.extract_biographical_data(sample_html, url="http://example.com/?i=111815")
     
-    assert data["id"] == "person1"
+    assert data["id"] == "111815"
     assert "שניאור זלמן" in data["name"]
-    assert data["birth_date"] == 'י"ח אלול ה\'תק"ה'
+    assert data["birth_date"] == "1745"
+    assert data["gender"] == "M"
+
 def test_extract_relationships(sample_html):
-    html_with_rels = sample_html + """
-    <div class="relationships">
-        <div class="father"><a href="/person2">אביו: רבי ברוך</a></div>
-        <div class="mother"><a href="/person3">אמו: רבקה</a></div>
-        <div class="spouse"><a href="/person4">רעייתו: סטערנא</a></div>
-        <div class="children">
-            <a href="/person5">דובער</a>
-            <a href="/person6">חיים אברהם</a>
-            <a href="/person7">משה</a>
-        </div>
-    </div>
-    """
     scraper = Scraper()
-    rels = scraper.extract_relationships(html_with_rels, person_id="person1")
+    rels = scraper.extract_relationships(sample_html, person_id="111815")
     
-    assert {"person_id": "person1", "related_id": "person2", "type": "father"} in rels
-    assert {"person_id": "person1", "related_id": "person3", "type": "mother"} in rels
-    assert {"person_id": "person1", "related_id": "person4", "type": "spouse"} in rels
-    assert {"person_id": "person1", "related_id": "person5", "type": "child"} in rels
-    assert {"person_id": "person1", "related_id": "person6", "type": "child"} in rels
-    assert {"person_id": "person1", "related_id": "person7", "type": "child"} in rels
+    assert {"person_id": "111815", "related_id": "111813", "type": "father", "url": "?i=111813"} in rels
+    assert {"person_id": "111815", "related_id": "111820", "type": "spouse", "url": "?i=111820"} in rels
+    assert {"person_id": "111815", "related_id": "111821", "type": "child", "url": "?i=111821"} in rels
 
 def test_extract_relationships_empty():
     scraper = Scraper()
-    rels = scraper.extract_relationships("<html><body></body></html>", person_id="person1")
+    rels = scraper.extract_relationships("<html><body></body></html>", person_id="111815")
     assert rels == []
