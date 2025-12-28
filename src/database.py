@@ -25,6 +25,25 @@ class DatabaseHelper:
                 url TEXT
             )
         """)
+        
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS discovered_urls (
+                id TEXT PRIMARY KEY,
+                url TEXT
+            )
+        """)
+
+        # Ensure all columns exist (simple migration)
+        cursor.execute("PRAGMA table_info(individuals)")
+        existing_columns = [row[1] for row in cursor.fetchall()]
+        required_columns = [
+            ("birth_date_civil", "TEXT"),
+            ("death_date_civil", "TEXT"),
+        ]
+        for col_name, col_type in required_columns:
+            if col_name not in existing_columns:
+                cursor.execute(f"ALTER TABLE individuals ADD COLUMN {col_name} {col_type}")
+
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS relationships (
                 person_id TEXT,
@@ -80,6 +99,32 @@ class DatabaseHelper:
             cursor.execute(
                 "SELECT * FROM relationships WHERE person_id = ?", (person_id,)
             )
+            return [dict(row) for row in cursor.fetchall()]
+
+    def get_all_ids(self):
+        with self.lock:
+            cursor = self.conn.cursor()
+            cursor.execute("SELECT id FROM individuals")
+            return [row[0] for row in cursor.fetchall()]
+
+    def add_discovered_url(self, person_id, url):
+        with self.lock:
+            cursor = self.conn.cursor()
+            cursor.execute("""
+                INSERT OR IGNORE INTO discovered_urls (id, url)
+                VALUES (?, ?)
+            """, (person_id, url))
+            self.conn.commit()
+
+    def get_pending_urls(self):
+        with self.lock:
+            cursor = self.conn.cursor()
+            cursor.execute("""
+                SELECT d.id, d.url 
+                FROM discovered_urls d
+                LEFT JOIN individuals i ON d.id = i.id
+                WHERE i.id IS NULL
+            """)
             return [dict(row) for row in cursor.fetchall()]
 
     def close(self):
