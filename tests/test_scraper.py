@@ -31,6 +31,7 @@ def test_extract_individual_data(sample_html):
     assert data["id"] == "111815"
     assert "שניאור זלמן" in data["name"]
     assert data["birth_date"] == "1745"
+    assert data["birth_date_civil"] == "1745"
     assert data["gender"] == "M"
 
 def test_extract_relationships(sample_html):

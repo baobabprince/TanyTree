@@ -25,8 +25,10 @@ def test_export_individual(db, tmp_path):
     db.add_individual({
         "id": "p1",
         "name": "שניאור זלמן",
-        "birth_date": "1745",
-        "death_date": "1813",
+        "birth_date": "תק\"ה",
+        "birth_date_civil": "1745",
+        "death_date": "תקע\"ג",
+        "death_date_civil": "1813",
         "gender": "M",
         "url": "http://example.com/p1"
     })
@@ -41,8 +43,10 @@ def test_export_individual(db, tmp_path):
         assert "1 NAME שניאור זלמן" in content
         assert "1 BIRT" in content
         assert "2 DATE 1745" in content
+        assert "2 NOTE תק\"ה" in content
         assert "1 DEAT" in content
         assert "2 DATE 1813" in content
+        assert "2 NOTE תקע\"ג" in content
 
 def test_export_relationships(db, tmp_path):
     # Father, Mother, Child

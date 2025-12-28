@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import re
 from urllib.parse import urlparse, parse_qs
+from src.utils import hebrew_to_civil
 
 class Scraper:
     def extract_biographical_data(self, html_content, url):
@@ -34,8 +35,10 @@ class Scraper:
             "id": person_id,
             "name": name,
             "birth_date": None,
+            "birth_date_civil": None,
             "birth_place": None,
             "death_date": None,
+            "death_date_civil": None,
             "death_place": None,
             "gender": gender,
             "url": url
@@ -46,10 +49,12 @@ class Scraper:
             text = li.get_text(strip=True)
             if 'תאריך לידה' in text:
                 data["birth_date"] = text.replace('תאריך לידה:', '').strip()
+                data["birth_date_civil"] = hebrew_to_civil(data["birth_date"])
             elif 'מקום לידה' in text:
                 data["birth_place"] = text.replace('מקום לידה:', '').strip()
             elif 'תאריך פטירה' in text:
                 data["death_date"] = text.replace('תאריך פטירה:', '').strip()
+                data["death_date_civil"] = hebrew_to_civil(data["death_date"])
             elif 'מקום פטירה' in text:
                 data["death_place"] = text.replace('מקום פטירה:', '').strip()
                 

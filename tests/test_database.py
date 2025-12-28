@@ -20,7 +20,9 @@ def test_add_individual(db_helper):
         "id": "p123",
         "name": "Abraham",
         "birth_date": "1745",
+        "birth_date_civil": "1745",
         "death_date": "1812",
+        "death_date_civil": "1812",
         "gender": "M",
         "url": "https://baalhatanya.org.il/p123"
     }
@@ -29,6 +31,7 @@ def test_add_individual(db_helper):
     assert result is not None
     assert result["name"] == "Abraham"
     assert result["gender"] == "M"
+    assert result["birth_date_civil"] == "1745"
 
 
 def test_add_relationship(db_helper):

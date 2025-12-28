@@ -93,15 +93,21 @@ class GedcomExporter:
                     sex = "M" if row['gender'] in ["זכר", "M", "male"] else "F"
                     f.write(f"1 SEX {sex}\n")
                 
-                if row['birth_date']:
+                if row['birth_date'] or row['birth_date_civil']:
                     f.write("1 BIRT\n")
-                    f.write(f"2 DATE {row['birth_date']}\n")
+                    if row['birth_date_civil']:
+                        f.write(f"2 DATE {row['birth_date_civil']}\n")
+                    if row['birth_date']:
+                        f.write(f"2 NOTE {row['birth_date']}\n")
                     if row['birth_place']:
                         f.write(f"2 PLAC {row['birth_place']}\n")
                     
-                if row['death_date']:
+                if row['death_date'] or row['death_date_civil']:
                     f.write("1 DEAT\n")
-                    f.write(f"2 DATE {row['death_date']}\n")
+                    if row['death_date_civil']:
+                        f.write(f"2 DATE {row['death_date_civil']}\n")
+                    if row['death_date']:
+                        f.write(f"2 NOTE {row['death_date']}\n")
                     if row['death_place']:
                         f.write(f"2 PLAC {row['death_place']}\n")
                 

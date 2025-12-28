@@ -1,4 +1,4 @@
-# Baal HaTanya Genealogy Scraper
+# TanyTree
 
 A specialized tool to scrape genealogical data from [baalhatanya.org.il](https://baalhatanya.org.il/) and export it to the standard GEDCOM format. This project is designed to help researchers and genealogists interested in the Chabad dynasty preserve and utilize family tree data in their own genealogy software.
 
@@ -16,7 +16,7 @@ A specialized tool to scrape genealogical data from [baalhatanya.org.il](https:/
 1. **Clone the repository:**
    ```bash
    git clone <repository-url>
-   cd tny
+   cd TanyTree
    ```
 
 2. **Install dependencies:**
