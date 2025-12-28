@@ -41,7 +41,7 @@ def test_cli_full_flow(runner, tmp_path):
         mock_get.return_value.status_code = 200
         
         # Scrape
-        result = runner.invoke(main, ["scrape", "http://example.com/?i=p1", "--db", str(db_path)])
+        result = runner.invoke(main, ["scrape", "--url", "http://example.com/?i=p1", "--db", str(db_path)])
         assert result.exit_code == 0
         assert "Scrape complete" in result.output
         
