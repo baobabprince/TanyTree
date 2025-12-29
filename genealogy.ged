@@ -56344,6 +56344,7 @@
 1 NAME הרבנית פייגא דינה בעער
 1 SEX F
 1 FAMC @F1806@
+1 FAMS @F4256@
 0 @I7998@ INDI
 1 NAME מרת אדיל בעער
 1 SEX F
@@ -56366,14 +56367,18 @@
 1 NAME כ"ק אדמו"ר הרה"ק אהרן טייטלבוים
 1 SEX M
 1 FAMC @F1807@
+1 FAMS @F4257@
 0 @I8003@ INDI
 1 NAME כ"ק אדמו"ר הרה"ק זלמן לייב טיטלבוים
 1 SEX M
 1 FAMC @F1807@
+1 FAMS @F4258@
 0 @I8004@ INDI
 1 NAME הרבנית חיה מייזליש
 1 SEX F
 1 FAMC @F1807@
+1 FAMS @F4259@
+1 FAMS @F4261@
 0 @I8005@ INDI
 1 NAME הרה"צ חנניה יום טוב ליפא טייטלבוים
 1 SEX M
@@ -56382,6 +56387,7 @@
 1 NAME הרה"צ שלום אליעזר טייטלבוים
 1 SEX M
 1 FAMC @F1807@
+1 FAMS @F4260@
 0 @I8007@ INDI
 1 NAME הרבנית ברכה  סימה מייזליש
 1 SEX F
@@ -56397,6 +56403,7 @@
 1 NAME הרבנית  הענדל הלברשטאם [טייטלבוים]
 1 SEX F
 1 FAMC @F1807@
+1 FAMS @F4262@
 0 @I8010@ INDI
 1 NAME כמר חיים צבי טייטלבוים
 1 SEX M
@@ -56461,6 +56468,7 @@
 1 NAME מרת חנה טייטלבוים
 1 SEX F
 1 FAMC @F1811@
+1 FAMS @F4263@
 0 @I8021@ INDI
 1 NAME חיים צבי הלברשטם
 1 SEX M
@@ -56597,6 +56605,7 @@
 1 NAME מר אבירם וורטהיים
 1 SEX M
 1 FAMC @F1814@
+1 FAMS @F4264@
 0 @I8048@ INDI
 1 NAME הרב משולם זלמן טברסקי
 1 SEX M
@@ -56608,6 +56617,7 @@
 1 NAME מרת סלאווא פרנקל
 1 SEX F
 1 FAMC @F1815@
+1 FAMS @F4265@
 0 @I8051@ INDI
 1 NAME מרת יוכבד פרנקל
 1 SEX F
@@ -56646,6 +56656,7 @@
 2 DATE 19 Aug 1976
 2 NOTE כ״ג אב ה׳תשל״א
 1 FAMC @F1817@
+1 FAMS @F4266@
 0 @I8059@ INDI
 1 NAME מר אברהם חנוך העניך אלברשטאם
 1 SEX M
@@ -56674,6 +56685,7 @@
 2 DATE 27 Jan 1985
 2 NOTE ה׳ שבט ה׳תש״מ
 1 FAMC @F1817@
+1 FAMS @F4267@
 0 @I8063@ INDI
 1 NAME מרת נחמה וסרמן
 1 SEX F
@@ -56681,6 +56693,7 @@
 2 DATE 01 Feb 1987
 2 NOTE ב׳ שבט ה׳תשמ״ב
 1 FAMC @F1817@
+1 FAMS @F4268@
 0 @I8064@ INDI
 1 NAME מרת עטל פורר
 1 SEX F
@@ -56712,6 +56725,7 @@
 2 DATE 25 Apr 1974
 2 NOTE ג׳ אייר ה׳תשכ״ט
 1 FAMC @F1818@
+1 FAMS @F4269@
 0 @I8068@ INDI
 1 NAME הרב שמואל נטע זלמונביץ
 1 SEX M
@@ -56719,6 +56733,7 @@
 2 DATE 30 Aug 1975
 2 NOTE כ״ג אלול ה׳תש״ל
 1 FAMC @F1818@
+1 FAMS @F4270@
 0 @I8069@ INDI
 1 NAME הרב ישכר שלמה זלמונביץ
 1 SEX M
@@ -56726,6 +56741,7 @@
 2 DATE 12 Oct 1977
 2 NOTE ל׳ תשרי ה׳תשל״ג
 1 FAMC @F1818@
+1 FAMS @F4271@
 0 @I8070@ INDI
 1 NAME כ"כ אדמו"ר הרה"צ יצחק דב יונגרייז
 1 SEX M
@@ -56737,6 +56753,7 @@
 2 DATE 14 Dec 1979
 2 NOTE כ״ד כסלו ה׳תשל״ה
 1 FAMC @F1818@
+1 FAMS @F4272@
 0 @I8072@ INDI
 1 NAME מר אלישע יונגרייז
 1 SEX M
@@ -56751,6 +56768,7 @@
 2 DATE 15 Apr 1981
 2 NOTE י״א ניסן ה׳תשל״ו
 1 FAMC @F1818@
+1 FAMS @F4273@
 0 @I8074@ INDI
 1 NAME מרת שרה יונגרייז
 1 SEX F
@@ -56779,6 +56797,7 @@
 2 DATE 14 Aug 1985
 2 NOTE כ״ז אב ה׳תש״מ
 1 FAMC @F1818@
+1 FAMS @F4274@
 0 @I8078@ INDI
 1 NAME הרב אשר יונגרייז
 1 SEX M
@@ -56793,6 +56812,7 @@
 2 DATE 03 Jun 1987
 2 NOTE ו׳ סיון ה׳תשמ״ב
 1 FAMC @F1818@
+1 FAMS @F4275@
 0 @I8080@ INDI
 1 NAME מר זלמן יונגרייז
 1 SEX M
@@ -56871,6 +56891,7 @@
 2 NOTE י״ב כסלו ה׳תשל״ד
 2 PLAC ירושלים
 1 FAMC @F1820@
+1 FAMS @F4276@
 0 @I8091@ INDI
 1 NAME הרב יעקב שמשון נחום יעקובוביץ
 1 SEX M
@@ -56885,6 +56906,7 @@
 2 DATE 29 Feb 1980
 2 NOTE י״ב אדר ה׳תשל״ה
 1 FAMC @F1820@
+1 FAMS @F4277@
 0 @I8093@ INDI
 1 NAME מרת יוכבד רבקה גרינצויג
 1 SEX F
@@ -56892,6 +56914,7 @@
 2 DATE 17 Sep 1979
 2 NOTE כ״ה אלול ה׳תשל״ד
 1 FAMC @F1821@
+1 FAMS @F4278@
 0 @I8094@ INDI
 1 NAME הרב דוד הלברשטם
 1 SEX M
@@ -56899,6 +56922,7 @@
 2 DATE 21 May 1981
 2 NOTE י״ז אייר ה׳תשל״ו
 1 FAMC @F1820@
+1 FAMS @F4279@
 0 @I8095@ INDI
 1 NAME מרת ריזל חוה שטרן
 1 SEX F
@@ -56906,6 +56930,7 @@
 2 DATE 08 Oct 1980
 2 NOTE כ״ח תשרי ה׳תשל״ו
 1 FAMC @F1821@
+1 FAMS @F4280@
 0 @I8096@ INDI
 1 NAME הרב חיים מנחם הלברשטם
 1 SEX M
@@ -56913,6 +56938,7 @@
 2 DATE 07 Apr 1983
 2 NOTE כ״ד ניסן ה׳תשל״ח
 1 FAMC @F1820@
+1 FAMS @F4281@
 0 @I8097@ INDI
 1 NAME מרת הינדא אנגלרד
 1 SEX F
@@ -56920,6 +56946,7 @@
 2 DATE 07 Nov 1981
 2 NOTE י׳ חשון ה׳תשל״ז
 1 FAMC @F1821@
+1 FAMS @F4282@
 0 @I8098@ INDI
 1 NAME הרב מתתיהו הלברשטם
 1 SEX M
@@ -56927,6 +56954,7 @@
 2 DATE 01 Mar 1986
 2 NOTE כ׳ אדר ב׳ ה׳תשמ״א
 1 FAMC @F1820@
+1 FAMS @F4283@
 0 @I8099@ INDI
 1 NAME מרת חנה גולדמן
 1 SEX F
@@ -56934,6 +56962,7 @@
 2 DATE 10 Dec 1983
 2 NOTE ד׳ טבת ה׳תשל״ט
 1 FAMC @F1821@
+1 FAMS @F4284@
 0 @I8100@ INDI
 1 NAME הרה"צ ברוך הלברשטם
 1 SEX M
@@ -56941,6 +56970,7 @@
 2 DATE 06 Nov 1987
 2 NOTE י״ד חשון ה׳תשמ״ג
 1 FAMC @F1820@
+1 FAMS @F4285@
 0 @I8101@ INDI
 1 NAME הרב משולם שרגא יעקובוביץ
 1 SEX M
@@ -56948,6 +56978,7 @@
 2 DATE 08 Mar 1985
 2 NOTE ט״ו אדר ה׳תש״מ
 1 FAMC @F1821@
+1 FAMS @F4286@
 0 @I8102@ INDI
 1 NAME הרה"צ ישכר שלמה הלברשטאם
 1 SEX M
@@ -56955,6 +56986,7 @@
 2 DATE 10 Apr 1989
 2 NOTE ה׳ ניסן ה׳תשד"מ
 1 FAMC @F1820@
+1 FAMS @F4287@
 0 @I8103@ INDI
 1 NAME מרת נחמה לייפער
 1 SEX F
@@ -56962,6 +56994,7 @@
 2 DATE 18 Jul 1986
 2 NOTE י״א תמוז ה׳תשמ״א
 1 FAMC @F1821@
+1 FAMS @F4288@
 0 @I8104@ INDI
 1 NAME מרת מרים יהודית ברכה למברגר
 1 SEX F
@@ -56976,6 +57009,7 @@
 2 DATE 18 Feb 1988
 2 NOTE ל׳ שבט ה׳תשמ״ג
 1 FAMC @F1821@
+1 FAMS @F4289@
 0 @I8106@ INDI
 1 NAME מרדכי דוב הלברשטם
 1 SEX M
@@ -57067,6 +57101,7 @@
 2 DATE 13 Jun 1982
 2 NOTE כ״ב סיון ה׳תשל״ז
 1 FAMC @F1822@
+1 FAMS @F4290@
 0 @I8119@ INDI
 1 NAME מר דוד הלברשטם
 1 SEX M
@@ -57096,6 +57131,7 @@
 2 DATE 07 Sep 1985
 2 NOTE כ״א אלול ה׳תש״מ
 1 FAMC @F1822@
+1 FAMS @F4291@
 0 @I8123@ INDI
 1 NAME מר מאיר הלברשטם
 1 SEX M
@@ -57204,6 +57240,7 @@
 2 DATE 03 Jul 1985
 2 NOTE י״ד תמוז ה׳תש״מ
 1 FAMC @F1824@
+1 FAMS @F4292@
 0 @I8138@ INDI
 1 NAME מרת רחל וייס
 1 SEX F
@@ -57211,6 +57248,7 @@
 2 DATE 08 Sep 1987
 2 NOTE י״ד אלול ה׳תשמ״ב
 1 FAMC @F1824@
+1 FAMS @F4293@
 0 @I8139@ INDI
 1 NAME מרת יוכבד רבקה גרינוולד
 1 SEX F
@@ -57254,6 +57292,7 @@
 2 NOTE כ״ח כסלו ה׳תשמ״ב
 2 PLAC 43442193
 1 FAMC @F1825@
+1 FAMS @F4294@
 0 @I8145@ INDI
 1 NAME יששכר שלמה גרינוולד
 1 SEX M
@@ -57268,6 +57307,7 @@
 2 DATE 20 Feb 1989
 2 NOTE ט״ו אדר ב׳ ה׳תשמ״ד
 1 FAMC @F1825@
+1 FAMS @F4295@
 0 @I8147@ INDI
 1 NAME אסתר גרינוולד
 1 SEX M
@@ -57352,6 +57392,7 @@
 2 DATE 08 Oct 1987
 2 NOTE ט״ו תשרי ה׳תשמ״ג
 1 FAMC @F1826@
+1 FAMS @F4296@
 0 @I8159@ INDI
 1 NAME מרת יוכבד רבקה שפירא
 1 SEX F
@@ -57359,6 +57400,7 @@
 2 DATE 22 Sep 1988
 2 NOTE י״א תשרי ה׳תשמ״ד
 1 FAMC @F1826@
+1 FAMS @F4297@
 0 @I8160@ INDI
 1 NAME הרב ברוך הלברשטם
 1 SEX M
@@ -57479,6 +57521,7 @@
 2 DATE 12 Mar 1993
 2 NOTE י״ט אדר ה׳תשמ״ח
 1 FAMC @F1828@
+1 FAMS @F4298@
 0 @I8177@ INDI
 1 NAME מרת הניה פנט
 1 SEX F
@@ -57493,6 +57536,7 @@
 2 DATE 10 Aug 1996
 2 NOTE כ״ה אב ה׳תשנ״א
 1 FAMC @F1828@
+1 FAMS @F4299@
 0 @I8179@ INDI
 1 NAME הרבנית חנה בתיה פנט
 1 SEX F
@@ -59295,6 +59339,7 @@
 2 NOTE כ״ו כסלו ה׳תשמ״ד
 2 PLAC ישראל
 1 FAMC @F1884@
+1 FAMS @F4287@
 0 @I8454@ INDI
 1 NAME מרת רייזל רוקח
 1 SEX F
@@ -71481,6 +71526,7 @@
 2 DATE 17 Aug 1985
 2 NOTE ל׳ אב ה׳תש״מ
 1 FAMC @F2287@
+1 FAMS @F4294@
 0 @I10281@ INDI
 1 NAME הרב יחיאל נתן שניאורסון
 1 SEX M
@@ -137828,6 +137874,1148 @@
 1 NAME נאור גבע הלל
 1 SEX M
 1 FAMS @F4250@
+0 @I20289@ INDI
+1 NAME בעער [לייפר]
+1 SEX M
+0 @I20290@ INDI
+1 NAME הגה"צ יצחק דוד הורוביץ
+1 SEX M
+1 FAMS @F4256@
+0 @I20291@ INDI
+1 NAME מרת  הורוביץ
+1 SEX F
+1 FAMC @F4256@
+0 @I20292@ INDI
+1 NAME מרת  הורוביץ
+1 SEX F
+1 FAMC @F4256@
+0 @I20293@ INDI
+1 NAME הרבנית סימא הורביץ
+1 SEX F
+1 FAMC @F4256@
+1 FAMS @F3291@
+0 @I20294@ INDI
+1 NAME הרה"צ אברהם יהושע הלברשטם
+1 SEX M
+0 @I20295@ INDI
+1 NAME הרה"צ שלום אליעזר רובין
+1 SEX M
+0 @I20296@ INDI
+1 NAME הרבנית סאשא טייטלבוים [הגר]
+1 SEX F
+1 BIRT
+2 DATE 21 Aug 1953
+2 NOTE י׳ אלול ה׳תש״ח
+1 FAMS @F4257@
+0 @I20297@ INDI
+1 NAME הרה"צ מנחם מענדל טייטלבוים
+1 SEX M
+1 FAMC @F4257@
+0 @I20298@ INDI
+1 NAME הרבנית חיה טייטלבוים
+1 SEX F
+1 FAMC @F4257@
+0 @I20299@ INDI
+1 NAME הרבנית שרה מרים טייטלבוים
+1 SEX F
+1 FAMC @F4257@
+0 @I20300@ INDI
+1 NAME הרבנית הינדא טייטלבוים
+1 SEX F
+1 FAMC @F4257@
+0 @I20301@ INDI
+1 NAME הרבנית חנה טייטלבוים
+1 SEX F
+1 FAMC @F4257@
+0 @I20302@ INDI
+1 NAME הרה"צ יואל טייטלבוים
+1 SEX M
+1 FAMC @F4257@
+0 @I20303@ INDI
+1 NAME הרבנית מרגלית טייטלבוים
+1 SEX F
+1 FAMC @F4257@
+0 @I20304@ INDI
+1 NAME הרבנית חיה שרה טיטלבוים [שפיץ]
+1 SEX F
+1 FAMS @F4258@
+0 @I20305@ INDI
+1 NAME הרה"צ חיים צבי טייטלבוים
+1 SEX M
+1 FAMC @F4257@
+0 @I20306@ INDI
+1 NAME הרה"צ חיים צבי טיטלבוים
+1 SEX M
+1 FAMC @F4258@
+0 @I20307@ INDI
+1 NAME הרה"צ יעקב בער טיטלבוים
+1 SEX M
+1 FAMC @F4258@
+0 @I20308@ INDI
+1 NAME טיטלבוים
+1 SEX M
+1 FAMC @F4258@
+0 @I20309@ INDI
+1 NAME הרה"צ דוב בעריש מייזליש
+1 SEX M
+1 FAMS @F4259@
+0 @I20310@ INDI
+1 NAME הרבנית ברכה סימא מייזליש
+1 SEX F
+1 FAMC @F4259@
+0 @I20311@ INDI
+1 NAME מייזליש
+1 SEX M
+1 FAMC @F4259@
+0 @I20312@ INDI
+1 NAME הרב יקותיאל יהודה מייזליש
+1 SEX M
+1 FAMC @F4259@
+0 @I20313@ INDI
+1 NAME טייטלבוים
+1 SEX M
+1 FAMS @F4260@
+0 @I20314@ INDI
+1 NAME הרה"צ דוד דב מייזליש
+1 SEX M
+1 FAMS @F4261@
+0 @I20315@ INDI
+1 NAME הלברשטם
+1 SEX M
+1 FAMC @F4260@
+0 @I20316@ INDI
+1 NAME הגה"צ רבי חיים צבי מייזליש
+1 SEX M
+1 FAMC @F4261@
+0 @I20317@ INDI
+1 NAME הרבנית חנה טייטלבוים [מאיער]
+1 SEX F
+1 DEAT
+2 DATE 04 Jun 1949
+2 NOTE ז׳ סיון ה׳תש״ד
+2 PLAC אושוויץ
+1 FAMS @F1808@
+0 @I20318@ INDI
+1 NAME כ"ק אדמו"ר הרה"צ חיים יהושע הלברשטם
+1 SEX M
+1 FAMC @F3259@
+1 FAMS @F4262@
+0 @I20319@ INDI
+1 NAME הלברשטם
+1 SEX M
+1 FAMC @F4262@
+0 @I20320@ INDI
+1 NAME הלברשטם
+1 SEX M
+1 FAMC @F4262@
+0 @I20321@ INDI
+1 NAME הרב יואל טייטלבוים
+1 SEX M
+1 FAMS @F4263@
+0 @I20322@ INDI
+1 NAME מרת העסי ניימאן
+1 SEX F
+1 FAMC @F4263@
+0 @I20323@ INDI
+1 NAME הרב חנוך העניך טייטלבוים
+1 SEX M
+1 FAMC @F4263@
+0 @I20324@ INDI
+1 NAME הרב חיים יצחק אייזיק טייטלבוים
+1 SEX M
+1 FAMC @F4263@
+0 @I20325@ INDI
+1 NAME מר יהושע טייטלבוים
+1 SEX M
+1 FAMC @F4263@
+0 @I20326@ INDI
+1 NAME הרב צבי הלברשטם
+1 SEX M
+0 @I20327@ INDI
+1 NAME הרב תום אליהו וורטהיים
+1 SEX M
+1 FAMC @F4264@
+0 @I20328@ INDI
+1 SEX M
+1 FAMS @F4265@
+0 @I20329@ INDI
+1 NAME הרב אהרן פיללער
+1 SEX M
+1 BIRT
+2 DATE 10 Mar 1987
+2 NOTE ט׳ אדר ה׳תשמ״ב
+1 FAMC @F4265@
+0 @I20330@ INDI
+1 NAME מר פנחס וינד
+1 SEX M
+1 BIRT
+2 DATE 04 Oct 1975
+2 NOTE כ״ט תשרי ה׳תשל״א
+1 FAMS @F4266@
+0 @I20331@ INDI
+1 NAME שמעון יהודה וינד
+1 SEX M
+1 BIRT
+2 DATE 04 Nov 2000
+2 NOTE ו׳ חשון ה׳תשנ״ו
+1 FAMC @F4266@
+0 @I20332@ INDI
+1 NAME אסתר נחמה פערל וינד
+1 SEX M
+1 BIRT
+2 DATE 29 Apr 2007
+2 NOTE י״א אייר ה׳תשס״ב
+1 FAMC @F4266@
+0 @I20333@ INDI
+1 NAME מרים וינד
+1 SEX M
+1 BIRT
+2 DATE 29 Apr 2007
+2 NOTE י״א אייר ה׳תשס״ב
+1 FAMC @F4266@
+0 @I20334@ INDI
+1 NAME פסיה פיגא וינד
+1 SEX M
+1 BIRT
+2 DATE 20 Apr 2010
+2 NOTE ו׳ אייר ה׳תשס״ה
+1 FAMC @F4266@
+0 @I20335@ INDI
+1 NAME אהרן וינד
+1 SEX M
+1 BIRT
+2 DATE 20 Apr 2010
+2 NOTE ו׳ אייר ה׳תשס״ה
+1 FAMC @F4266@
+0 @I20336@ INDI
+1 NAME מר מאיר גרוס
+1 SEX M
+1 FAMS @F4267@
+0 @I20337@ INDI
+1 NAME מרדכי גרוס
+1 SEX M
+1 BIRT
+2 DATE 22 Jun 2004
+2 NOTE ג׳ תמוז ה׳תשנ״ט
+1 FAMC @F4267@
+0 @I20338@ INDI
+1 NAME מרים גרוס
+1 SEX M
+1 BIRT
+2 DATE 17 Dec 2005
+2 NOTE ט״ז כסלו ה׳תשס״א
+1 FAMC @F4267@
+0 @I20339@ INDI
+1 NAME משה גרוס
+1 SEX M
+1 BIRT
+2 DATE 18 Jan 2008
+2 NOTE י״א שבט ה׳תשס״ג
+1 FAMC @F4267@
+0 @I20340@ INDI
+1 NAME אסתר גרוס
+1 SEX M
+1 BIRT
+2 DATE 27 Jun 2009
+2 NOTE ה׳ תמוז ה׳תשס״ד
+1 FAMC @F4267@
+0 @I20341@ INDI
+1 NAME מר שמואל אהרן וסרמן
+1 SEX M
+1 BIRT
+2 DATE 23 Sep 1985
+2 NOTE ח׳ תשרי ה׳תשמ״א
+1 FAMS @F4268@
+0 @I20342@ INDI
+1 NAME אלטר ישראל וסרמן
+1 SEX M
+1 BIRT
+2 DATE 14 May 2008
+2 NOTE ט׳ אייר ה׳תשס״ג
+1 FAMC @F4268@
+0 @I20343@ INDI
+1 NAME מר שרגא שמואל זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 22 Jun 1996
+2 NOTE ה׳ תמוז ה׳תשנ״א
+1 FAMC @F4269@
+0 @I20344@ INDI
+1 NAME מרת ליבע זלמונביץ
+1 SEX F
+1 BIRT
+2 DATE 29 Jul 1975
+2 NOTE כ״א אב ה׳תש״ל
+1 FAMS @F4269@
+0 @I20345@ INDI
+1 NAME פריידא מילכה זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 04 Sep 2000
+2 NOTE ד׳ אלול ה׳תשנ״ה
+1 FAMC @F4269@
+0 @I20346@ INDI
+1 NAME מלכה זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 03 Apr 1999
+2 NOTE י״ז ניסן ה׳תשנ״ד
+1 FAMC @F4269@
+0 @I20347@ INDI
+1 NAME ישכר שלמה זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 01 Jul 2003
+2 NOTE א׳ תמוז ה׳תשנ״ח
+1 FAMC @F4269@
+0 @I20348@ INDI
+1 NAME מרת דינה זלמונביץ
+1 SEX F
+1 BIRT
+2 DATE 26 Feb 1977
+2 NOTE ח׳ אדר ה׳תשל״ב
+1 FAMS @F4270@
+0 @I20349@ INDI
+1 NAME אידל זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 14 Apr 1997
+2 NOTE ז׳ ניסן ה׳תשנ״ב
+1 FAMC @F4270@
+0 @I20350@ INDI
+1 NAME פריידא מלכה זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 18 Aug 1998
+2 NOTE כ״ו אב ה׳תשנ״ג
+1 FAMC @F4270@
+0 @I20351@ INDI
+1 NAME לאה זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 23 Jun 2008
+2 NOTE כ׳ סיון ה׳תשס״ג
+1 FAMC @F4269@
+0 @I20352@ INDI
+1 NAME ישכר שלמה זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 12 Nov 2001
+2 NOTE כ״ו חשון ה׳תשנ״ז
+1 FAMC @F4270@
+0 @I20353@ INDI
+1 NAME ברוך זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 13 May 2000
+2 NOTE ח׳ אייר ה׳תשנ״ה
+1 FAMC @F4270@
+0 @I20354@ INDI
+1 NAME בן ציון זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 12 Nov 2001
+2 NOTE כ״ו חשון ה׳תשנ״ז
+1 FAMC @F4270@
+0 @I20355@ INDI
+1 NAME אסתר מירל זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 07 Nov 2002
+2 NOTE ב׳ כסלו ה׳תשנ״ח
+1 FAMC @F4270@
+0 @I20356@ INDI
+1 NAME צבי אלימלך זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 26 Jul 2005
+2 NOTE י״ט תמוז ה׳תש״ס
+1 FAMC @F4270@
+0 @I20357@ INDI
+1 NAME רחל פיגא זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 04 Apr 2004
+2 NOTE י״ג ניסן ה׳תשנ״ט
+1 FAMC @F4270@
+0 @I20358@ INDI
+1 NAME ישראל אריה זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 16 Feb 2009
+2 NOTE כ״ב שבט ה׳תשס״ד
+1 FAMC @F4270@
+0 @I20359@ INDI
+1 NAME פעסיל זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 16 Dec 2006
+2 NOTE כ״ה כסלו ה׳תשס״ב
+1 FAMC @F4270@
+0 @I20360@ INDI
+1 NAME פרידה מילכה זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 26 Jan 2004
+2 NOTE ג׳ שבט ה׳תשנ״ט
+1 FAMC @F4271@
+0 @I20361@ INDI
+1 NAME בעריש זלמונביץ
+1 SEX M
+1 BIRT
+2 DATE 18 Jun 2000
+2 NOTE ט״ו סיון ה׳תשנ״ה
+1 FAMC @F4271@
+0 @I20362@ INDI
+1 NAME מרת שרה זלמונביץ
+1 SEX F
+1 BIRT
+2 DATE 17 Feb 1980
+2 NOTE ל׳ שבט ה׳תשל״ה
+1 FAMS @F4271@
+0 @I20363@ INDI
+1 NAME הרב פנחס נפתלי ברנדר
+1 SEX M
+1 FAMS @F4272@
+0 @I20364@ INDI
+1 NAME אברהם שמואל נטע ברנדר
+1 SEX M
+1 BIRT
+2 DATE 11 Oct 2004
+2 NOTE כ״ו תשרי ה׳תש״ס
+1 FAMC @F4272@
+0 @I20365@ INDI
+1 NAME ברכה מלכה ברנדר
+1 SEX M
+1 BIRT
+2 DATE 28 Oct 2005
+2 NOTE כ״ה תשרי ה׳תשס״א
+1 FAMC @F4272@
+0 @I20366@ INDI
+1 NAME שלום ברנדר
+1 SEX M
+1 BIRT
+2 DATE 06 Mar 2007
+2 NOTE ט״ז אדר ה׳תשס״ב
+1 FAMC @F4272@
+0 @I20367@ INDI
+1 NAME לאה ברנדר
+1 SEX M
+1 BIRT
+2 DATE 13 Dec 2008
+2 NOTE ט״ז כסלו ה׳תשס״ד
+1 FAMC @F4272@
+0 @I20368@ INDI
+1 NAME ברנדר
+1 SEX M
+1 BIRT
+2 DATE 20 Aug 2010
+2 NOTE י׳ אלול ה׳תשס״ה
+1 FAMC @F4272@
+0 @I20369@ INDI
+1 NAME הרב אהרן ישראל חיים וייס
+1 SEX M
+1 BIRT
+2 DATE 31 Mar 1982
+2 NOTE ז׳ ניסן ה׳תשל״ז
+1 FAMS @F4273@
+0 @I20370@ INDI
+1 NAME אלימלך יצחק אייזיק וייס
+1 SEX M
+1 BIRT
+2 DATE 21 Aug 2002
+2 NOTE י״ג אלול ה׳תשנ״ז
+1 FAMC @F4273@
+0 @I20371@ INDI
+1 NAME נחמה וייס
+1 SEX M
+1 BIRT
+2 DATE 03 May 2004
+2 NOTE י״ב אייר ה׳תשנ״ט
+1 FAMC @F4273@
+0 @I20372@ INDI
+1 NAME אסתר סאבל וייס
+1 SEX M
+1 BIRT
+2 DATE 05 Sep 2005
+2 NOTE א׳ אלול ה׳תש״ס
+1 FAMC @F4273@
+0 @I20373@ INDI
+1 NAME ברוך וייס
+1 SEX M
+1 BIRT
+2 DATE 24 Feb 2007
+2 NOTE ו׳ אדר ה׳תשס״ב
+1 FAMC @F4273@
+0 @I20374@ INDI
+1 NAME אברהם צבי וייס
+1 SEX M
+1 BIRT
+2 DATE 25 Nov 2009
+2 NOTE ח׳ כסלו ה׳תשס״ה
+1 FAMC @F4273@
+0 @I20375@ INDI
+1 NAME הרב יעקב וידר
+1 SEX M
+1 BIRT
+2 DATE 13 Apr 1988
+2 NOTE כ״ו ניסן ה׳תשמ״ג
+1 FAMS @F4274@
+0 @I20376@ INDI
+1 NAME ברוך וידר
+1 SEX M
+1 BIRT
+2 DATE 15 Jan 2008
+2 NOTE ח׳ שבט ה׳תשס״ג
+1 FAMC @F4274@
+0 @I20377@ INDI
+1 NAME הרב שלמה רוזנפלד
+1 SEX M
+1 BIRT
+2 DATE 18 Jan 1989
+2 NOTE י״ב שבט ה׳תשמ״ד
+1 FAMS @F4275@
+0 @I20378@ INDI
+1 NAME ישראל אריה רוזנפלד
+1 SEX M
+1 BIRT
+2 DATE 24 Aug 2009
+2 NOTE ד׳ אלול ה׳תשס״ד
+1 FAMC @F4275@
+0 @I20379@ INDI
+1 NAME דבורה מרים וידר
+1 SEX M
+1 BIRT
+2 DATE 26 Mar 2010
+2 NOTE י״א ניסן ה׳תשס״ה
+1 FAMC @F4274@
+0 @I20380@ INDI
+1 NAME הרבנית  חיה אסתר הלברשטם
+1 SEX F
+1 BIRT
+2 DATE 02 Dec 1978
+2 NOTE ב׳ כסלו ה׳תשל״ד
+2 PLAC חיפה
+1 FAMS @F4276@
+0 @I20381@ INDI
+1 NAME הרה"צ ברוך הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 27 Aug 1998
+2 NOTE ה׳ אלול ה׳תשנ״ג
+1 FAMC @F4276@
+1 FAMS @F3296@
+0 @I20382@ INDI
+1 NAME מרת יוכבד רבקה רוזנבוים [הלברשטם]
+1 SEX F
+1 BIRT
+2 DATE 28 May 2000
+2 NOTE כ״ג אייר ה׳תשנ״ה
+2 PLAC בני ברק
+1 FAMC @F4276@
+0 @I20383@ INDI
+1 NAME הרב יששכר בער הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 09 Aug 2001
+2 NOTE כ׳ אב ה׳תשנ״ו
+2 PLAC בני ברק
+1 FAMC @F4276@
+0 @I20384@ INDI
+1 NAME הרב דוד שלמה הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 19 Jan 2003
+2 NOTE ט״ז שבט ה׳תשנ״ח
+2 PLAC בני ברק
+1 FAMC @F4276@
+0 @I20385@ INDI
+1 NAME מרת צירל שניאורסון [הלברשטם]
+1 SEX F
+1 BIRT
+2 DATE 15 Aug 2005
+2 NOTE י׳ אב ה׳תש״ס
+2 PLAC בני ברק
+1 FAMC @F4276@
+0 @I20386@ INDI
+1 NAME הרב משה הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 24 Apr 2008
+2 NOTE י״ט ניסן ה׳תשס״ג
+2 PLAC ירושלים
+1 FAMC @F4276@
+0 @I20387@ INDI
+1 NAME מרדכי הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 03 Mar 2016
+2 NOTE כ"ג אדר ב' ה'תשע"א
+2 PLAC בני ברק
+1 FAMC @F4276@
+0 @I20388@ INDI
+1 NAME יעקב הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 28 Aug 2013
+2 NOTE כ"ב אלול ה'תשס"ח
+2 PLAC בני ברק
+1 FAMC @F4276@
+0 @I20389@ INDI
+1 NAME שמואל שמעלקי הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 03 Jan 2020
+2 NOTE ו' טבת ה'תשע"ה
+2 PLAC בני ברק
+1 FAMC @F4276@
+0 @I20390@ INDI
+1 NAME הרב אברהם מאיר חיים גשטטנר
+1 SEX M
+1 BIRT
+2 DATE 15 Jun 1980
+2 NOTE א׳ תמוז ה׳תשל״ה
+1 FAMS @F4277@
+0 @I20391@ INDI
+1 NAME רחל גשטטנר
+1 SEX M
+1 BIRT
+2 DATE 27 Dec 1999
+2 NOTE י״ח טבת ה׳תשנ״ה
+1 FAMC @F4277@
+0 @I20392@ INDI
+1 NAME מלכה גשטטנר
+1 SEX M
+1 BIRT
+2 DATE 23 Apr 2001
+2 NOTE ל׳ ניסן ה׳תשנ״ו
+1 FAMC @F4277@
+0 @I20393@ INDI
+1 NAME יהודה אריה גשטטנר
+1 SEX M
+1 BIRT
+2 DATE 29 Aug 2003
+2 NOTE א׳ אלול ה׳תשנ״ח
+1 FAMC @F4277@
+0 @I20394@ INDI
+1 NAME רייזל גשטטנר
+1 SEX M
+1 BIRT
+2 DATE 28 Oct 2005
+2 NOTE כ״ה תשרי ה׳תשס״א
+1 FAMC @F4277@
+0 @I20395@ INDI
+1 NAME נחמה גשטטנר
+1 SEX M
+1 BIRT
+2 DATE 08 Oct 2007
+2 NOTE כ״ו תשרי ה׳תשס״ג
+1 FAMC @F4277@
+0 @I20396@ INDI
+1 NAME אליעזר גשטטנר
+1 SEX M
+1 BIRT
+2 DATE 22 Feb 2010
+2 NOTE ח׳ אדר א׳ ה׳תשס״ה
+1 FAMC @F4277@
+0 @I20397@ INDI
+1 NAME מר קלמן נפתלי גרינצויג
+1 SEX M
+1 BIRT
+2 DATE 27 Oct 1978
+2 NOTE כ״ו תשרי ה׳תשל״ד
+1 FAMS @F4278@
+0 @I20398@ INDI
+1 NAME ברוך גרינצויג
+1 SEX M
+1 BIRT
+2 DATE 04 Jul 1999
+2 NOTE כ׳ תמוז ה׳תשנ״ד
+1 FAMC @F4278@
+0 @I20399@ INDI
+1 NAME מרת ברכה הלברשטם
+1 SEX F
+1 BIRT
+2 DATE 21 Dec 1980
+2 NOTE י״ד טבת ה׳תשל״ו
+1 FAMS @F4279@
+0 @I20400@ INDI
+1 NAME הרה"צ אהרן יוסף הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 17 Aug 2002
+2 NOTE ט׳ אלול ה׳תשנ״ז
+1 FAMC @F4279@
+0 @I20401@ INDI
+1 NAME ברוך הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 06 Mar 2004
+2 NOTE י״ג אדר ה׳תשנ״ט
+1 FAMC @F4279@
+0 @I20402@ INDI
+1 NAME חנה פעסיל הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 26 Oct 2005
+2 NOTE כ״ג תשרי ה׳תשס״א
+1 FAMC @F4279@
+0 @I20403@ INDI
+1 NAME צבי אריה הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 24 Jan 2008
+2 NOTE י״ז שבט ה׳תשס״ג
+1 FAMC @F4279@
+0 @I20404@ INDI
+1 NAME שלום הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 24 Jan 2010
+2 NOTE ט׳ שבט ה׳תשס״ה
+1 FAMC @F4279@
+0 @I20405@ INDI
+1 NAME מר דניאל שטרן
+1 SEX M
+1 BIRT
+2 DATE 14 Nov 1978
+2 NOTE י״ד חשון ה׳תשל״ד
+1 FAMS @F4280@
+0 @I20406@ INDI
+1 NAME ברוך שטרן
+1 SEX M
+1 BIRT
+2 DATE 31 Oct 1999
+2 NOTE כ״א חשון ה׳תשנ״ה
+1 FAMC @F4280@
+0 @I20407@ INDI
+1 NAME שלמה יצחק שטרן
+1 SEX M
+1 BIRT
+2 DATE 27 Feb 2001
+2 NOTE ד׳ אדר ה׳תשנ״ו
+1 FAMC @F4280@
+0 @I20408@ INDI
+1 NAME גאלדא שטרן
+1 SEX M
+1 BIRT
+2 DATE 03 Sep 2005
+2 NOTE כ״ט אב ה׳תש״ס
+1 FAMC @F4280@
+0 @I20409@ INDI
+1 NAME נחמה שטרן
+1 SEX M
+1 BIRT
+2 DATE 14 May 2007
+2 NOTE כ״ו אייר ה׳תשס״ב
+1 FAMC @F4280@
+0 @I20410@ INDI
+1 NAME מרת רבקה הלברשטם
+1 SEX F
+1 BIRT
+2 DATE 20 Nov 1984
+2 NOTE כ״ה חשון ה׳תש״מ
+1 FAMS @F4281@
+0 @I20411@ INDI
+1 NAME יטל הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 12 Feb 2005
+2 NOTE ג׳ אדר א׳ ה׳תש״ס
+1 FAMC @F4281@
+0 @I20412@ INDI
+1 NAME מרים יהודית ברכה הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 18 Mar 2009
+2 NOTE כ״ב אדר ה׳תשס״ד
+1 FAMC @F4281@
+0 @I20413@ INDI
+1 NAME משה הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 26 Mar 2006
+2 NOTE כ״ו אדר ה׳תשס״א
+1 FAMC @F4281@
+0 @I20414@ INDI
+1 NAME הרב אהרן בן ציון אנגלרד
+1 SEX M
+1 BIRT
+2 DATE 03 Dec 1980
+2 NOTE כ״ה כסלו ה׳תשל״ו
+1 FAMS @F4282@
+0 @I20415@ INDI
+1 NAME אברהם אנגלרד
+1 SEX M
+1 BIRT
+2 DATE 26 Jul 2003
+2 NOTE כ״ו תמוז ה׳תשנ״ח
+1 FAMC @F4282@
+0 @I20416@ INDI
+1 NAME מרדכי דב אנגלרד
+1 SEX M
+1 BIRT
+2 DATE 17 Feb 2005
+2 NOTE ח׳ אדר ב׳ ה׳תש״ס
+1 FAMC @F4282@
+0 @I20417@ INDI
+1 NAME ברוך אנגלרד
+1 SEX M
+1 BIRT
+2 DATE 15 Feb 2002
+2 NOTE ג׳ אדר א׳ ה׳תשנ״ז
+1 FAMC @F4282@
+0 @I20418@ INDI
+1 NAME שרה לאה אנגלרד
+1 SEX M
+1 BIRT
+2 DATE 13 May 2007
+2 NOTE כ״ה אייר ה׳תשס״ב
+1 FAMC @F4282@
+0 @I20419@ INDI
+1 NAME מרת חוה טויבא הלברשטם
+1 SEX F
+1 BIRT
+2 DATE 10 Dec 1984
+2 NOTE ט״ז כסלו ה׳תש״מ
+1 FAMS @F4283@
+0 @I20420@ INDI
+1 NAME שלמה אנגלרד
+1 SEX M
+1 BIRT
+2 DATE 30 May 2010
+2 NOTE י״ז סיון ה׳תשס״ה
+1 FAMC @F4282@
+0 @I20421@ INDI
+1 NAME אסתר רייזל הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 19 Feb 2008
+2 NOTE י״ג אדר ב׳ ה׳תשס״ג
+1 FAMC @F4283@
+0 @I20422@ INDI
+1 NAME הרב יחיאל מיכל גולדמן
+1 SEX M
+1 FAMS @F4284@
+0 @I20423@ INDI
+1 NAME רייזי רבקה גולדמן
+1 SEX M
+1 BIRT
+2 DATE 21 Sep 2005
+2 NOTE י״ז אלול ה׳תש״ס
+1 FAMC @F4284@
+0 @I20424@ INDI
+1 NAME יטל גולדמן
+1 SEX M
+1 BIRT
+2 DATE 05 Dec 2006
+2 NOTE י״ד כסלו ה׳תשס״ב
+1 FAMC @F4284@
+0 @I20425@ INDI
+1 NAME מרת אסתר מירל הלברשטם
+1 SEX F
+1 BIRT
+2 DATE 27 Aug 1986
+2 NOTE כ״ב אב ה׳תשמ״א
+1 FAMS @F4285@
+0 @I20426@ INDI
+1 NAME יהודה אריה הלברשטם
+1 SEX M
+1 FAMC @F4285@
+0 @I20427@ INDI
+1 NAME יחזקאל אברהם הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 11 Apr 2007
+2 NOTE כ״ג ניסן ה׳תשס״ב
+1 FAMC @F4285@
+0 @I20428@ INDI
+1 NAME יוכבד רבקה הלברשטם
+1 SEX M
+1 BIRT
+2 DATE 14 Aug 2008
+2 NOTE י״ג אב ה׳תשס״ג
+1 FAMC @F4285@
+0 @I20429@ INDI
+1 NAME יעקובוביץ
+1 SEX M
+1 BIRT
+2 DATE 20 Feb 2010
+2 NOTE ו׳ אדר א׳ ה׳תשס״ה
+1 FAMC @F4286@
+0 @I20430@ INDI
+1 NAME מרת רבקה קאפף [הלברשטאם]
+1 SEX F
+1 BIRT
+2 DATE 03 Jun 2009
+2 NOTE י"א סיון ה׳תשס״ד
+1 FAMC @F4287@
+0 @I20431@ INDI
+1 NAME מרת רחל יעקובוביץ
+1 SEX F
+1 BIRT
+2 DATE 19 Dec 1985
+2 NOTE ז׳ טבת ה׳תשמ״א
+1 FAMS @F4286@
+0 @I20432@ INDI
+1 NAME מרת רחל פאנעט [הלברשטאם]
+1 SEX F
+1 BIRT
+2 DATE 18 Dec 2010
+2 NOTE י"א טבת ה'תשס"ו
+2 PLAC ישראל
+1 FAMC @F4287@
+0 @I20433@ INDI
+1 NAME ברוך הלברשטאם
+1 SEX M
+1 FAMC @F4287@
+0 @I20434@ INDI
+1 NAME חנה זלטא הלברשטאם
+1 SEX M
+1 FAMC @F4287@
+0 @I20435@ INDI
+1 NAME ריזל הלברשטאם
+1 SEX M
+1 FAMC @F4287@
+0 @I20436@ INDI
+1 NAME אסתר מרים הלברשטאם
+1 SEX M
+1 FAMC @F4287@
+0 @I20437@ INDI
+1 NAME יהודית ברכה הלברשטאם
+1 SEX M
+1 FAMC @F4287@
+0 @I20438@ INDI
+1 NAME יוכבד נחמה הלברשטאם
+1 SEX M
+1 FAMC @F4287@
+0 @I20439@ INDI
+1 NAME ברוך לייפער
+1 SEX M
+1 BIRT
+2 DATE 20 May 2007
+2 NOTE ג׳ סיון ה׳תשס״ב
+1 FAMC @F4288@
+0 @I20440@ INDI
+1 NAME הרב יוסף יהושע לייפער
+1 SEX M
+1 FAMS @F4288@
+0 @I20441@ INDI
+1 NAME חנה רייזל לייפער
+1 SEX M
+1 BIRT
+2 DATE 13 Mar 2010
+2 NOTE כ״ז אדר ב׳ ה׳תשס״ה
+1 FAMC @F4288@
+0 @I20442@ INDI
+1 NAME אריה לייב לייפער
+1 SEX M
+1 BIRT
+2 DATE 23 Jun 2008
+2 NOTE כ׳ סיון ה׳תשס״ג
+1 FAMC @F4288@
+0 @I20443@ INDI
+1 NAME מר  למברגר
+1 SEX M
+0 @I20444@ INDI
+1 NAME חנה כהנא
+1 SEX M
+1 BIRT
+2 DATE 29 Apr 2009
+2 NOTE ה׳ אייר ה׳תשס״ד
+1 FAMC @F4289@
+0 @I20445@ INDI
+1 NAME אלימלך חיים שמואל כהנא
+1 SEX M
+1 BIRT
+2 DATE 12 Mar 2010
+2 NOTE כ״ו אדר ב׳ ה׳תשס״ה
+1 FAMC @F4289@
+0 @I20446@ INDI
+1 NAME הרב יעקב שלמה כהנא
+1 SEX M
+1 BIRT
+2 DATE 16 Jul 1988
+2 NOTE ב׳ אב ה׳תשמ״ג
+1 FAMS @F4289@
+0 @I20447@ INDI
+1 NAME ר' שלמה למברגר
+1 SEX M
+1 BIRT
+2 DATE 05 Sep 1980
+2 NOTE כ״ד אלול ה׳תשל״ה
+1 FAMS @F4290@
+0 @I20448@ INDI
+1 NAME משה נתן נטע למברגר
+1 SEX M
+1 BIRT
+2 DATE 03 Nov 2004
+2 NOTE י״ט חשון ה׳תש״ס
+1 FAMC @F4290@
+0 @I20449@ INDI
+1 NAME אברהם למברגר
+1 SEX M
+1 BIRT
+2 DATE 26 Jun 2002
+2 NOTE ט״ז תמוז ה׳תשנ״ז
+1 FAMC @F4290@
+0 @I20450@ INDI
+1 NAME יוכבד רבקה למברגר
+1 SEX M
+1 BIRT
+2 DATE 12 Sep 2006
+2 NOTE י״ט אלול ה׳תשס״א
+1 FAMC @F4290@
+0 @I20451@ INDI
+1 NAME ר' מרדכי פאנעט
+1 SEX M
+1 FAMS @F4291@
+0 @I20452@ INDI
+1 NAME רחל שרה לאה למברגר
+1 SEX M
+1 BIRT
+2 DATE 11 Jun 2009
+2 NOTE י״ט סיון ה׳תשס״ד
+1 FAMC @F4290@
+0 @I20453@ INDI
+1 NAME פיגא פעסיל פאנעט
+1 SEX M
+1 BIRT
+2 DATE 06 Mar 2007
+2 NOTE ט״ז אדר ה׳תשס״ב
+1 FAMC @F4291@
+0 @I20454@ INDI
+1 NAME מר נתן ליפשיץ
+1 SEX M
+1 FAMS @F4292@
+0 @I20455@ INDI
+1 NAME חנה רחל פאנעט
+1 SEX M
+1 BIRT
+2 DATE 10 Nov 2008
+2 NOTE י״ב חשון ה׳תשס״ד
+1 FAMC @F4291@
+0 @I20456@ INDI
+1 NAME יוכבד רבקה ליפשיץ
+1 SEX M
+1 BIRT
+2 DATE 01 Jan 2006
+2 NOTE א׳ טבת ה׳תשס״א
+1 FAMC @F4292@
+0 @I20457@ INDI
+1 NAME ברכה ליפשיץ
+1 SEX M
+1 BIRT
+2 DATE 31 Mar 2009
+2 NOTE ו׳ ניסן ה׳תשס״ד
+1 FAMC @F4292@
+0 @I20458@ INDI
+1 NAME וייס
+1 SEX M
+1 BIRT
+2 DATE 21 May 2009
+2 NOTE כ״ז אייר ה׳תשס״ד
+1 FAMC @F4293@
+0 @I20459@ INDI
+1 NAME הרבנית נחמה אוורבוך (הלברשטם)
+1 SEX F
+1 BIRT
+2 DATE 14 Apr 2009
+2 NOTE כ׳ ניסן ה׳תשס״ד
+1 FAMC @F4294@
+0 @I20460@ INDI
+1 NAME מר נפתלי מנחם וייס
+1 SEX M
+1 BIRT
+2 DATE 24 Aug 1988
+2 NOTE י״א אלול ה׳תשמ״ג
+1 FAMS @F4293@
+0 @I20461@ INDI
+1 NAME מר אהרן גליק
+1 SEX M
+1 BIRT
+2 DATE 07 Nov 1986
+2 NOTE ה׳ חשון ה׳תשמ״ב
+1 FAMS @F4295@
+0 @I20462@ INDI
+1 NAME הרב אברהם צבי שיינפלד
+1 SEX M
+1 BIRT
+2 DATE 03 May 1987
+2 NOTE ד׳ אייר ה׳תשמ״ב
+1 FAMS @F4296@
+0 @I20463@ INDI
+1 NAME מנחם נחום גליק
+1 SEX M
+1 BIRT
+2 DATE 19 May 2008
+2 NOTE י״ד אייר ה׳תשס״ג
+1 FAMC @F4295@
+0 @I20464@ INDI
+1 NAME מלכה שיינפלד
+1 SEX M
+1 BIRT
+2 DATE 02 May 2010
+2 NOTE י״ח אייר ה׳תשס״ה
+1 FAMC @F4296@
+0 @I20465@ INDI
+1 NAME ברוך שיינפלד
+1 SEX M
+1 BIRT
+2 DATE 11 Mar 2009
+2 NOTE ט״ו אדר ה׳תשס״ד
+1 FAMC @F4296@
+0 @I20466@ INDI
+1 NAME הרב ישראל שפירא
+1 SEX M
+1 BIRT
+2 DATE 23 Aug 1989
+2 NOTE כ״ב אב ה׳תשמ״ד
+1 FAMS @F4297@
+0 @I20467@ INDI
+1 NAME שמעון אלתר שפירא
+1 SEX M
+1 BIRT
+2 DATE 23 Jul 2010
+2 NOTE י״ב אב ה׳תשס״ה
+1 FAMC @F4297@
+0 @I20468@ INDI
+1 NAME מרת שיינדל הלברשטם [בעק]
+1 SEX F
+0 @I20469@ INDI
+1 NAME מרת  הלברשטם [ווגשל]
+1 SEX F
+0 @I20470@ INDI
+1 NAME זלאטא זיסל גרינפעלד
+1 SEX M
+1 FAMC @F4298@
+0 @I20471@ INDI
+1 NAME הרב שמעון גרינפעלד
+1 SEX M
+1 BIRT
+2 DATE 25 Oct 1992
+2 NOTE כ"ח תשרי ה'תשמ"ח
+1 FAMS @F4298@
+0 @I20472@ INDI
+1 NAME יהודה גרינפעלד
+1 SEX M
+1 FAMC @F4298@
+0 @I20473@ INDI
+1 NAME ברוך גרינפעלד
+1 SEX M
+1 FAMC @F4298@
+0 @I20474@ INDI
+1 NAME ר' אליעזר מושקוביץ
+1 SEX M
+1 FAMS @F4299@
+0 @I20475@ INDI
+1 NAME ברוך מושקוביץ
+1 SEX M
+1 FAMC @F4299@
+0 @I20476@ INDI
+1 NAME אהרן מושקוביץ
+1 SEX M
+1 FAMC @F4299@
 0 @F1@ FAM
 1 HUSB @I2@
 1 WIFE @I3@
@@ -149359,6 +150547,7 @@
 1 CHIL @I8009@
 0 @F1808@ FAM
 1 HUSB @I3460@
+1 WIFE @I20317@
 1 CHIL @I8008@
 1 CHIL @I8010@
 1 CHIL @I8012@
@@ -159684,6 +160873,7 @@
 1 HUSB @I8218@
 1 WIFE @I15554@
 1 CHIL @I15555@
+1 CHIL @I20318@
 0 @F3260@ FAM
 1 HUSB @I8222@
 1 WIFE @I15556@
@@ -159899,6 +161089,7 @@
 1 CHIL @I15710@
 0 @F3291@ FAM
 1 HUSB @I8460@
+1 WIFE @I20293@
 1 CHIL @I15711@
 1 CHIL @I15712@
 1 CHIL @I15713@
@@ -159940,6 +161131,7 @@
 1 CHIL @I15740@
 1 CHIL @I15741@
 0 @F3296@ FAM
+1 HUSB @I20381@
 1 WIFE @I8465@
 1 CHIL @I15742@
 0 @F3297@ FAM
@@ -166100,4 +167292,274 @@
 1 HUSB @I20274@
 1 WIFE @I19853@
 1 CHIL @I20275@
+0 @F4256@ FAM
+1 HUSB @I20290@
+1 WIFE @I7997@
+1 CHIL @I20291@
+1 CHIL @I20292@
+1 CHIL @I20293@
+0 @F4257@ FAM
+1 HUSB @I8002@
+1 WIFE @I20296@
+1 CHIL @I20297@
+1 CHIL @I20298@
+1 CHIL @I20299@
+1 CHIL @I20300@
+1 CHIL @I20301@
+1 CHIL @I20302@
+1 CHIL @I20303@
+1 CHIL @I20305@
+0 @F4258@ FAM
+1 HUSB @I8003@
+1 WIFE @I20304@
+1 CHIL @I20306@
+1 CHIL @I20307@
+1 CHIL @I20308@
+0 @F4259@ FAM
+1 HUSB @I20309@
+1 WIFE @I8004@
+1 CHIL @I20310@
+1 CHIL @I20311@
+1 CHIL @I20312@
+0 @F4260@ FAM
+1 HUSB @I8006@
+1 WIFE @I20313@
+1 CHIL @I20315@
+0 @F4261@ FAM
+1 HUSB @I20314@
+1 WIFE @I8004@
+1 CHIL @I20316@
+0 @F4262@ FAM
+1 HUSB @I20318@
+1 WIFE @I8009@
+1 CHIL @I20319@
+1 CHIL @I20320@
+0 @F4263@ FAM
+1 HUSB @I20321@
+1 WIFE @I8020@
+1 CHIL @I20322@
+1 CHIL @I20323@
+1 CHIL @I20324@
+1 CHIL @I20325@
+0 @F4264@ FAM
+1 HUSB @I8047@
+1 CHIL @I20327@
+0 @F4265@ FAM
+1 HUSB @I20328@
+1 WIFE @I8050@
+1 CHIL @I20329@
+0 @F4266@ FAM
+1 HUSB @I20330@
+1 WIFE @I8058@
+1 CHIL @I20331@
+1 CHIL @I20332@
+1 CHIL @I20333@
+1 CHIL @I20334@
+1 CHIL @I20335@
+0 @F4267@ FAM
+1 HUSB @I20336@
+1 WIFE @I8062@
+1 CHIL @I20337@
+1 CHIL @I20338@
+1 CHIL @I20339@
+1 CHIL @I20340@
+0 @F4268@ FAM
+1 HUSB @I20341@
+1 WIFE @I8063@
+1 CHIL @I20342@
+0 @F4269@ FAM
+1 HUSB @I8067@
+1 WIFE @I20344@
+1 CHIL @I20343@
+1 CHIL @I20345@
+1 CHIL @I20346@
+1 CHIL @I20347@
+1 CHIL @I20351@
+0 @F4270@ FAM
+1 HUSB @I8068@
+1 WIFE @I20348@
+1 CHIL @I20349@
+1 CHIL @I20350@
+1 CHIL @I20352@
+1 CHIL @I20353@
+1 CHIL @I20354@
+1 CHIL @I20355@
+1 CHIL @I20356@
+1 CHIL @I20357@
+1 CHIL @I20358@
+1 CHIL @I20359@
+0 @F4271@ FAM
+1 HUSB @I8069@
+1 WIFE @I20362@
+1 CHIL @I20360@
+1 CHIL @I20361@
+0 @F4272@ FAM
+1 HUSB @I20363@
+1 WIFE @I8071@
+1 CHIL @I20364@
+1 CHIL @I20365@
+1 CHIL @I20366@
+1 CHIL @I20367@
+1 CHIL @I20368@
+0 @F4273@ FAM
+1 HUSB @I20369@
+1 WIFE @I8073@
+1 CHIL @I20370@
+1 CHIL @I20371@
+1 CHIL @I20372@
+1 CHIL @I20373@
+1 CHIL @I20374@
+0 @F4274@ FAM
+1 HUSB @I20375@
+1 WIFE @I8077@
+1 CHIL @I20376@
+1 CHIL @I20379@
+0 @F4275@ FAM
+1 HUSB @I20377@
+1 WIFE @I8079@
+1 CHIL @I20378@
+0 @F4276@ FAM
+1 HUSB @I8090@
+1 WIFE @I20380@
+1 CHIL @I20381@
+1 CHIL @I20382@
+1 CHIL @I20383@
+1 CHIL @I20384@
+1 CHIL @I20385@
+1 CHIL @I20386@
+1 CHIL @I20387@
+1 CHIL @I20388@
+1 CHIL @I20389@
+0 @F4277@ FAM
+1 HUSB @I20390@
+1 WIFE @I8092@
+1 CHIL @I20391@
+1 CHIL @I20392@
+1 CHIL @I20393@
+1 CHIL @I20394@
+1 CHIL @I20395@
+1 CHIL @I20396@
+0 @F4278@ FAM
+1 HUSB @I20397@
+1 WIFE @I8093@
+1 CHIL @I20398@
+0 @F4279@ FAM
+1 HUSB @I8094@
+1 WIFE @I20399@
+1 CHIL @I20400@
+1 CHIL @I20401@
+1 CHIL @I20402@
+1 CHIL @I20403@
+1 CHIL @I20404@
+0 @F4280@ FAM
+1 HUSB @I20405@
+1 WIFE @I8095@
+1 CHIL @I20406@
+1 CHIL @I20407@
+1 CHIL @I20408@
+1 CHIL @I20409@
+0 @F4281@ FAM
+1 HUSB @I8096@
+1 WIFE @I20410@
+1 CHIL @I20411@
+1 CHIL @I20412@
+1 CHIL @I20413@
+0 @F4282@ FAM
+1 HUSB @I20414@
+1 WIFE @I8097@
+1 CHIL @I20415@
+1 CHIL @I20416@
+1 CHIL @I20417@
+1 CHIL @I20418@
+1 CHIL @I20420@
+0 @F4283@ FAM
+1 HUSB @I8098@
+1 WIFE @I20419@
+1 CHIL @I20421@
+0 @F4284@ FAM
+1 HUSB @I20422@
+1 WIFE @I8099@
+1 CHIL @I20423@
+1 CHIL @I20424@
+0 @F4285@ FAM
+1 HUSB @I8100@
+1 WIFE @I20425@
+1 CHIL @I20426@
+1 CHIL @I20427@
+1 CHIL @I20428@
+0 @F4286@ FAM
+1 HUSB @I8101@
+1 WIFE @I20431@
+1 CHIL @I20429@
+0 @F4287@ FAM
+1 HUSB @I8102@
+1 WIFE @I8453@
+1 CHIL @I20430@
+1 CHIL @I20432@
+1 CHIL @I20433@
+1 CHIL @I20434@
+1 CHIL @I20435@
+1 CHIL @I20436@
+1 CHIL @I20437@
+1 CHIL @I20438@
+0 @F4288@ FAM
+1 HUSB @I20440@
+1 WIFE @I8103@
+1 CHIL @I20439@
+1 CHIL @I20441@
+1 CHIL @I20442@
+0 @F4289@ FAM
+1 HUSB @I20446@
+1 WIFE @I8105@
+1 CHIL @I20444@
+1 CHIL @I20445@
+0 @F4290@ FAM
+1 HUSB @I20447@
+1 WIFE @I8118@
+1 CHIL @I20448@
+1 CHIL @I20449@
+1 CHIL @I20450@
+1 CHIL @I20452@
+0 @F4291@ FAM
+1 HUSB @I20451@
+1 WIFE @I8122@
+1 CHIL @I20453@
+1 CHIL @I20455@
+0 @F4292@ FAM
+1 HUSB @I20454@
+1 WIFE @I8137@
+1 CHIL @I20456@
+1 CHIL @I20457@
+0 @F4293@ FAM
+1 HUSB @I20460@
+1 WIFE @I8138@
+1 CHIL @I20458@
+0 @F4294@ FAM
+1 HUSB @I8144@
+1 WIFE @I10280@
+1 CHIL @I20459@
+0 @F4295@ FAM
+1 HUSB @I20461@
+1 WIFE @I8146@
+1 CHIL @I20463@
+0 @F4296@ FAM
+1 HUSB @I20462@
+1 WIFE @I8158@
+1 CHIL @I20464@
+1 CHIL @I20465@
+0 @F4297@ FAM
+1 HUSB @I20466@
+1 WIFE @I8159@
+1 CHIL @I20467@
+0 @F4298@ FAM
+1 HUSB @I20471@
+1 WIFE @I8176@
+1 CHIL @I20470@
+1 CHIL @I20472@
+1 CHIL @I20473@
+0 @F4299@ FAM
+1 HUSB @I20474@
+1 WIFE @I8178@
+1 CHIL @I20475@
+1 CHIL @I20476@
 0 TRLR
