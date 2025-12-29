@@ -87,8 +87,11 @@ class GedcomExporter:
                 db_id = row['id']
                 ged_id = id_map[db_id]
                 f.write(f"0 @{ged_id}@ INDI\n")
-                if row['name']:
+                if row['first_name'] and row['last_name']:
+                    f.write(f"1 NAME {row['first_name']} /{row['last_name']}/\n")
+                elif row['name']:
                     f.write(f"1 NAME {row['name']}\n")
+
                 if row['gender']:
                     sex = "M" if row['gender'] in ["זכר", "M", "male"] else "F"
                     f.write(f"1 SEX {sex}\n")

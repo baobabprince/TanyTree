@@ -2,8 +2,12 @@ from bs4 import BeautifulSoup
 import re
 from urllib.parse import urlparse, parse_qs
 from src.utils import hebrew_to_civil
+from src.name_parser import NameParser
 
 class Scraper:
+    def __init__(self):
+        self.name_parser = NameParser()
+
     def _get_soup(self, html_content):
         try:
             return BeautifulSoup(html_content, 'lxml')
@@ -37,9 +41,13 @@ class Scraper:
             if not any(ind in name for ind in ["רבי", "הרה\"ק", "אדמו\"ר"]) or "הרבנית" in name:
                 gender = "F"
 
+        parsed_name = self.name_parser.parse_name(name)
+
         data = {
             "id": person_id,
             "name": name,
+            "first_name": parsed_name["first_name"],
+            "last_name": parsed_name["last_name"],
             "birth_date": None,
             "birth_date_civil": None,
             "birth_place": None,

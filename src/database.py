@@ -15,6 +15,8 @@ class DatabaseHelper:
             CREATE TABLE IF NOT EXISTS individuals (
                 id TEXT PRIMARY KEY,
                 name TEXT,
+                first_name TEXT,
+                last_name TEXT,
                 birth_date TEXT,
                 birth_date_civil TEXT,
                 birth_place TEXT,
@@ -39,6 +41,8 @@ class DatabaseHelper:
         required_columns = [
             ("birth_date_civil", "TEXT"),
             ("death_date_civil", "TEXT"),
+            ("first_name", "TEXT"),
+            ("last_name", "TEXT"),
         ]
         for col_name, col_type in required_columns:
             if col_name not in existing_columns:
@@ -59,11 +63,13 @@ class DatabaseHelper:
             cursor = self.conn.cursor()
             cursor.execute("""
                 INSERT OR REPLACE INTO individuals
-                (id, name, birth_date, birth_date_civil, birth_place, death_date, death_date_civil, death_place, gender, url)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                (id, name, first_name, last_name, birth_date, birth_date_civil, birth_place, death_date, death_date_civil, death_place, gender, url)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 data.get("id"),
                 data.get("name"),
+                data.get("first_name"),
+                data.get("last_name"),
                 data.get("birth_date"),
                 data.get("birth_date_civil"),
                 data.get("birth_place"),
