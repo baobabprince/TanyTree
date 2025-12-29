@@ -8,21 +8,29 @@ on:
   workflow_dispatch: # Allow manual trigger
 
 jobs:
+  check-date:
+    runs-on: ubuntu-latest
+    outputs:
+      is_last_day: ${{ steps.check.outputs.is_last_day }}
+    steps:
+      - name: Check if it is the last day of the month
+        id: check
+        run: |
+          # If 10 hours from now the day is 1, then it's currently 10h before the end of the month
+          if [ "$(date +%d -d '+10 hours')" = "01" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "is_last_day=true" >> $GITHUB_OUTPUT
+          else
+            echo "is_last_day=false" >> $GITHUB_OUTPUT
+          fi
+
   update-genealogy:
+    needs: check-date
+    if: needs.check-date.outputs.is_last_day == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
-      - name: Check if it is the last day of the month (10h before end)
-        if: github.event_name == 'schedule'
-        run: |
-          # If 10 hours from now the day is 1, then it's the last day of the month
-          if [ $(date +%d -d "+10 hours") -ne 1 ]; then
-            echo "Not the last day of the month. Skipping scheduled run."
-            exit 0
-          fi
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
