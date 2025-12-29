@@ -32,14 +32,8 @@ class Scraper:
         name_elem = info_container.find('h2')
         name = name_elem.get_text(strip=True) if name_elem else ""
         
-        # Default gender detection based on name/titles
-        gender = "M"
-        female_indicators = ["הרבנית", "מרת", "ע\"ה", "בת"]
-        # If the name contains any female indicator, and doesn't contain male indicators like "רבי" or "רב"
-        # but "הרבנית" contains "רב", so we should be careful.
-        if any(ind in name for ind in female_indicators):
-            if not any(ind in name for ind in ["רבי", "הרה\"ק", "אדמו\"ר"]) or "הרבנית" in name:
-                gender = "F"
+        # Detect gender using NameParser
+        gender = self.name_parser.detect_gender(name) or "M" # Default to M if unknown
 
         parsed_name = self.name_parser.parse_name(name)
 
@@ -48,6 +42,8 @@ class Scraper:
             "name": name,
             "first_name": parsed_name["first_name"],
             "last_name": parsed_name["last_name"],
+            "prefix": parsed_name["prefix"],
+            "suffix": parsed_name["suffix"],
             "birth_date": None,
             "birth_date_civil": None,
             "birth_place": None,
@@ -72,9 +68,7 @@ class Scraper:
             elif 'מקום פטירה' in text:
                 data["death_place"] = text.replace('מקום פטירה:', '').strip()
                 
-        # Improved gender detection if class is present in related links
-        # But for the main person, we might check the photo or other cues.
-        # Let's check the container class again
+        # Explicit gender detection from class overrides name detection
         classes = person_container.get('class', [])
         if "female" in classes:
              data["gender"] = "F"

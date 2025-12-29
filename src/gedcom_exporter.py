@@ -87,8 +87,27 @@ class GedcomExporter:
                 db_id = row['id']
                 ged_id = id_map[db_id]
                 f.write(f"0 @{ged_id}@ INDI\n")
-                if row['first_name'] and row['last_name']:
-                    f.write(f"1 NAME {row['first_name']} /{row['last_name']}/\n")
+                
+                # Export names correctly, prioritizing parsed names
+                first_name = row['first_name'] or ""
+                last_name = row['last_name'] or ""
+                prefix = row['prefix'] or ""
+                suffix = row['suffix'] or ""
+                
+                if first_name or last_name:
+                    name_line = f"1 NAME {first_name} /{last_name}/".replace("  ", " ").strip()
+                    if suffix:
+                        name_line += f" {suffix}"
+                    f.write(f"{name_line}\n")
+                    
+                    if first_name:
+                        f.write(f"2 GIVN {first_name}\n")
+                    if last_name:
+                        f.write(f"2 SURN {last_name}\n")
+                    if prefix:
+                        f.write(f"2 NPFX {prefix}\n")
+                    if suffix:
+                        f.write(f"2 NSFX {suffix}\n")
                 elif row['name']:
                     f.write(f"1 NAME {row['name']}\n")
 

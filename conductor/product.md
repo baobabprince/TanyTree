@@ -14,7 +14,7 @@ The primary users are casual researchers and genealogists interested in the Chab
 
 ## Core Features
 *   **Automated Web Crawling:** A robust crawler designed to traverse the specific structure of baalhatanya.org.il, identifying and visiting all relevant individual and family pages.
-*   **Hebrew-to-GEDCOM Mapping:** Specialized logic to handle Hebrew names, dates, and locations, converting them into standard GEDCOM-compatible strings while preserving the original cultural context where possible.
+*   **Structured Name Extraction:** Advanced name parsing to separate given names, surnames, and honorifics, including the detection of maiden names in brackets, ensuring high fidelity in GEDCOM exports.
 *   **Relationship Mapping:** Comprehensive extraction of family connections, including parents, spouses, and children, to reconstruct a complete and interconnected family tree.
 *   **Biographical Data Extraction:** Capture of birth and death dates, locations, and any available historical notes or descriptions provided on the site.
 

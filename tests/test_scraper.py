@@ -30,8 +30,42 @@ def test_extract_individual_data(sample_html):
     
     assert data["id"] == "111815"
     assert "שניאור זלמן" in data["name"]
+    assert data["first_name"] == "שניאור זלמן"
+    assert data["last_name"] is None
     assert data["birth_date"] == "1745"
     assert data["birth_date_civil"] == "1745"
+    assert data["gender"] == "M"
+
+def test_extract_individual_with_prefix_and_maiden():
+    html = """
+    <div class="person female">
+        <div class="info">
+            <h2>הרבנית הצדקנית מרת רבקה ע"ה [סגל]</h2>
+        </div>
+    </div>
+    """
+    scraper = Scraper()
+    data = scraper.extract_biographical_data(html, url="http://example.com/?i=111814")
+    
+    assert data["first_name"] == "רבקה"
+    assert data["last_name"] == "סגל"
+    assert "הרבנית" in data["prefix"]
+    assert data["gender"] == "F"
+
+def test_extract_individual_with_suffix():
+    html = """
+    <div class="person male">
+        <div class="info">
+            <h2>הרה"ק רבי שלום דובער - האדמו"ר מהורש"א</h2>
+        </div>
+    </div>
+    """
+    scraper = Scraper()
+    data = scraper.extract_biographical_data(html, url="http://example.com/?i=111822")
+    
+    assert data["first_name"] == "שלום דובער"
+    assert data["prefix"] == "הרה\"ק רבי"
+    assert data["suffix"] == "האדמו\"ר מהורש\"א"
     assert data["gender"] == "M"
 
 def test_extract_relationships(sample_html):

@@ -24,7 +24,10 @@ def test_export_empty_gedcom(db, tmp_path):
 def test_export_individual(db, tmp_path):
     db.add_individual({
         "id": "p1",
-        "name": "שניאור זלמן",
+        "name": "הרה\"ק רבי שניאור זלמן מליאדי",
+        "first_name": "שניאור זלמן",
+        "last_name": "מליאדי",
+        "prefix": "הרה\"ק רבי",
         "birth_date": "תק\"ה",
         "birth_date_civil": "1745",
         "death_date": "תקע\"ג",
@@ -40,7 +43,10 @@ def test_export_individual(db, tmp_path):
     with open(output_path, "r", encoding="utf-8") as f:
         content = f.read()
         assert "0 @I1@ INDI" in content
-        assert "1 NAME שניאור זלמן" in content
+        assert "1 NAME שניאור זלמן /מליאדי/" in content
+        assert "2 GIVN שניאור זלמן" in content
+        assert "2 SURN מליאדי" in content
+        assert "2 NPFX הרה\"ק רבי" in content
         assert "1 BIRT" in content
         assert "2 DATE 1745" in content
         assert "2 NOTE תק\"ה" in content
