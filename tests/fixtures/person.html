@@ -1,0 +1,844 @@
+﻿<!DOCTYPE html>
+<html dir="rtl" lang="he-IL" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+		<script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">var ewww_webp_supported=!1;function check_webp_feature(A,e){var w;e=void 0!==e?e:function(){},ewww_webp_supported?e(ewww_webp_supported):((w=new Image).onload=function(){ewww_webp_supported=0<w.width&&0<w.height,e&&e(ewww_webp_supported)},w.onerror=function(){e&&e(!1)},w.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA=="}[A])}check_webp_feature("alpha");</script><script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">var Arrive=function(c,w){"use strict";if(c.MutationObserver&&"undefined"!=typeof HTMLElement){var r,a=0,u=(r=HTMLElement.prototype.matches||HTMLElement.prototype.webkitMatchesSelector||HTMLElement.prototype.mozMatchesSelector||HTMLElement.prototype.msMatchesSelector,{matchesSelector:function(e,t){return e instanceof HTMLElement&&r.call(e,t)},addMethod:function(e,t,r){var a=e[t];e[t]=function(){return r.length==arguments.length?r.apply(this,arguments):"function"==typeof a?a.apply(this,arguments):void 0}},callCallbacks:function(e,t){t&&t.options.onceOnly&&1==t.firedElems.length&&(e=[e[0]]);for(var r,a=0;r=e[a];a++)r&&r.callback&&r.callback.call(r.elem,r.elem);t&&t.options.onceOnly&&1==t.firedElems.length&&t.me.unbindEventWithSelectorAndCallback.call(t.target,t.selector,t.callback)},checkChildNodesRecursively:function(e,t,r,a){for(var i,n=0;i=e[n];n++)r(i,t,a)&&a.push({callback:t.callback,elem:i}),0<i.childNodes.length&&u.checkChildNodesRecursively(i.childNodes,t,r,a)},mergeArrays:function(e,t){var r,a={};for(r in e)e.hasOwnProperty(r)&&(a[r]=e[r]);for(r in t)t.hasOwnProperty(r)&&(a[r]=t[r]);return a},toElementsArray:function(e){return e=void 0!==e&&("number"!=typeof e.length||e===c)?[e]:e}}),e=(l.prototype.addEvent=function(e,t,r,a){a={target:e,selector:t,options:r,callback:a,firedElems:[]};return this._beforeAdding&&this._beforeAdding(a),this._eventsBucket.push(a),a},l.prototype.removeEvent=function(e){for(var t,r=this._eventsBucket.length-1;t=this._eventsBucket[r];r--)e(t)&&(this._beforeRemoving&&this._beforeRemoving(t),(t=this._eventsBucket.splice(r,1))&&t.length&&(t[0].callback=null))},l.prototype.beforeAdding=function(e){this._beforeAdding=e},l.prototype.beforeRemoving=function(e){this._beforeRemoving=e},l),t=function(i,n){var o=new e,l=this,s={fireOnAttributesModification:!1};return o.beforeAdding(function(t){var e=t.target;e!==c.document&&e!==c||(e=document.getElementsByTagName("html")[0]);var r=new MutationObserver(function(e){n.call(this,e,t)}),a=i(t.options);r.observe(e,a),t.observer=r,t.me=l}),o.beforeRemoving(function(e){e.observer.disconnect()}),this.bindEvent=function(e,t,r){t=u.mergeArrays(s,t);for(var a=u.toElementsArray(this),i=0;i<a.length;i++)o.addEvent(a[i],e,t,r)},this.unbindEvent=function(){var r=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<r.length;t++)if(this===w||e.target===r[t])return!0;return!1})},this.unbindEventWithSelectorOrCallback=function(r){var a=u.toElementsArray(this),i=r,e="function"==typeof r?function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.callback===i)return!0;return!1}:function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.selector===r)return!0;return!1};o.removeEvent(e)},this.unbindEventWithSelectorAndCallback=function(r,a){var i=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<i.length;t++)if((this===w||e.target===i[t])&&e.selector===r&&e.callback===a)return!0;return!1})},this},i=new function(){var s={fireOnAttributesModification:!1,onceOnly:!1,existing:!1};function n(e,t,r){return!(!u.matchesSelector(e,t.selector)||(e._id===w&&(e._id=a++),-1!=t.firedElems.indexOf(e._id)))&&(t.firedElems.push(e._id),!0)}var c=(i=new t(function(e){var t={attributes:!1,childList:!0,subtree:!0};return e.fireOnAttributesModification&&(t.attributes=!0),t},function(e,i){e.forEach(function(e){var t=e.addedNodes,r=e.target,a=[];null!==t&&0<t.length?u.checkChildNodesRecursively(t,i,n,a):"attributes"===e.type&&n(r,i)&&a.push({callback:i.callback,elem:r}),u.callCallbacks(a,i)})})).bindEvent;return i.bindEvent=function(e,t,r){t=void 0===r?(r=t,s):u.mergeArrays(s,t);var a=u.toElementsArray(this);if(t.existing){for(var i=[],n=0;n<a.length;n++)for(var o=a[n].querySelectorAll(e),l=0;l<o.length;l++)i.push({callback:r,elem:o[l]});if(t.onceOnly&&i.length)return r.call(i[0].elem,i[0].elem);setTimeout(u.callCallbacks,1,i)}c.call(this,e,t,r)},i},o=new function(){var a={};function i(e,t){return u.matchesSelector(e,t.selector)}var n=(o=new t(function(){return{childList:!0,subtree:!0}},function(e,r){e.forEach(function(e){var t=e.removedNodes,e=[];null!==t&&0<t.length&&u.checkChildNodesRecursively(t,r,i,e),u.callCallbacks(e,r)})})).bindEvent;return o.bindEvent=function(e,t,r){t=void 0===r?(r=t,a):u.mergeArrays(a,t),n.call(this,e,t,r)},o};d(HTMLElement.prototype),d(NodeList.prototype),d(HTMLCollection.prototype),d(HTMLDocument.prototype),d(Window.prototype);var n={};return s(i,n,"unbindAllArrive"),s(o,n,"unbindAllLeave"),n}function l(){this._eventsBucket=[],this._beforeAdding=null,this._beforeRemoving=null}function s(e,t,r){u.addMethod(t,r,e.unbindEvent),u.addMethod(t,r,e.unbindEventWithSelectorOrCallback),u.addMethod(t,r,e.unbindEventWithSelectorAndCallback)}function d(e){e.arrive=i.bindEvent,s(i,e,"unbindArrive"),e.leave=o.bindEvent,s(o,e,"unbindLeave")}}(window,void 0),ewww_webp_supported=!1;function check_webp_feature(e,t){var r;ewww_webp_supported?t(ewww_webp_supported):((r=new Image).onload=function(){ewww_webp_supported=0<r.width&&0<r.height,t(ewww_webp_supported)},r.onerror=function(){t(!1)},r.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",animation:"UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"}[e])}function ewwwLoadImages(e){if(e){for(var t=document.querySelectorAll(".batch-image img, .image-wrapper a, .ngg-pro-masonry-item a, .ngg-galleria-offscreen-seo-wrapper a"),r=0,a=t.length;r<a;r++)ewwwAttr(t[r],"data-src",t[r].getAttribute("data-webp")),ewwwAttr(t[r],"data-thumbnail",t[r].getAttribute("data-webp-thumbnail"));for(var i=document.querySelectorAll("div.woocommerce-product-gallery__image"),r=0,a=i.length;r<a;r++)ewwwAttr(i[r],"data-thumb",i[r].getAttribute("data-webp-thumb"))}for(var n=document.querySelectorAll("video"),r=0,a=n.length;r<a;r++)ewwwAttr(n[r],"poster",e?n[r].getAttribute("data-poster-webp"):n[r].getAttribute("data-poster-image"));for(var o,l=document.querySelectorAll("img.ewww_webp_lazy_load"),r=0,a=l.length;r<a;r++)e&&(ewwwAttr(l[r],"data-lazy-srcset",l[r].getAttribute("data-lazy-srcset-webp")),ewwwAttr(l[r],"data-srcset",l[r].getAttribute("data-srcset-webp")),ewwwAttr(l[r],"data-lazy-src",l[r].getAttribute("data-lazy-src-webp")),ewwwAttr(l[r],"data-src",l[r].getAttribute("data-src-webp")),ewwwAttr(l[r],"data-orig-file",l[r].getAttribute("data-webp-orig-file")),ewwwAttr(l[r],"data-medium-file",l[r].getAttribute("data-webp-medium-file")),ewwwAttr(l[r],"data-large-file",l[r].getAttribute("data-webp-large-file")),null!=(o=l[r].getAttribute("srcset"))&&!1!==o&&o.includes("R0lGOD")&&ewwwAttr(l[r],"src",l[r].getAttribute("data-lazy-src-webp"))),l[r].className=l[r].className.replace(/\bewww_webp_lazy_load\b/,"");for(var s=document.querySelectorAll(".ewww_webp"),r=0,a=s.length;r<a;r++)e?(ewwwAttr(s[r],"srcset",s[r].getAttribute("data-srcset-webp")),ewwwAttr(s[r],"src",s[r].getAttribute("data-src-webp")),ewwwAttr(s[r],"data-orig-file",s[r].getAttribute("data-webp-orig-file")),ewwwAttr(s[r],"data-medium-file",s[r].getAttribute("data-webp-medium-file")),ewwwAttr(s[r],"data-large-file",s[r].getAttribute("data-webp-large-file")),ewwwAttr(s[r],"data-large_image",s[r].getAttribute("data-webp-large_image")),ewwwAttr(s[r],"data-src",s[r].getAttribute("data-webp-src"))):(ewwwAttr(s[r],"srcset",s[r].getAttribute("data-srcset-img")),ewwwAttr(s[r],"src",s[r].getAttribute("data-src-img"))),s[r].className=s[r].className.replace(/\bewww_webp\b/,"ewww_webp_loaded");window.jQuery&&jQuery.fn.isotope&&jQuery.fn.imagesLoaded&&(jQuery(".fusion-posts-container-infinite").imagesLoaded(function(){jQuery(".fusion-posts-container-infinite").hasClass("isotope")&&jQuery(".fusion-posts-container-infinite").isotope()}),jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").imagesLoaded(function(){jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").isotope()}))}function ewwwWebPInit(e){ewwwLoadImages(e),ewwwNggLoadGalleries(e),document.arrive(".ewww_webp",function(){ewwwLoadImages(e)}),document.arrive(".ewww_webp_lazy_load",function(){ewwwLoadImages(e)}),document.arrive("videos",function(){ewwwLoadImages(e)}),"loading"==document.readyState?document.addEventListener("DOMContentLoaded",ewwwJSONParserInit):("undefined"!=typeof galleries&&ewwwNggParseGalleries(e),ewwwWooParseVariations(e))}function ewwwAttr(e,t,r){null!=r&&!1!==r&&e.setAttribute(t,r)}function ewwwJSONParserInit(){"undefined"!=typeof galleries&&check_webp_feature("alpha",ewwwNggParseGalleries),check_webp_feature("alpha",ewwwWooParseVariations)}function ewwwWooParseVariations(e){if(e)for(var t=document.querySelectorAll("form.variations_form"),r=0,a=t.length;r<a;r++){var i=t[r].getAttribute("data-product_variations"),n=!1;try{for(var o in i=JSON.parse(i))void 0!==i[o]&&void 0!==i[o].image&&(void 0!==i[o].image.src_webp&&(i[o].image.src=i[o].image.src_webp,n=!0),void 0!==i[o].image.srcset_webp&&(i[o].image.srcset=i[o].image.srcset_webp,n=!0),void 0!==i[o].image.full_src_webp&&(i[o].image.full_src=i[o].image.full_src_webp,n=!0),void 0!==i[o].image.gallery_thumbnail_src_webp&&(i[o].image.gallery_thumbnail_src=i[o].image.gallery_thumbnail_src_webp,n=!0),void 0!==i[o].image.thumb_src_webp&&(i[o].image.thumb_src=i[o].image.thumb_src_webp,n=!0));n&&ewwwAttr(t[r],"data-product_variations",JSON.stringify(i))}catch(e){}}}function ewwwNggParseGalleries(e){if(e)for(var t in galleries){var r=galleries[t];galleries[t].images_list=ewwwNggParseImageList(r.images_list)}}function ewwwNggLoadGalleries(e){e&&document.addEventListener("ngg.galleria.themeadded",function(e,t){window.ngg_galleria._create_backup=window.ngg_galleria.create,window.ngg_galleria.create=function(e,t){var r=$(e).data("id");return galleries["gallery_"+r].images_list=ewwwNggParseImageList(galleries["gallery_"+r].images_list),window.ngg_galleria._create_backup(e,t)}})}function ewwwNggParseImageList(e){for(var t in e){var r=e[t];if(void 0!==r["image-webp"]&&(e[t].image=r["image-webp"],delete e[t]["image-webp"]),void 0!==r["thumb-webp"]&&(e[t].thumb=r["thumb-webp"],delete e[t]["thumb-webp"]),void 0!==r.full_image_webp&&(e[t].full_image=r.full_image_webp,delete e[t].full_image_webp),void 0!==r.srcsets)for(var a in r.srcsets)nggSrcset=r.srcsets[a],void 0!==r.srcsets[a+"-webp"]&&(e[t].srcsets[a]=r.srcsets[a+"-webp"],delete e[t].srcsets[a+"-webp"]);if(void 0!==r.full_srcsets)for(var i in r.full_srcsets)nggFSrcset=r.full_srcsets[i],void 0!==r.full_srcsets[i+"-webp"]&&(e[t].full_srcsets[i]=r.full_srcsets[i+"-webp"],delete e[t].full_srcsets[i+"-webp"])}return e}check_webp_feature("alpha",ewwwWebPInit);</script>	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+
+	<!-- This site is optimized with the Yoast SEO plugin v26.6 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>אילן היחס - צאצאים</title>
+	<link rel="canonical" href="https://baalhatanya.org.il/איגוד-הצאצאים-של-בעל-התניא-האדמור-הזקן/אילן-היחס/" />
+	<meta property="og:locale" content="he_IL" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="אילן היחס - צאצאים" />
+	<meta property="og:url" content="https://baalhatanya.org.il/איגוד-הצאצאים-של-בעל-התניא-האדמור-הזקן/אילן-היחס/" />
+	<meta property="og:site_name" content="צאצאים" />
+	<meta property="article:modified_time" content="2021-03-16T14:41:12+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="זמן קריאה מוערך" />
+	<meta name="twitter:data1" content="5 דקות" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/","url":"https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/","name":"אילן היחס - צאצאים","isPartOf":{"@id":"https://baalhatanya.org.il/#website"},"datePublished":"2020-09-21T10:28:27+00:00","dateModified":"2021-03-16T14:41:12+00:00","breadcrumb":{"@id":"https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/#breadcrumb"},"inLanguage":"he-IL","potentialAction":[{"@type":"ReadAction","target":["https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/"]}]},{"@type":"BreadcrumbList","@id":"https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"ראשי","item":"https://baalhatanya.org.il/"},{"@type":"ListItem","position":2,"name":"המשפחה","item":"https://baalhatanya.org.il/"},{"@type":"ListItem","position":3,"name":"אילן היחס"}]},{"@type":"WebSite","@id":"https://baalhatanya.org.il/#website","url":"https://baalhatanya.org.il/","name":"צאצאים","description":"איגוד צאצאי רבנו הזקן","publisher":{"@id":"https://baalhatanya.org.il/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://baalhatanya.org.il/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"he-IL"},{"@type":"Organization","@id":"https://baalhatanya.org.il/#organization","name":"צאצאים","url":"https://baalhatanya.org.il/","logo":{"@type":"ImageObject","inLanguage":"he-IL","@id":"https://baalhatanya.org.il/#/schema/logo/image/","url":"https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה.jpg","contentUrl":"https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה.jpg","width":902,"height":373,"caption":"צאצאים"},"image":{"@id":"https://baalhatanya.org.il/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+
+<!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
+<title>אילן היחס - צאצאים</title>
+<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/" />
+<meta property="og:locale" content="he_IL" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="אילן היחס - צאצאים" />
+<meta property="og:url" content="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/" />
+<meta property="og:site_name" content="צאצאים" />
+<meta property="og:updated_time" content="2021-03-16T14:41:12+00:00" />
+<meta property="article:published_time" content="2020-09-21T10:28:27+00:00" />
+<meta property="article:modified_time" content="2021-03-16T14:41:12+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="אילן היחס - צאצאים" />
+<meta name="twitter:label1" content="Time to read" />
+<meta name="twitter:data1" content="Less than a minute" />
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://baalhatanya.org.il/#organization","name":"\u05e6\u05d0\u05e6\u05d0\u05d9\u05dd"},{"@type":"WebSite","@id":"https://baalhatanya.org.il/#website","url":"https://baalhatanya.org.il","name":"\u05e6\u05d0\u05e6\u05d0\u05d9\u05dd","publisher":{"@id":"https://baalhatanya.org.il/#organization"},"inLanguage":"he-IL"},{"@type":"WebPage","@id":"https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/#webpage","url":"https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/","name":"\u05d0\u05d9\u05dc\u05df \u05d4\u05d9\u05d7\u05e1 - \u05e6\u05d0\u05e6\u05d0\u05d9\u05dd","datePublished":"2020-09-21T10:28:27+00:00","dateModified":"2021-03-16T14:41:12+00:00","isPartOf":{"@id":"https://baalhatanya.org.il/#website"},"inLanguage":"he-IL"},{"@type":"Person","@id":"https://baalhatanya.org.il/author/kobishomer/","name":"kobishomer","url":"https://baalhatanya.org.il/author/kobishomer/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/d6c1d969a23b811c4d051810b47fdc068e345648a9466e571654293deee5511e?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/d6c1d969a23b811c4d051810b47fdc068e345648a9466e571654293deee5511e?s=96&amp;d=mm&amp;r=g","caption":"kobishomer","inLanguage":"he-IL"},"worksFor":{"@id":"https://baalhatanya.org.il/#organization"}},{"@type":"Article","headline":"\u05d0\u05d9\u05dc\u05df \u05d4\u05d9\u05d7\u05e1 - \u05e6\u05d0\u05e6\u05d0\u05d9\u05dd","datePublished":"2020-09-21T10:28:27+00:00","dateModified":"2021-03-16T14:41:12+00:00","author":{"@id":"https://baalhatanya.org.il/author/kobishomer/","name":"kobishomer"},"publisher":{"@id":"https://baalhatanya.org.il/#organization"},"name":"\u05d0\u05d9\u05dc\u05df \u05d4\u05d9\u05d7\u05e1 - \u05e6\u05d0\u05e6\u05d0\u05d9\u05dd","@id":"https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/#richSnippet","isPartOf":{"@id":"https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/#webpage"},"inLanguage":"he-IL","mainEntityOfPage":{"@id":"https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/#webpage"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel='dns-prefetch' href='//cdn.enable.co.il' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="צאצאים &laquo; פיד‏" href="https://baalhatanya.org.il/feed/" />
+<link rel="alternate" type="application/rss+xml" title="צאצאים &laquo; פיד תגובות‏" href="https://baalhatanya.org.il/comments/feed/" />
+<link rel='stylesheet' id='rmp-elementor-form-widget-css-css' href='https://baalhatanya.org.il/wp-content/plugins/responder/assets/css/integrations/elementor/form-widget.css?ver=4.4.3' media='all' />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='realmedia-jquery-datepicker-css' href='https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/css/jquery-ui.min.css?ver=6.8.3' media='all' />
+<link rel='stylesheet' id='realmedia-flexcal-css' href='https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/css/flexcal.css?ver=6.8.3' media='all' />
+<link rel='stylesheet' id='realmedia-tree-css' href='https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/css/style.css?ver=6.8.3' media='all' />
+<link rel='stylesheet' id='realmedia-tree-mobile-css' href='https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/css/mobile.css?ver=6.8.3' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-rtl-css' href='https://baalhatanya.org.il/wp-content/plugins/woocommerce/assets/css/woocommerce-layout-rtl.css?ver=10.3.7' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-rtl-css' href='https://baalhatanya.org.il/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen-rtl.css?ver=10.3.7' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-rtl-css' href='https://baalhatanya.org.il/wp-content/plugins/woocommerce/assets/css/woocommerce-rtl.css?ver=10.3.7' media='all' />
+<style id='woocommerce-inline-inline-css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='gateway-css' href='https://baalhatanya.org.il/wp-content/plugins/woocommerce-paypal-payments/modules/ppcp-button/assets/css/gateway.css?ver=3.3.0' media='all' />
+<link rel='stylesheet' id='brands-styles-css' href='https://baalhatanya.org.il/wp-content/plugins/woocommerce/assets/css/brands.css?ver=10.3.7' media='all' />
+<link rel='stylesheet' id='hello-elementor-css' href='https://baalhatanya.org.il/wp-content/themes/hello-elementor/style.min.css?ver=2.9.0' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://baalhatanya.org.il/wp-content/themes/hello-elementor/theme.min.css?ver=2.9.0' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://baalhatanya.org.il/wp-content/plugins/elementor/assets/css/frontend-rtl.min.css?ver=3.33.2' media='all' />
+<link rel='stylesheet' id='e-popup-css' href='https://baalhatanya.org.il/wp-content/plugins/elementor-pro/assets/css/conditionals/popup.min.css?ver=3.34.0' media='all' />
+<link rel='stylesheet' id='widget-image-css' href='https://baalhatanya.org.il/wp-content/plugins/elementor/assets/css/widget-image-rtl.min.css?ver=3.33.2' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://baalhatanya.org.il/wp-content/plugins/elementor/assets/css/widget-heading-rtl.min.css?ver=3.33.2' media='all' />
+<link rel='stylesheet' id='widget-spacer-css' href='https://baalhatanya.org.il/wp-content/plugins/elementor/assets/css/widget-spacer-rtl.min.css?ver=3.33.2' media='all' />
+<link rel='stylesheet' id='widget-form-css' href='https://baalhatanya.org.il/wp-content/plugins/elementor-pro/assets/css/widget-form-rtl.min.css?ver=3.34.0' media='all' />
+<link rel='stylesheet' id='e-animation-fadeIn-css' href='https://baalhatanya.org.il/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css?ver=3.33.2' media='all' />
+<link rel='stylesheet' id='elementor-icons-css' href='https://baalhatanya.org.il/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.44.0' media='all' />
+<link rel='stylesheet' id='elementor-post-1156-css' href='https://baalhatanya.org.il/wp-content/uploads/elementor/css/post-1156.css?ver=1766475364' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css' href='https://baalhatanya.org.il/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.33.2' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css' href='https://baalhatanya.org.il/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.33.2' media='all' />
+<link rel='stylesheet' id='elementor-post-1445-css' href='https://baalhatanya.org.il/wp-content/uploads/elementor/css/post-1445.css?ver=1766475378' media='all' />
+<link rel='stylesheet' id='elementor-post-130245-css' href='https://baalhatanya.org.il/wp-content/uploads/elementor/css/post-130245.css?ver=1766475378' media='all' />
+<link rel='stylesheet' id='elementor-post-134214-css' href='https://baalhatanya.org.il/wp-content/uploads/elementor/css/post-134214.css?ver=1766475366' media='all' />
+<link rel='stylesheet' id='elementor-post-25429-css' href='https://baalhatanya.org.il/wp-content/uploads/elementor/css/post-25429.css?ver=1766475366' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://baalhatanya.org.il/wp-includes/css/dashicons.min.css?ver=6.8.3' media='all' />
+<link rel='stylesheet' id='acf-global-css' href='https://baalhatanya.org.il/wp-content/plugins/advanced-custom-fields-pro/assets/build/css/acf-global.min.css?ver=6.7.0.2' media='all' />
+<link rel='stylesheet' id='acf-input-css' href='https://baalhatanya.org.il/wp-content/plugins/advanced-custom-fields-pro/assets/build/css/acf-input.min.css?ver=6.7.0.2' media='all' />
+<link rel='stylesheet' id='acf-pro-input-css' href='https://baalhatanya.org.il/wp-content/plugins/advanced-custom-fields-pro/assets/build/css/pro/acf-pro-input.min.css?ver=6.7.0.2' media='all' />
+<link rel='stylesheet' id='select2-css' href='https://baalhatanya.org.il/wp-content/plugins/woocommerce/assets/css/select2.css?ver=10.3.7' media='all' />
+<link rel='stylesheet' id='acf-datepicker-css' href='https://baalhatanya.org.il/wp-content/plugins/advanced-custom-fields-pro/assets/inc/datepicker/jquery-ui.min.css?ver=1.11.4' media='all' />
+<link rel='stylesheet' id='acf-timepicker-css' href='https://baalhatanya.org.il/wp-content/plugins/advanced-custom-fields-pro/assets/inc/timepicker/jquery-ui-timepicker-addon.min.css?ver=1.6.1' media='all' />
+<link rel='stylesheet' id='wp-color-picker-rtl-css' href='https://baalhatanya.org.il/wp-admin/css/color-picker-rtl.min.css?ver=6.8.3' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-roboto-css' href='https://baalhatanya.org.il/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1751971195' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-robotoslab-css' href='https://baalhatanya.org.il/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1751971198' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-assistant-css' href='https://baalhatanya.org.il/wp-content/uploads/elementor/google-fonts/css/assistant.css?ver=1751971199' media='all' />
+<script src="https://baalhatanya.org.il/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://baalhatanya.org.il/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="https://baalhatanya.org.il/wp-includes/js/underscore.min.js?ver=1.13.7" id="underscore-js"></script>
+<script id="rmp-ajax-js-js-extra">
+var RMP_AJAX_LOCALS = {"ajaxUrl":"https:\/\/baalhatanya.org.il\/wp-admin\/admin-ajax.php?page=Responder_PluginSettings","_nonce":"b648499e86","direction":"rtl"};
+</script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/responder/assets/js/ajax.js?ver=4.4.3" id="rmp-ajax-js-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/responder/assets/js/integrations/elementor/form-widget.js?ver=4.4.3" id="rmp-elementor-form-widget-js-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.10.3.7" id="wc-jquery-blockui-js" defer data-wp-strategy="defer"></script>
+<script id="wc-add-to-cart-js-extra">
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"\u05de\u05e2\u05d1\u05e8 \u05dc\u05e1\u05dc \u05d4\u05e7\u05e0\u05d9\u05d5\u05ea","cart_url":"https:\/\/baalhatanya.org.il\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+</script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=10.3.7" id="wc-add-to-cart-js" defer data-wp-strategy="defer"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.10.3.7" id="wc-js-cookie-js" defer data-wp-strategy="defer"></script>
+<script id="woocommerce-js-extra">
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_password_show":"\u05dc\u05d4\u05e6\u05d9\u05d2 \u05e1\u05d9\u05e1\u05de\u05d4","i18n_password_hide":"\u05dc\u05d4\u05e1\u05ea\u05d9\u05e8 \u05e1\u05d9\u05e1\u05de\u05d4"};
+</script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=10.3.7" id="woocommerce-js" defer data-wp-strategy="defer"></script>
+<script src="https://baalhatanya.org.il/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.33.2" id="font-awesome-4-shim-js"></script>
+<script src="https://baalhatanya.org.il/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3" id="jquery-ui-mouse-js"></script>
+<script src="https://baalhatanya.org.il/wp-includes/js/jquery/ui/sortable.min.js?ver=1.13.3" id="jquery-ui-sortable-js"></script>
+<script src="https://baalhatanya.org.il/wp-includes/js/jquery/ui/resizable.min.js?ver=1.13.3" id="jquery-ui-resizable-js"></script>
+<script id="acf-js-extra">
+var acfL10n = {"Yes":"\u05db\u05df","No":"\u05dc\u05d0","Remove":"\u05d4\u05e1\u05e8","Minimum rows not reached ({min} rows)":"\u05d4\u05d2\u05e2\u05ea\u05dd \u05dc\u05de\u05d9\u05e0\u05d9\u05de\u05d5\u05dd \u05e9\u05d5\u05e8\u05d5\u05ea \u05d4\u05d0\u05e4\u05e9\u05e8\u05d9 ({min} \u05e9\u05d5\u05e8\u05d5\u05ea)","Maximum rows reached ({max} rows)":"\u05d4\u05d2\u05e2\u05ea\u05dd \u05dc\u05de\u05e7\u05e1\u05d9\u05de\u05d5\u05dd \u05e9\u05d5\u05e8\u05d5\u05ea \u05d4\u05d0\u05e4\u05e9\u05e8\u05d9 ({max} \u05e9\u05d5\u05e8\u05d5\u05ea)","Error loading page":"\u05e9\u05d2\u05d9\u05d0\u05d4 \u05d1\u05d1\u05e7\u05e9\u05ea \u05d4\u05d0\u05d9\u05de\u05d5\u05ea","layout":"\u05e4\u05e8\u05d9\u05e1\u05d4","layouts":"\u05e4\u05e8\u05d9\u05e1\u05d5\u05ea","Fields":"\u05e9\u05d3\u05d5\u05ea","Delete Layout":"\u05de\u05d7\u05d9\u05e7\u05ea \u05e4\u05e8\u05d9\u05e1\u05ea \u05ea\u05d5\u05db\u05df","This field requires at least {min} {label} {identifier}":"\u05e9\u05d3\u05d4 \u05d6\u05d4 \u05d3\u05d5\u05e8\u05e9 \u05dc\u05e4\u05d7\u05d5\u05ea {min} {label} {identifier}","This field has a limit of {max} {label} {identifier}":"\u05dc\u05e9\u05d3\u05d4 \u05d6\u05d4 \u05d9\u05e9 \u05de\u05d2\u05d1\u05dc\u05d4 \u05e9\u05dc  {max} {identifier}","{available} {label} {identifier} available (max {max})":"\u200f{available} {label} {identifier} \u05d6\u05de\u05d9\u05e0\u05d9\u05dd (\u05de\u05e7\u05e1\u05d9\u05de\u05d5\u05dd {max})","{required} {label} {identifier} required (min {min})":"\u200f{required} {label} {identifier} \u05e0\u05d3\u05e8\u05e9 (\u05de\u05d9\u05e0\u05d9\u05de\u05d5\u05dd {min})","Flexible Content requires at least 1 layout":"\u05d3\u05e8\u05d5\u05e9\u05d4 \u05dc\u05e4\u05d7\u05d5\u05ea \u05e4\u05e8\u05d9\u05e1\u05d4 \u05d0\u05d7\u05ea \u05dc\u05ea\u05d5\u05db\u05df \u05d4\u05d2\u05de\u05d9\u05e9","Add Image to Gallery":"\u05d4\u05d5\u05e1\u05e4\u05ea \u05ea\u05de\u05d5\u05e0\u05d4 \u05dc\u05d2\u05dc\u05e8\u05d9\u05d4","Maximum selection reached":"\u05d4\u05d2\u05e2\u05ea\u05dd \u05dc\u05de\u05e7\u05e1\u05d9\u05de\u05d5\u05dd \u05d1\u05d7\u05d9\u05e8\u05d4"};
+</script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/advanced-custom-fields-pro/assets/build/js/acf.min.js?ver=6.7.0.2" id="acf-js"></script>
+<script src="https://baalhatanya.org.il/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
+<script src="https://baalhatanya.org.il/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script src="https://baalhatanya.org.il/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'rtl' ] } );
+</script>
+<script id="wp-a11y-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2023-05-28 22:06:16+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"he_IL"},"Notifications":["\u05d4\u05ea\u05e8\u05d0\u05d5\u05ea"]}},"comment":{"reference":"wp-includes\/js\/dist\/a11y.js"}} );
+</script>
+<script src="https://baalhatanya.org.il/wp-includes/js/dist/a11y.min.js?ver=3156534cc54473497e14" id="wp-a11y-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/advanced-custom-fields-pro/assets/build/js/acf-input.min.js?ver=6.7.0.2" id="acf-input-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/advanced-custom-fields-pro/assets/build/js/pro/acf-pro-input.min.js?ver=6.7.0.2" id="acf-pro-input-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/advanced-custom-fields-pro/assets/build/js/pro/acf-pro-ui-options-page.min.js?ver=6.7.0.2" id="acf-pro-ui-options-page-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/woocommerce/assets/js/select2/select2.full.min.js?ver=4.0.3-wc.10.3.7" id="wc-select2-js" defer data-wp-strategy="defer"></script>
+<script src="https://baalhatanya.org.il/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3" id="jquery-ui-datepicker-js"></script>
+<script id="jquery-ui-datepicker-js-after">
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"\u05e1\u05d2\u05d5\u05e8","currentText":"\u05d4\u05d9\u05d5\u05dd","monthNames":["\u05d9\u05e0\u05d5\u05d0\u05e8","\u05e4\u05d1\u05e8\u05d5\u05d0\u05e8","\u05de\u05e8\u05e5","\u05d0\u05e4\u05e8\u05d9\u05dc","\u05de\u05d0\u05d9","\u05d9\u05d5\u05e0\u05d9","\u05d9\u05d5\u05dc\u05d9","\u05d0\u05d5\u05d2\u05d5\u05e1\u05d8","\u05e1\u05e4\u05d8\u05de\u05d1\u05e8","\u05d0\u05d5\u05e7\u05d8\u05d5\u05d1\u05e8","\u05e0\u05d5\u05d1\u05de\u05d1\u05e8","\u05d3\u05e6\u05de\u05d1\u05e8"],"monthNamesShort":["\u05d9\u05e0\u05d5","\u05e4\u05d1\u05e8","\u05de\u05e8\u05e5","\u05d0\u05e4\u05e8","\u05de\u05d0\u05d9","\u05d9\u05d5\u05e0","\u05d9\u05d5\u05dc","\u05d0\u05d5\u05d2","\u05e1\u05e4\u05d8","\u05d0\u05d5\u05e7","\u05e0\u05d5\u05d1","\u05d3\u05e6\u05de"],"nextText":"\u05dc\u05e9\u05dc\u05d1 \u05d4\u05d1\u05d0","prevText":"\u05e7\u05d5\u05d3\u05dd","dayNames":["\u05d9\u05d5\u05dd \u05e8\u05d0\u05e9\u05d5\u05df","\u05d9\u05d5\u05dd \u05e9\u05e0\u05d9","\u05d9\u05d5\u05dd \u05e9\u05dc\u05d9\u05e9\u05d9","\u05d9\u05d5\u05dd \u05e8\u05d1\u05d9\u05e2\u05d9","\u05d9\u05d5\u05dd \u05d7\u05de\u05d9\u05e9\u05d9","\u05d9\u05d5\u05dd \u05e9\u05d9\u05e9\u05d9","\u05e9\u05d1\u05ea"],"dayNamesShort":["\u05d0","\u05d1","\u05d2","\u05d3","\u05d4","\u05d5","\u05e9"],"dayNamesMin":["\u05d0","\u05d1","\u05d2","\u05d3","\u05d4","\u05d5","\u05e9"],"dateFormat":"MM d, yy","firstDay":0,"isRTL":true});});
+</script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/advanced-custom-fields-pro/assets/inc/timepicker/jquery-ui-timepicker-addon.min.js?ver=1.6.1" id="acf-timepicker-js"></script>
+<script src="https://baalhatanya.org.il/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.3" id="jquery-ui-draggable-js"></script>
+<script src="https://baalhatanya.org.il/wp-includes/js/jquery/ui/slider.min.js?ver=1.13.3" id="jquery-ui-slider-js"></script>
+<script src="https://baalhatanya.org.il/wp-includes/js/jquery/jquery.ui.touch-punch.js?ver=0.2.2" id="jquery-touch-punch-js"></script>
+<script src="https://baalhatanya.org.il/wp-admin/js/iris.min.js?ver=1.0.7" id="iris-js"></script>
+<script id="wp-color-picker-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2024-05-04 18:39:24+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"he_IL"},"Select Color":["\u05d1\u05d7\u05d9\u05e8\u05ea \u05e6\u05d1\u05e2"],"Color value":["\u05e2\u05e8\u05da \u05e6\u05d1\u05e2"],"Select default color":["\u05e6\u05d1\u05e2 \u05d1\u05e8\u05d9\u05e8\u05d5\u05ea \u05de\u05d7\u05d3\u05dc"],"Clear color":["\u05e0\u05e7\u05d4 \u05e6\u05d1\u05e2"],"Clear":["\u05e0\u05e7\u05d4"],"Default":["\u05d1\u05e8\u05d9\u05e8\u05ea \u05de\u05d7\u05d3\u05dc"]}},"comment":{"reference":"wp-admin\/js\/color-picker.js"}} );
+</script>
+<script src="https://baalhatanya.org.il/wp-admin/js/color-picker.min.js?ver=6.8.3" id="wp-color-picker-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/advanced-custom-fields-pro/assets/inc/color-picker-alpha/wp-color-picker-alpha.js?ver=3.0.0" id="acf-color-picker-alpha-js"></script>
+<link rel="https://api.w.org/" href="https://baalhatanya.org.il/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://baalhatanya.org.il/wp-json/wp/v2/pages/1445" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://baalhatanya.org.il/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.3" />
+<link rel='shortlink' href='https://baalhatanya.org.il/?p=1445' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://baalhatanya.org.il/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbaalhatanya.org.il%2F%25d7%2590%25d7%2599%25d7%2592%25d7%2595%25d7%2593-%25d7%2594%25d7%25a6%25d7%2590%25d7%25a6%25d7%2590%25d7%2599%25d7%259d-%25d7%25a9%25d7%259c-%25d7%2591%25d7%25a2%25d7%259c-%25d7%2594%25d7%25aa%25d7%25a0%25d7%2599%25d7%2590-%25d7%2594%25d7%2590%25d7%2593%25d7%259e%25d7%2595%25d7%25a8-%25d7%2594%25d7%2596%25d7%25a7%25d7%259f%2F%25d7%2590%25d7%2599%25d7%259c%25d7%259f-%25d7%2594%25d7%2599%25d7%2597%25d7%25a1%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://baalhatanya.org.il/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbaalhatanya.org.il%2F%25d7%2590%25d7%2599%25d7%2592%25d7%2595%25d7%2593-%25d7%2594%25d7%25a6%25d7%2590%25d7%25a6%25d7%2590%25d7%2599%25d7%259d-%25d7%25a9%25d7%259c-%25d7%2591%25d7%25a2%25d7%259c-%25d7%2594%25d7%25aa%25d7%25a0%25d7%2599%25d7%2590-%25d7%2594%25d7%2590%25d7%2593%25d7%259e%25d7%2595%25d7%25a8-%25d7%2594%25d7%2596%25d7%25a7%25d7%259f%2F%25d7%2590%25d7%2599%25d7%259c%25d7%259f-%25d7%2594%25d7%2599%25d7%2597%25d7%25a1%2F&#038;format=xml" />
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<meta name="generator" content="Elementor 3.33.2; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+<meta name="google-site-verification" content="U6PHEhTXvqGXy3-ezClXIyb41u18zKDAvbawKRpfeks" />
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<noscript><style>.lazyload[data-src]{display:none !important;}</style></noscript><style>.lazyload{background-image:none !important;}.lazyload:before{background-image:none !important;}</style><style>.wp-block-gallery.is-cropped .blocks-gallery-item picture{height:100%;width:100%;}</style><link rel="icon" href="https://baalhatanya.org.il/wp-content/uploads/2020/11/cropped-bigtree-1-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://baalhatanya.org.il/wp-content/uploads/2020/11/cropped-bigtree-1-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://baalhatanya.org.il/wp-content/uploads/2020/11/cropped-bigtree-1-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://baalhatanya.org.il/wp-content/uploads/2020/11/cropped-bigtree-1-270x270.jpg" />
+		<style id="wp-custom-css">
+
+
+/** Start Envato Elements CSS: Public Notary (191-3-70eb4764a3aad3cc77f142b87fa4920d) **/
+
+/* Envato Custom CSS - applied to the element it affects */
+/* border-radius on tab border */
+.envato-kit-195-roundborders .elementor-tabs div{
+	border-radius: 4px
+}
+.envato-kit-195-roundborders .elementor-toggle-item{
+	border-bottom: 1px solid #ccc
+}
+
+/** End Envato Elements CSS: Public Notary (191-3-70eb4764a3aad3cc77f142b87fa4920d) **/
+
+HTML, body{
+
+Overflow-x: hidden; }		</style>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /></head>
+<body class="rtl wp-singular page-template page-template-elementor_canvas page page-id-1445 page-child parent-pageid-1118 wp-custom-logo wp-theme-hello-elementor theme-hello-elementor woocommerce-no-js elementor-default elementor-template-canvas elementor-kit-1156 elementor-page elementor-page-1445">
+			<div data-elementor-type="wp-page" data-elementor-id="1445" class="elementor elementor-1445" data-elementor-post-type="page">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-ae98338 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="ae98338" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-dfdbbff" data-id="dfdbbff" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-92c899c elementor-widget elementor-widget-template" data-id="92c899c" data-element_type="widget" data-widget_type="template.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-template">
+					<header data-elementor-type="header" data-elementor-id="1356" class="elementor elementor-1356" data-elementor-post-type="elementor_library">
+					<header class="elementor-section elementor-top-section elementor-element elementor-element-2a6489a elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2a6489a" data-element_type="section" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0,&quot;sticky_anchor_link_offset&quot;:0}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-67a8891" data-id="67a8891" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-d49e6bf elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="d49e6bf" data-element_type="widget" data-widget_type="theme-site-logo.default">
+				<div class="elementor-widget-container">
+											<a href="https://baalhatanya.org.il">
+			<picture><source  sizes='(max-width: 902px) 100vw, 902px' type="image/webp" data-srcset="https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה.jpg.webp 902w, https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה-600x248.jpg 600w, https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה-300x124.jpg.webp 300w, https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה-768x318.jpg.webp 768w"><img fetchpriority="high" decoding="async" width="902" height="373" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA4YAAAF1AQAAAACckck+AAAAAnRSTlMAAHaTzTgAAABASURBVHja7cEBDQAAAMKg909tDwcUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMCbAaYaAAGKj+yyAAAAAElFTkSuQmCC" class="attachment-full size-full wp-image-25213 lazyload" alt=""   data-eio="p" data-src="https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה.jpg" data-srcset="https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה.jpg 902w, https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה-600x248.jpg 600w, https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה-300x124.jpg 300w, https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה-768x318.jpg 768w" data-sizes="auto" data-eio-rwidth="902" data-eio-rheight="373" /></picture><noscript><img fetchpriority="high" decoding="async" width="902" height="373" src="https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה.jpg" class="attachment-full size-full wp-image-25213" alt="" srcset="https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה.jpg 902w, https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה-600x248.jpg 600w, https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה-300x124.jpg 300w, https://baalhatanya.org.il/wp-content/uploads/2021/02/לשנות-את-הצבע-של-הלוגו-לצבע-זה-768x318.jpg 768w" sizes="(max-width: 902px) 100vw, 902px" data-eio="l" /></noscript>				</a>
+											</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4f8c340" data-id="4f8c340" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-683adfe elementor-nav-menu__align-end elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-nav-menu--dropdown-tablet elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="683adfe" data-element_type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="תפריט" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
+				<ul id="menu-1-683adfe" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1922"><a href="https://baalhatanya.org.il/about/" class="elementor-item">האיגוד</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1959"><a href="https://baalhatanya.org.il/about/%d7%90%d7%95%d7%93%d7%95%d7%aa/" class="elementor-sub-item">אודות</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1918"><a href="https://baalhatanya.org.il/about/%d7%9b%d7%9a-%d7%96%d7%94-%d7%94%d7%aa%d7%97%d7%99%d7%9c-2/" class="elementor-sub-item">כך זה התחיל</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1653"><a href="https://baalhatanya.org.il/%d7%a4%d7%a2%d7%99%d7%9c%d7%95%d7%aa-%d7%95%d7%90%d7%99%d7%a8%d7%95%d7%a2%d7%99%d7%9d/" class="elementor-sub-item">פעילות ואירועים</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1917"><a href="https://baalhatanya.org.il/about/%d7%9b%d7%9a-%d7%96%d7%94-%d7%94%d7%aa%d7%97%d7%99%d7%9c/" class="elementor-sub-item">הרבי ואיגוד הצאצאים</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1651"><a href="https://baalhatanya.org.il/about/%d7%a1%d7%a4%d7%a8-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d/" class="elementor-sub-item">ספר הצאצאים</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1316"><a href="https://baalhatanya.org.il/" class="elementor-item">המשפחה</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1445 current_page_item menu-item-1668"><a href="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/" aria-current="page" class="elementor-sub-item elementor-item-active">אילן היחס</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1505"><a href="https://baalhatanya.org.il/saba/" class="elementor-item">הסבא</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1886"><a href="https://baalhatanya.org.il/saba/%d7%9e%d7%a1%d7%9b%d7%aa-%d7%97%d7%99%d7%99%d7%95/" class="elementor-sub-item">מסכת חייו</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1722"><a href="https://baalhatanya.org.il/saba/%d7%94%d7%9e%d7%95%d7%a8%d7%a9%d7%aa/" class="elementor-sub-item">המורשת</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1659"><a href="https://baalhatanya.org.il/saba/%d7%a1%d7%99%d7%a4%d7%95%d7%a8%d7%99%d7%9d-%d7%a2%d7%9c-%d7%a1%d7%91%d7%90/" class="elementor-sub-item">סיפורים על סבא</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131121"><a href="https://baalhatanya.org.il/saba/%d7%9e%d7%a0%d7%92%d7%a0%d7%99%d7%9d-%d7%a2%d7%9d-%d7%a1%d7%91%d7%90-2/" class="elementor-sub-item">מנגנים עם סבא</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1276"><a href="https://baalhatanya.org.il/%d7%99%d7%a6%d7%99%d7%a8%d7%aa-%d7%a7%d7%a9%d7%a8/" class="elementor-item">נשמח להכיר</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="כפתור פתיחת תפריט" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-683adfe" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1922"><a href="https://baalhatanya.org.il/about/" class="elementor-item" tabindex="-1">האיגוד</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1959"><a href="https://baalhatanya.org.il/about/%d7%90%d7%95%d7%93%d7%95%d7%aa/" class="elementor-sub-item" tabindex="-1">אודות</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1918"><a href="https://baalhatanya.org.il/about/%d7%9b%d7%9a-%d7%96%d7%94-%d7%94%d7%aa%d7%97%d7%99%d7%9c-2/" class="elementor-sub-item" tabindex="-1">כך זה התחיל</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1653"><a href="https://baalhatanya.org.il/%d7%a4%d7%a2%d7%99%d7%9c%d7%95%d7%aa-%d7%95%d7%90%d7%99%d7%a8%d7%95%d7%a2%d7%99%d7%9d/" class="elementor-sub-item" tabindex="-1">פעילות ואירועים</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1917"><a href="https://baalhatanya.org.il/about/%d7%9b%d7%9a-%d7%96%d7%94-%d7%94%d7%aa%d7%97%d7%99%d7%9c/" class="elementor-sub-item" tabindex="-1">הרבי ואיגוד הצאצאים</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1651"><a href="https://baalhatanya.org.il/about/%d7%a1%d7%a4%d7%a8-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d/" class="elementor-sub-item" tabindex="-1">ספר הצאצאים</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1316"><a href="https://baalhatanya.org.il/" class="elementor-item" tabindex="-1">המשפחה</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1445 current_page_item menu-item-1668"><a href="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/" aria-current="page" class="elementor-sub-item elementor-item-active" tabindex="-1">אילן היחס</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1505"><a href="https://baalhatanya.org.il/saba/" class="elementor-item" tabindex="-1">הסבא</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1886"><a href="https://baalhatanya.org.il/saba/%d7%9e%d7%a1%d7%9b%d7%aa-%d7%97%d7%99%d7%99%d7%95/" class="elementor-sub-item" tabindex="-1">מסכת חייו</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1722"><a href="https://baalhatanya.org.il/saba/%d7%94%d7%9e%d7%95%d7%a8%d7%a9%d7%aa/" class="elementor-sub-item" tabindex="-1">המורשת</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1659"><a href="https://baalhatanya.org.il/saba/%d7%a1%d7%99%d7%a4%d7%95%d7%a8%d7%99%d7%9d-%d7%a2%d7%9c-%d7%a1%d7%91%d7%90/" class="elementor-sub-item" tabindex="-1">סיפורים על סבא</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131121"><a href="https://baalhatanya.org.il/saba/%d7%9e%d7%a0%d7%92%d7%a0%d7%99%d7%9d-%d7%a2%d7%9d-%d7%a1%d7%91%d7%90-2/" class="elementor-sub-item" tabindex="-1">מנגנים עם סבא</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1276"><a href="https://baalhatanya.org.il/%d7%99%d7%a6%d7%99%d7%a8%d7%aa-%d7%a7%d7%a9%d7%a8/" class="elementor-item" tabindex="-1">נשמח להכיר</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-035f6d3 elementor-align-left elementor-hidden-desktop elementor-widget elementor-widget-button" data-id="035f6d3" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://baalhatanya.org.il/%d7%9c%d7%aa%d7%a8%d7%95%d7%9e%d7%94/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">שותפים איתנו</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-71e8dd2 elementor-hidden-tablet elementor-hidden-phone" data-id="71e8dd2" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3a44063 elementor-align-left elementor-widget elementor-widget-button" data-id="3a44063" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://baalhatanya.org.il/%d7%9c%d7%aa%d7%a8%d7%95%d7%9e%d7%94/">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="fas fa-pen-alt"></i>			</span>
+									<span class="elementor-button-text">שותפים איתנו</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</header>
+				</header>
+				</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a23ba2e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a23ba2e" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1591ec8" data-id="1591ec8" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-1a1f0d5 elementor-widget elementor-widget-shortcode" data-id="1a1f0d5" data-element_type="widget" data-widget_type="shortcode.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-shortcode"><div class="realmedia-tree"><div class="navigation-search"><div class="search"><form method="get" action="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/?i=111815"><input type="hidden" name="i" value="111815"/><input type="text" name="d" placeholder="חיפוש צאצא" value="" /><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="navigation"><ul><li><a href="/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/?edit=1&i=111815"><i class="fas fa-pencil-alt"></i>עריכת פרטים</a></li><li><a href="/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/?addinfo=1&i=111815"><i class="fas fa-user-plus"></i>הוספת פרטים<br/>ביוגרפיים</a></li><li><a href="/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/?add=1&i=111815"><i class="fas fa-sitemap"></i>הוספת בן משפחה</a></li></ul></div></div><div class="current-view"><ul class="parents"><li><a href="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1//?i=111813" class="male"><div class="photo lazyload" style="" data-back="https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/img/nophoto.jpg" data-eio-rwidth="150" data-eio-rheight="150"></div><div class="info"><h3>הרה&quot;ק רבי ברוך זצוקללה&quot;ה</h3></div></a></li><li><a href="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1//?i=111814" class="female"><div class="photo lazyload" style="" data-back="https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/img/nophoto.jpg" data-eio-rwidth="150" data-eio-rheight="150"></div><div class="info"><h3>הרבנית הצדקנית מרת רבקה ע&quot;ה [סגל]</h3></div></a></li></ul><div class="person"><div class="img"><div class="picture lazyload" style="" data-back="https://baalhatanya.org.il/wp-content/uploads/2022/09/אדמור-הזקן-בעל-התניא-ושוע-הרב.jpg" data-eio-rwidth="215" data-eio-rheight="235" data-back-webp="https://baalhatanya.org.il/wp-content/uploads/2022/09/אדמור-הזקן-בעל-התניא-ושוע-הרב.jpg.webp" data-back-webp="https://baalhatanya.org.il/wp-content/uploads/2022/09/אדמור-הזקן-בעל-התניא-ושוע-הרב.jpg.webp"></div></div><div class="info"><h2>רבנו הגדול בעל התניא והשולחן ערוך רבי שניאור זלמן מליאדי זי&quot;ע</h2><h4><a href="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1//?i=111820">הרבנית הצדקנית מרת סטערנא</a></h4><ul><li><i class="far fa-calendar-alt"></i><strong>תאריך לידה: </strong> י״ח אלול ה׳תק״ה</li><li><i class="fas fa-location-arrow"></i><strong>מקום לידה: </strong>בסביבות העיר ליוזנא</li><li><i class="fas fa-burn"></i><strong>תאריך פטירה: </strong>כ״ד טבת ה׳תקע״ג</li><li><i class="fas fa-location-arrow"></i><strong>מקום פטירה: </strong>כפר פיענא</li></ul><ol><li><a href="/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/?edit=1&i=111815"><i class="fas fa-pencil-alt"></i></a></li><li><a href="/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/?addinfo=1&i=111815"><i class="fas fa-user-plus"></i></a></li><li><a href="/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1/?add=1&i=111815"><i class="fas fa-sitemap"></i></a></li></ol></div></div><ul class="kids"><li><a href="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1//?i=111821" class="female"><div class="photo lazyload" style="" data-back="https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/img/nophoto.jpg" data-eio-rwidth="150" data-eio-rheight="150"></div><div class="info"><h3>הרבנית הצדקנית פריידא</h3><span>2 ילדים</span></div></a></li><li><a href="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1//?i=111822" class="male"><div class="photo lazyload" style="" data-back="https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/img/nophoto.jpg" data-eio-rwidth="150" data-eio-rheight="150"></div><div class="info"><h3>כ&quot;ק אדמו&quot;ר האמצעי רבי דובער מליובאוויטש זי&quot;ע</h3><span>12 ילדים</span></div></a></li><li><a href="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1//?i=111823" class="male"><div class="photo lazyload" style="" data-back="https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/img/nophoto.jpg" data-eio-rwidth="150" data-eio-rheight="150"></div><div class="info"><h3>הרה&quot;ק רבי משה שניאורי</h3><span>2 ילדים</span></div></a></li><li><a href="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1//?i=111824" class="male"><div class="photo lazyload" style="" data-back="https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/img/nophoto.jpg" data-eio-rwidth="150" data-eio-rheight="150"></div><div class="info"><h3>הרה&quot;ק רבי חיים אברהם שניאורסון</h3><span>5 ילדים</span></div></a></li><li><a href="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1//?i=111825" class="female"><div class="photo lazyload" style="" data-back="https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/img/nophoto.jpg" data-eio-rwidth="150" data-eio-rheight="150"></div><div class="info"><h3>הרבנית הצדקנית דבורה לאה ע&quot;ה</h3><span>1 ילדים</span></div></a></li><li><a href="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1//?i=111826" class="female"><div class="photo lazyload" style="" data-back="https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/img/nophoto.jpg" data-eio-rwidth="150" data-eio-rheight="150"></div><div class="info"><h3>הרבנית רחל שיינעס</h3></div></a></li></ul></div><div class="roots"><img decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAANzAQAAAAASeQ/JAAAAAnRSTlMAAHaTzTgAAACDSURBVHja7cExAQAAAMKg9U9tB2+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA3wCyqQABdqcMPgAAAABJRU5ErkJggg==" alt="" data-src="https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/img/tree.jpg" class="lazyload" data-eio-rwidth="1000" data-eio-rheight="883" /><noscript><img decoding="async" src="https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/img/tree.jpg" alt="" data-eio="l" /></noscript><h1>אילן יוחסין</h1><ol><li><a href="https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%97%d7%a1//?i=111815" class="male"><div class="photo"><picture><source   type="image/webp" data-srcset="https://baalhatanya.org.il/wp-content/uploads/2022/09/אדמור-הזקן-בעל-התניא-ושוע-הרב.jpg.webp"><img decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANcAAADrAQAAAADSvj7OAAAAAnRSTlMAAHaTzTgAAAAdSURBVFjD7cExAQAAAMKg9U9tDB+gAAAAAAAAeBsZtAABeOSSMQAAAABJRU5ErkJggg==" alt="" data-eio="p" data-src="https://baalhatanya.org.il/wp-content/uploads/2022/09/אדמור-הזקן-בעל-התניא-ושוע-הרב.jpg" class="lazyload" data-eio-rwidth="215" data-eio-rheight="235" /></picture><noscript><img decoding="async" src="https://baalhatanya.org.il/wp-content/uploads/2022/09/אדמור-הזקן-בעל-התניא-ושוע-הרב.jpg" alt="" data-eio="l" /></noscript></div><div class="info"><h3>רבנו הגדול בעל התניא והשולחן ערוך רבי שניאור זלמן מליאדי זי&quot;ע</h3></div></a></li></ol></div><a href="https://baalhatanya.org.il/%d7%9e%d7%a9%d7%95%d7%91-%d7%a2%d7%9c-%d7%94%d7%90%d7%99%d7%9c%d7%9f/" class="mashov"><i class="fas fa-pencil-alt"></i> כתיבת משוב על אילן</a></div></div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-30a6fae elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="30a6fae" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-013bbc0" data-id="013bbc0" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-21b7822 elementor-widget elementor-widget-template" data-id="21b7822" data-element_type="widget" data-widget_type="template.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-template">
+					<footer data-elementor-type="footer" data-elementor-id="1359" class="elementor elementor-1359" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-3cf26492 elementor-section-content-middle elementor-hidden-mobile elementor-hidden-desktop elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3cf26492" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-60712b9c" data-id="60712b9c" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2123bb07 elementor-widget elementor-widget-heading" data-id="2123bb07" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">קרוב יקר, פעילות האיגוד מתקיימת אודות לבני משפחה שרעיון האיגוד קרוב לליבם. </h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-da89c40 elementor-widget elementor-widget-text-editor" data-id="da89c40" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><span style="font-weight: 400;">בני משפחה ביולוגיים וגם בני משפחה רוחניים, קשורים ומחוברים לסבא  הרואים בשותפות במפעל 'איגוד הצאצאים' דרך להכרת טובה. </span><span style="font-weight: 400;">שום גוף  לא עומד מאחורי מימון הפעילות. <br /></span><span style="font-weight: 400;">אנו קוראים לך להצטרף וכמוהם לתת כתף. </span><span style="font-weight: 400;">כך נוכל להמשיך וגם להרחיב  את הפעילות שמעצימה את כולנו</span></p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-7088e4fd elementor-align-center elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-id="7088e4fd" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow" href="https://baalhatanya.org.il/%d7%99%d7%a6%d7%99%d7%a8%d7%aa-%d7%a7%d7%a9%d7%a8/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">שותפים אתנו - מכאן!</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<footer class="elementor-section elementor-top-section elementor-element elementor-element-86d106d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="86d106d" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_bottom&quot;:&quot;split&quot;}">
+							<div class="elementor-background-overlay"></div>
+						<div class="elementor-shape elementor-shape-bottom" aria-hidden="true" data-negative="false">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 20" preserveAspectRatio="none">
+	<path class="elementor-shape-fill" d="M0,0v3c0,0,393.8,0,483.4,0c9.2,0,16.6,7.4,16.6,16.6c0-9.1,7.4-16.6,16.6-16.6C606.2,3,1000,3,1000,3V0H0z"/>
+</svg>		</div>
+					<div class="elementor-container elementor-column-gap-wider">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a00e1d2" data-id="a00e1d2" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-8a92835 elementor-widget elementor-widget-heading" data-id="8a92835" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">נשמח להכיר!</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-10dcca8 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="10dcca8" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-39f5ea2 elementor-widget elementor-widget-text-editor" data-id="39f5ea2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p style="text-align: right;"><strong>צאצא יקר! צאצאית יקרה!</strong><br />יש לכם שאלה? רעיון? הצעה?<br />בכל דבר ועניין אנו כאן בשבילכם!</p><p><strong>הרב יצחק מאיר הלפרין    </strong><strong> הרב משה צבי הלפרין</strong></p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-6c84d7b elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="6c84d7b" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-phone"></i>						</span>
+										<span class="elementor-icon-list-text">טלפון: 025370515</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://wa.me/972587628770" target="_blank" rel="noopener">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-whatsapp"></i>						</span>
+										<span class="elementor-icon-list-text">וואטסאפ: 0587628770</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-fax"></i>						</span>
+										<span class="elementor-icon-list-text">פקס: 15325370762</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-envelope-open"></i>						</span>
+										<span class="elementor-icon-list-text"> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3d525b5b545e587d5f5c5c51555c495c53445c13524f5a135451">[email&#160;protected]</a></span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.facebook.com/baalhatanya/" target="_blank" rel="noopener">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-facebook-f"></i>						</span>
+										<span class="elementor-icon-list-text">דף הפייסבוק שלנו</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.youtube.com/@%D7%90%D7%99%D7%92%D7%95%D7%93%D7%94%D7%A6%D7%90%D7%A6%D7%90%D7%99%D7%9D-%D7%935%D7%91" target="_blank" rel="noopener">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-youtube"></i>						</span>
+										<span class="elementor-icon-list-text">ערוץ היוטיוב שלנו</span>
+											</a>
+									</li>
+						</ul>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3261f73" data-id="3261f73" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6fcd013 elementor-widget elementor-widget-heading" data-id="6fcd013" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">כתבו לנו:</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-87da0b2 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="87da0b2" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-44ba429 elementor-button-align-end elementor-widget elementor-widget-form" data-id="44ba429" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;\u05d4\u05d1\u05d0&quot;,&quot;step_previous_label&quot;:&quot;\u05d4\u05e7\u05d5\u05d3\u05dd&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
+				<div class="elementor-widget-container">
+							<form class="elementor-form" method="post" name="טופס חדש" aria-label="טופס חדש">
+			<input type="hidden" name="post_id" value="1359"/>
+			<input type="hidden" name="form_id" value="44ba429"/>
+			<input type="hidden" name="referer_title" value="הרב מרגלית - צאצאים" />
+
+							<input type="hidden" name="queried_id" value="128377"/>
+
+			<div class="elementor-form-fields-wrapper elementor-labels-">
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-50 elementor-field-required">
+												<label for="form-field-name" class="elementor-field-label elementor-screen-only">
+								שם מלא:							</label>
+														<input size="1" type="text" name="form_fields[name]" id="form-field-name" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="שם מלא:" required="required">
+											</div>
+								<div class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-field_9fb471a elementor-col-50">
+												<label for="form-field-field_9fb471a" class="elementor-field-label elementor-screen-only">
+								טלפון:							</label>
+								<input size="1" type="tel" name="form_fields[field_9fb471a]" id="form-field-field_9fb471a" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="טלפון:" pattern="[0-9()#&amp;+*-=.]+" title="מותר להשתמש רק במספרים ותווי טלפון (#, -, *, וכו&#039;).">
+
+						</div>
+								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
+												<label for="form-field-email" class="elementor-field-label elementor-screen-only">
+								אימייל:							</label>
+														<input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="אימייל:" required="required">
+											</div>
+								<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100">
+												<label for="form-field-message" class="elementor-field-label elementor-screen-only">
+								הודעה:							</label>
+						<textarea class="elementor-field-textual elementor-field  elementor-size-sm" name="form_fields[message]" id="form-field-message" rows="4" placeholder="הודעה:"></textarea>				</div>
+								<div class="elementor-field-type-text">
+					<input size="1" type="text" name="form_fields[field_3cc4f6c]" id="form-field-field_3cc4f6c" class="elementor-field elementor-size-sm " style="display:none !important;">				</div>
+								<div class="elementor-field-type-recaptcha_v3 elementor-field-group elementor-column elementor-field-group-field_f0e5474 elementor-col-100 recaptcha_v3-bottomright">
+					<div class="elementor-field" id="form-field-field_f0e5474"><div class="elementor-g-recaptcha" data-sitekey="6Le7bm8qAAAAAId7OJZyP7i4gpSk7ZtupzTx7k5a" data-type="v3" data-action="Form" data-badge="bottomright" data-size="invisible"></div></div>				</div>
+								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+					<button class="elementor-button elementor-size-sm" type="submit">
+						<span class="elementor-button-content-wrapper">
+																						<span class="elementor-button-text">שליחה</span>
+													</span>
+					</button>
+				</div>
+			</div>
+		</form>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-1808468 elementor-mobile-align-justify elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-button" data-id="1808468" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="tel:972587628770%20">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="fas fa-phone"></i>			</span>
+									<span class="elementor-button-text">התקשר עכשיו</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				<div class="elementor-element elementor-element-be8f4ca elementor-mobile-align-justify elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-button" data-id="be8f4ca" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://api.whatsapp.com/send?phone=972587628770%20" target="_blank" rel="noopener">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="fab fa-whatsapp"></i>			</span>
+									<span class="elementor-button-text">שלח וואטסאפ</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</footer>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-986f19e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="986f19e" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-569c5aa" data-id="569c5aa" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a81f43c elementor-view-default elementor-widget elementor-widget-icon" data-id="a81f43c" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+			<i aria-hidden="true" class="fas fa-fire"></i>			</div>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-070dd1e elementor-widget elementor-widget-heading" data-id="070dd1e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">האתר מוקדש</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e38fcad elementor-widget elementor-widget-heading" data-id="e38fcad" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">לע"נ מר שמואל משה יהודה לייב אבן אור  אורנשטיין ז"ל</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-8c3f7be elementor-widget elementor-widget-text-editor" data-id="8c3f7be" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>בנם של רב הכותל הרב יצחק אביגדור הי&quot;ד והרבנית מושקא ליבה הי&quot;ד אורנשטיין<br />דור שביעי לרבנו הזקן זי&quot;ע</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-6fc7db9 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="6fc7db9" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-cd5ae34 elementor-widget elementor-widget-text-editor" data-id="cd5ae34" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>באדיבות בתו וחתנו לבה ואמוץ ירדן שיחיו</p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-936cc4d elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="936cc4d" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ae8afc3" data-id="ae8afc3" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4af9cce elementor-position-right elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="4af9cce" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<span  class="elementor-icon">
+				<i aria-hidden="true" class="fas fa-copyright"></i>				</span>
+			</div>
+
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<span  >
+							כל הזכויות שמורות ל'איגוד הצאצאים' (ע"ר) 						</span>
+					</h3>
+
+
+			</div>
+
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7dc0f33" data-id="7dc0f33" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7742b68 elementor-hidden-phone elementor-widget elementor-widget-text-editor" data-id="7742b68" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h6>Made by:<strong> <a href="http://www.kobish.com" target="_blank" rel="noopener">kobish.com</a></strong></h6>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</footer>
+				</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/hello-elementor\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<div data-elementor-type="popup" data-elementor-id="130245" class="elementor elementor-130245 elementor-location-popup" data-elementor-settings="{&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:{&quot;page_load&quot;:&quot;yes&quot;,&quot;page_load_delay&quot;:0},&quot;timing&quot;:{&quot;times_times&quot;:1,&quot;times&quot;:&quot;yes&quot;}}" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-be29e67 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="be29e67" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-681594e" data-id="681594e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-45acf12 elementor-widget elementor-widget-text-editor" data-id="45acf12" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h2 style="text-align: center;"><strong>קרובים יקרים!</strong></h2><h4>באילן היחס הושקעו משאבים ומאמצים רבים, אך הוא במפורש לא מושלם.</h4><h4>לשם כך בדיוק, הוא מוצג לפניכם כאן.</h4><h4>נודה לכם על כל הערה והארה באיות שמות, תאריכים, תארים ראויים, שיוך להורה הנכון (במקרה של יותר מזיווג אחד), וכמובן שילוב נכון בסולם הדורות.</h4>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+				<div data-elementor-type="popup" data-elementor-id="134214" class="elementor elementor-134214 elementor-location-popup" data-elementor-settings="{&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-04843ae elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="04843ae" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b4454bd" data-id="b4454bd" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-e5c6721 elementor-widget elementor-widget-image" data-id="e5c6721" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<picture><source  sizes='(max-width: 723px) 100vw, 723px' type="image/webp" data-srcset="https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-723x1024.jpg.webp 723w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-600x850.jpg.webp 600w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-212x300.jpg.webp 212w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-768x1087.jpg.webp 768w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-1085x1536.jpg.webp 1085w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12.jpg.webp 1130w"><img width="723" height="1024" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtMAAAQAAQAAAAAL9egnAAAAAnRSTlMAAHaTzTgAAABySURBVHja7cGBAAAAAMOg+VNf4QBVAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAYcA8AAYtjbyoAAAAASUVORK5CYII=" class="attachment-large size-large wp-image-134215 lazyload" alt=""   data-eio="p" data-src="https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-723x1024.jpg" decoding="async" data-srcset="https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-723x1024.jpg 723w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-600x850.jpg 600w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-212x300.jpg 212w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-768x1087.jpg 768w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-1085x1536.jpg 1085w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12.jpg 1130w" data-sizes="auto" data-eio-rwidth="723" data-eio-rheight="1024" /></picture><noscript><img width="723" height="1024" src="https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-723x1024.jpg" class="attachment-large size-large wp-image-134215" alt="" srcset="https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-723x1024.jpg 723w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-600x850.jpg 600w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-212x300.jpg 212w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-768x1087.jpg 768w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12-1085x1536.jpg 1085w, https://baalhatanya.org.il/wp-content/uploads/2024/09/unnamed-12.jpg 1130w" sizes="(max-width: 723px) 100vw, 723px" data-eio="l" /></noscript>															</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+				<div data-elementor-type="popup" data-elementor-id="25429" class="elementor elementor-25429 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;fadeIn&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.2,&quot;sizes&quot;:[]},&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-1a301d1 elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle" data-id="1a301d1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-059b5ca" data-id="059b5ca" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-c6f9db5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c6f9db5" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-c09d900" data-id="c09d900" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a4b442c elementor-widget elementor-widget-heading" data-id="a4b442c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">מלא\י פרטיך והנך בפנים</h2>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-74d2184 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="74d2184" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-5ab0529" data-id="5ab0529" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-21f5594 elementor-widget elementor-widget-spacer" data-id="21f5594" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-5281ca9 elementor-widget__width-inherit elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="5281ca9" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;\u05d4\u05d1\u05d0&quot;,&quot;step_previous_label&quot;:&quot;\u05d4\u05e7\u05d5\u05d3\u05dd&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
+				<div class="elementor-widget-container">
+							<form class="elementor-form" method="post" name="טופס חדש" aria-label="טופס חדש">
+			<input type="hidden" name="post_id" value="25429"/>
+			<input type="hidden" name="form_id" value="5281ca9"/>
+			<input type="hidden" name="referer_title" value="הרב מרגלית - צאצאים" />
+
+							<input type="hidden" name="queried_id" value="128377"/>
+
+			<div class="elementor-form-fields-wrapper elementor-labels-">
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-50">
+												<label for="form-field-name" class="elementor-field-label elementor-screen-only">
+								שם							</label>
+														<input size="1" type="text" name="form_fields[name]" id="form-field-name" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="שם">
+											</div>
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_bfdff83 elementor-col-50">
+												<label for="form-field-field_bfdff83" class="elementor-field-label elementor-screen-only">
+								משפחה							</label>
+														<input size="1" type="text" name="form_fields[field_bfdff83]" id="form-field-field_bfdff83" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="משפחה">
+											</div>
+								<div class="elementor-field-type-tel elementor-field-group elementor-column elementor-field-group-field_63d524c elementor-col-50">
+												<label for="form-field-field_63d524c" class="elementor-field-label elementor-screen-only">
+								טלפון							</label>
+								<input size="1" type="tel" name="form_fields[field_63d524c]" id="form-field-field_63d524c" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="טלפון" pattern="[0-9()#&amp;+*-=.]+" title="מותר להשתמש רק במספרים ותווי טלפון (#, -, *, וכו&#039;).">
+
+						</div>
+								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-50 elementor-field-required">
+												<label for="form-field-email" class="elementor-field-label elementor-screen-only">
+								אימייל							</label>
+														<input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="אימייל" required="required">
+											</div>
+								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+					<button class="elementor-button elementor-size-sm" type="submit">
+						<span class="elementor-button-content-wrapper">
+																						<span class="elementor-button-text">שליחה</span>
+													</span>
+					</button>
+				</div>
+			</div>
+		</form>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+					<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+				<script>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<link rel='stylesheet' id='wc-blocks-style-rtl-css' href='https://baalhatanya.org.il/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks-rtl.css?ver=wc-10.3.7' media='all' />
+<link rel='stylesheet' id='elementor-post-1356-css' href='https://baalhatanya.org.il/wp-content/uploads/elementor/css/post-1356.css?ver=1766475365' media='all' />
+<link rel='stylesheet' id='widget-nav-menu-css' href='https://baalhatanya.org.il/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu-rtl.min.css?ver=3.34.0' media='all' />
+<link rel='stylesheet' id='elementor-post-1359-css' href='https://baalhatanya.org.il/wp-content/uploads/elementor/css/post-1359.css?ver=1766475366' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://baalhatanya.org.il/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://baalhatanya.org.il/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://baalhatanya.org.il/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' media='all' />
+<script id="eio-lazy-load-js-before">
+var eio_lazy_vars = {"exactdn_domain":"","skip_autoscale":0,"bg_min_dpr":1.1,"threshold":0,"use_dpr":1};
+</script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/ewww-image-optimizer/includes/lazysizes.min.js?ver=830" id="eio-lazy-load-js" async data-wp-strategy="async"></script>
+<script src="https://cdn.enable.co.il/licenses/enable-L1369jklu320rt5-0218-29520/init.js?ver=1.4.1" id="enable-accessibility-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/js/custom_date_picker.js?ver=1.0.0" id="date-picker-js-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/js/jquery.textpopup.js?ver=1.0.0" id="date-textpopup-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/realmedia-tree/js/jquery.flexcal.js?ver=1.0.0" id="date-flexcal-js-js"></script>
+<script id="ppcp-smart-button-js-extra">
+var PayPalCommerceGateway = {"url":"https:\/\/www.paypal.com\/sdk\/js?client-id=AQyr4dwOGVVjqBAxj3O0oqXcuIZJ3gXG7RvCn__tS2UFp68GYjrvzEI5zzfn-O5XNQXYWQY1X_Dbzz7J&currency=USD&integration-date=2025-10-31&components=buttons,funding-eligibility&vault=false&commit=false&intent=capture&disable-funding=card&enable-funding=venmo,paylater","url_params":{"client-id":"AQyr4dwOGVVjqBAxj3O0oqXcuIZJ3gXG7RvCn__tS2UFp68GYjrvzEI5zzfn-O5XNQXYWQY1X_Dbzz7J","currency":"USD","integration-date":"2025-10-31","components":"buttons,funding-eligibility","vault":"false","commit":"false","intent":"capture","disable-funding":"card","enable-funding":"venmo,paylater"},"script_attributes":{"data-partner-attribution-id":"Woo_PPCP"},"client_id":"AQyr4dwOGVVjqBAxj3O0oqXcuIZJ3gXG7RvCn__tS2UFp68GYjrvzEI5zzfn-O5XNQXYWQY1X_Dbzz7J","currency":"USD","data_client_id":{"set_attribute":false,"endpoint":"\/?wc-ajax=ppc-data-client-id","nonce":"2539b0c17f","user":0,"has_subscriptions":false,"paypal_subscriptions_enabled":false},"redirect":"https:\/\/baalhatanya.org.il\/checkout\/","context":"mini-cart","ajax":{"simulate_cart":{"endpoint":"\/?wc-ajax=ppc-simulate-cart","nonce":"e9d54508e0"},"change_cart":{"endpoint":"\/?wc-ajax=ppc-change-cart","nonce":"9b57d7f522"},"create_order":{"endpoint":"\/?wc-ajax=ppc-create-order","nonce":"374d469757"},"approve_order":{"endpoint":"\/?wc-ajax=ppc-approve-order","nonce":"34cbf66306"},"get_order":{"endpoint":"\/?wc-ajax=ppc-get-order","nonce":"a29594676a"},"approve_subscription":{"endpoint":"\/?wc-ajax=ppc-approve-subscription","nonce":"36c28ffdc6"},"vault_paypal":{"endpoint":"\/?wc-ajax=ppc-vault-paypal","nonce":"60b484788a"},"save_checkout_form":{"endpoint":"\/?wc-ajax=ppc-save-checkout-form","nonce":"0a3cd25df1"},"validate_checkout":{"endpoint":"\/?wc-ajax=ppc-validate-checkout","nonce":"1a16894d3b"},"cart_script_params":{"endpoint":"\/?wc-ajax=ppc-cart-script-params"},"create_setup_token":{"endpoint":"\/?wc-ajax=ppc-create-setup-token","nonce":"b2cd38135a"},"create_payment_token":{"endpoint":"\/?wc-ajax=ppc-create-payment-token","nonce":"2d93511969"},"create_payment_token_for_guest":{"endpoint":"\/?wc-ajax=ppc-update-customer-id","nonce":"f7bb0cbe53"},"update_shipping":{"endpoint":"\/?wc-ajax=ppc-update-shipping","nonce":"1ea0a71e4d"},"update_customer_shipping":{"shipping_options":{"endpoint":"https:\/\/baalhatanya.org.il\/wp-json\/wc\/store\/v1\/cart\/select-shipping-rate"},"shipping_address":{"cart_endpoint":"https:\/\/baalhatanya.org.il\/wp-json\/wc\/store\/v1\/cart\/","update_customer_endpoint":"https:\/\/baalhatanya.org.il\/wp-json\/wc\/store\/v1\/cart\/update-customer"},"wp_rest_nonce":"855bfb05dc","update_shipping_method":"\/?wc-ajax=update_shipping_method"}},"cart_contains_subscription":"","subscription_plan_id":"","vault_v3_enabled":"","variable_paypal_subscription_variations":[],"variable_paypal_subscription_variation_from_cart":"","subscription_product_allowed":"","locations_with_subscription_product":{"product":false,"payorder":false,"cart":false},"enforce_vault":"","can_save_vault_token":"","is_free_trial_cart":"","vaulted_paypal_email":"","bn_codes":{"checkout":"Woo_PPCP","cart":"Woo_PPCP","mini-cart":"Woo_PPCP","product":"Woo_PPCP"},"payer":null,"button":{"wrapper":"#ppc-button-ppcp-gateway","is_disabled":false,"mini_cart_wrapper":"#ppc-button-minicart","is_mini_cart_disabled":false,"cancel_wrapper":"#ppcp-cancel","mini_cart_style":{"layout":"vertical","color":"gold","shape":"rect","label":"paypal","tagline":false,"height":35},"style":{"layout":"vertical","color":"gold","shape":"rect","label":"paypal","tagline":false}},"separate_buttons":{"card":{"id":"ppcp-card-button-gateway","wrapper":"#ppc-button-ppcp-card-button-gateway","style":{"shape":"rect","color":"black","layout":"horizontal"}}},"hosted_fields":{"wrapper":"#ppcp-hosted-fields","labels":{"credit_card_number":"","cvv":"","mm_yy":"MM\/YY","fields_empty":"Card payment details are missing. Please fill in all required fields.","fields_not_valid":"Unfortunately, your credit card details are not valid.","card_not_supported":"Unfortunately, we do not support your credit card.","cardholder_name_required":"Cardholder's first and last name are required, please fill the checkout form required fields."},"valid_cards":[],"contingency":"SCA_WHEN_REQUIRED"},"messages":[],"labels":{"error":{"generic":"Something went wrong. Please try again or choose another payment source.","required":{"generic":"Required form fields are not filled.","field":"%s \u05d4\u05d5\u05d0 \u05e9\u05d3\u05d4 \u05d7\u05d5\u05d1\u05d4.","elements":{"terms":"\u05db\u05d3\u05d9 \u05dc\u05d4\u05de\u05e9\u05d9\u05da \u05d1\u05d4\u05d6\u05de\u05e0\u05d4, \u05d9\u05e9 \u05dc\u05e7\u05e8\u05d5\u05d0 \u05d0\u05ea \u05ea\u05e0\u05d0\u05d9 \u05d4\u05e9\u05d9\u05de\u05d5\u05e9 \u05d5\u05dc\u05e7\u05d1\u05dc \u05d0\u05d5\u05ea\u05dd."}}},"billing_field":"\u05d7\u05d9\u05d5\u05d1 %s","shipping_field":"\u05de\u05e9\u05dc\u05d5\u05d7 %s"},"simulate_cart":{"enabled":true,"throttling":5000},"order_id":"0","single_product_buttons_enabled":"1","mini_cart_buttons_enabled":"1","basic_checkout_validation_enabled":"","early_checkout_validation_enabled":"1","funding_sources_without_redirect":["paypal","paylater","venmo","card"],"user":{"is_logged":false,"has_wc_card_payment_tokens":false},"should_handle_shipping_in_paypal":"","server_side_shipping_callback":{"enabled":false},"appswitch":{"enabled":true},"needShipping":"","vaultingEnabled":"","productType":null,"manualRenewalEnabled":"","final_review_enabled":"1"};
+</script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/woocommerce-paypal-payments/modules/ppcp-button/assets/js/button.js?ver=3.3.0" id="ppcp-smart-button-js"></script>
+<script id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/checkout\/??(.*)|\/cart\/?|\/my-account\/??(.*)|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/baalhatanya.org.il","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+<script id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.33.2" id="elementor-webpack-runtime-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.33.2" id="elementor-frontend-modules-js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"\u05e9\u05ea\u05e3 \u05d1\u05e4\u05d9\u05d9\u05e1\u05d1\u05d5\u05e7","shareOnTwitter":"\u05e9\u05ea\u05e3 \u05d1\u05d8\u05d5\u05d5\u05d9\u05d8\u05e8","pinIt":"\u05dc\u05e0\u05e2\u05d5\u05e5 \u05d1\u05e4\u05d9\u05e0\u05d8\u05e8\u05e1\u05d8","download":"\u05d4\u05d5\u05e8\u05d3\u05d4","downloadImage":"\u05d4\u05d5\u05e8\u05d3\u05ea \u05ea\u05de\u05d5\u05e0\u05d4","fullscreen":"\u05de\u05e1\u05da \u05de\u05dc\u05d0","zoom":"\u05de\u05d9\u05e7\u05d5\u05d3","share":"\u05e9\u05ea\u05e3","playVideo":"\u05e0\u05d2\u05df \u05d5\u05d9\u05d3\u05d0\u05d5","previous":"\u05e7\u05d5\u05d3\u05dd","next":"\u05d4\u05d1\u05d0","close":"\u05e1\u05d2\u05d5\u05e8","a11yCarouselPrevSlideMessage":"\u05e9\u05e7\u05d5\u05e4\u05d9\u05ea \u05e7\u05d5\u05d3\u05de\u05ea","a11yCarouselNextSlideMessage":"\u05e9\u05e7\u05d5\u05e4\u05d9\u05ea \u05d4\u05d1\u05d0\u05d4","a11yCarouselFirstSlideMessage":"\u05d6\u05d5\u05d4\u05d9 \u05d4\u05e9\u05e7\u05d5\u05e4\u05d9\u05ea \u05d4\u05e8\u05d0\u05e9\u05d5\u05e0\u05d4","a11yCarouselLastSlideMessage":"\u05d6\u05d5\u05d4\u05d9 \u05d4\u05e9\u05e7\u05d5\u05e4\u05d9\u05ea \u05d4\u05d0\u05d7\u05e8\u05d5\u05e0\u05d4","a11yCarouselPaginationBulletMessage":"\u05dc\u05e2\u05d1\u05d5\u05e8 \u05dc\u05e9\u05e7\u05d5\u05e4\u05d9\u05ea"},"is_rtl":true,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"\u05de\u05d5\u05d1\u05d9\u05d9\u05dc \u05d0\u05e0\u05db\u05d9","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"\u05de\u05d5\u05d1\u05d9\u05d9\u05dc \u05d0\u05d5\u05e4\u05e7\u05d9","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"\u05d8\u05d0\u05d1\u05dc\u05d8 \u05d0\u05e0\u05db\u05d9","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"\u05d8\u05d0\u05d1\u05dc\u05d8 \u05d0\u05d5\u05e4\u05e7\u05d9","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"\u05dc\u05e4\u05d8\u05d5\u05e4","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"\u05de\u05e1\u05da \u05e8\u05d7\u05d1","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.33.2","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"container":true,"theme_builder_v2":true,"nested-elements":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true,"import-export-customization":true,"e_pro_variables":true},"urls":{"assets":"https:\/\/baalhatanya.org.il\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/baalhatanya.org.il\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/baalhatanya.org.il\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"642c7dcb40"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","woocommerce_notices_elements":[]},"post":{"id":1445,"title":"%D7%90%D7%99%D7%9C%D7%9F%20%D7%94%D7%99%D7%97%D7%A1%20-%20%D7%A6%D7%90%D7%A6%D7%90%D7%99%D7%9D","excerpt":"","featuredImage":false}};
+</script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.33.2" id="elementor-frontend-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=10.3.7" id="sourcebuster-js-js"></script>
+<script id="wc-order-attribution-js-extra">
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https:\/\/baalhatanya.org.il\/wp-admin\/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+</script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.3.7" id="wc-order-attribution-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1" id="smartmenus-js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=explicit&amp;ver=3.34.0" id="elementor-recaptcha_v3-api-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.34.0" id="elementor-pro-webpack-runtime-js"></script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/baalhatanya.org.il\/wp-admin\/admin-ajax.php","nonce":"883f599333","urls":{"assets":"https:\/\/baalhatanya.org.il\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/baalhatanya.org.il\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"woocommerce":{"menu_cart":{"cart_page_url":"https:\/\/baalhatanya.org.il\/cart\/","checkout_page_url":"https:\/\/baalhatanya.org.il\/checkout\/","fragments_nonce":"4773993574"}},"facebook_sdk":{"lang":"he_IL","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/baalhatanya.org.il\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.34.0" id="elementor-pro-frontend-js"></script>
+<script src="https://baalhatanya.org.il/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.34.0" id="pro-elements-handlers-js"></script>
+<script>
+acf.data = {"select2L10n":{"matches_1":"One result is available, press enter to select it.","matches_n":"%d results are available, use up and down arrow keys to navigate.","matches_0":"No matches found","input_too_short_1":"Please enter 1 or more characters","input_too_short_n":"Please enter %d or more characters","input_too_long_1":"Please delete 1 character","input_too_long_n":"Please delete %d characters","selection_too_long_1":"You can only select 1 item","selection_too_long_n":"You can only select %d items","load_more":"Loading more results&hellip;","searching":"Searching&hellip;","load_fail":"Loading failed"},"google_map_api":"https:\/\/maps.googleapis.com\/maps\/api\/js?libraries=places&ver=3&callback=Function.prototype&language=he_IL","datePickerL10n":{"closeText":"Done","currentText":"Today","nextText":"Next","prevText":"Prev","weekHeader":"Wk","monthNames":["\u05d9\u05e0\u05d5\u05d0\u05e8","\u05e4\u05d1\u05e8\u05d5\u05d0\u05e8","\u05de\u05e8\u05e5","\u05d0\u05e4\u05e8\u05d9\u05dc","\u05de\u05d0\u05d9","\u05d9\u05d5\u05e0\u05d9","\u05d9\u05d5\u05dc\u05d9","\u05d0\u05d5\u05d2\u05d5\u05e1\u05d8","\u05e1\u05e4\u05d8\u05de\u05d1\u05e8","\u05d0\u05d5\u05e7\u05d8\u05d5\u05d1\u05e8","\u05e0\u05d5\u05d1\u05de\u05d1\u05e8","\u05d3\u05e6\u05de\u05d1\u05e8"],"monthNamesShort":["\u05d9\u05e0\u05d5","\u05e4\u05d1\u05e8","\u05de\u05e8\u05e5","\u05d0\u05e4\u05e8","\u05de\u05d0\u05d9","\u05d9\u05d5\u05e0","\u05d9\u05d5\u05dc","\u05d0\u05d5\u05d2","\u05e1\u05e4\u05d8","\u05d0\u05d5\u05e7","\u05e0\u05d5\u05d1","\u05d3\u05e6\u05de"],"dayNames":["\u05d9\u05d5\u05dd \u05e8\u05d0\u05e9\u05d5\u05df","\u05d9\u05d5\u05dd \u05e9\u05e0\u05d9","\u05d9\u05d5\u05dd \u05e9\u05dc\u05d9\u05e9\u05d9","\u05d9\u05d5\u05dd \u05e8\u05d1\u05d9\u05e2\u05d9","\u05d9\u05d5\u05dd \u05d7\u05de\u05d9\u05e9\u05d9","\u05d9\u05d5\u05dd \u05e9\u05d9\u05e9\u05d9","\u05e9\u05d1\u05ea"],"dayNamesMin":["\u05d0","\u05d1","\u05d2","\u05d3","\u05d4","\u05d5","\u05e9"],"dayNamesShort":["\u05d0","\u05d1","\u05d2","\u05d3","\u05d4","\u05d5","\u05e9"]},"dateTimePickerL10n":{"timeOnlyTitle":"Choose Time","timeText":"Time","hourText":"Hour","minuteText":"Minute","secondText":"Second","millisecText":"Millisecond","microsecText":"Microsecond","timezoneText":"Time Zone","currentText":"Now","closeText":"Done","selectText":"Select","amNames":["AM","A"],"pmNames":["PM","P"]},"colorPickerL10n":{"hex_string":"Hex String","rgba_string":"RGBA String"},"iconPickerA11yStrings":{"noResultsForSearchTerm":"No results found for that search term","newResultsFoundForSearchTerm":"The available icons matching your search query have been updated in the icon picker below."},"iconPickeri10n":{"dashicons-admin-appearance":"Appearance Icon","dashicons-admin-collapse":"Collapse Icon","dashicons-admin-comments":"Comments Icon","dashicons-admin-customizer":"Customizer Icon","dashicons-admin-generic":"Generic Icon","dashicons-admin-home":"Home Icon","dashicons-admin-links":"Links Icon","dashicons-admin-media":"Media Icon","dashicons-admin-multisite":"Multisite Icon","dashicons-admin-network":"Network Icon","dashicons-admin-page":"Page Icon","dashicons-admin-plugins":"Plugins Icon","dashicons-admin-post":"Post Icon","dashicons-admin-settings":"Settings Icon","dashicons-admin-site":"Site Icon","dashicons-admin-site-alt":"Site (alt) Icon","dashicons-admin-site-alt2":"Site (alt2) Icon","dashicons-admin-site-alt3":"Site (alt3) Icon","dashicons-admin-tools":"Tools Icon","dashicons-admin-users":"Users Icon","dashicons-airplane":"Airplane Icon","dashicons-album":"Album Icon","dashicons-align-center":"Align Center Icon","dashicons-align-full-width":"Align Full Width Icon","dashicons-align-left":"Align Left Icon","dashicons-align-none":"Align None Icon","dashicons-align-pull-left":"Align Pull Left Icon","dashicons-align-pull-right":"Align Pull Right Icon","dashicons-align-right":"Align Right Icon","dashicons-align-wide":"Align Wide Icon","dashicons-amazon":"Amazon Icon","dashicons-analytics":"Analytics Icon","dashicons-archive":"Archive Icon","dashicons-arrow-down":"Arrow Down Icon","dashicons-arrow-down-alt":"Arrow Down (alt) Icon","dashicons-arrow-down-alt2":"Arrow Down (alt2) Icon","dashicons-arrow-left":"Arrow Left Icon","dashicons-arrow-left-alt":"Arrow Left (alt) Icon","dashicons-arrow-left-alt2":"Arrow Left (alt2) Icon","dashicons-arrow-right":"Arrow Right Icon","dashicons-arrow-right-alt":"Arrow Right (alt) Icon","dashicons-arrow-right-alt2":"Arrow Right (alt2) Icon","dashicons-arrow-up":"Arrow Up Icon","dashicons-arrow-up-alt":"Arrow Up (alt) Icon","dashicons-arrow-up-alt2":"Arrow Up (alt2) Icon","dashicons-art":"Art Icon","dashicons-awards":"Awards Icon","dashicons-backup":"Backup Icon","dashicons-bank":"Bank Icon","dashicons-beer":"Beer Icon","dashicons-bell":"Bell Icon","dashicons-block-default":"Block Default Icon","dashicons-book":"Book Icon","dashicons-book-alt":"Book (alt) Icon","dashicons-buddicons-activity":"Activity Icon","dashicons-buddicons-bbpress-logo":"bbPress Icon","dashicons-buddicons-buddypress-logo":"BuddyPress Icon","dashicons-buddicons-community":"Community Icon","dashicons-buddicons-forums":"Forums Icon","dashicons-buddicons-friends":"Friends Icon","dashicons-buddicons-groups":"Groups Icon","dashicons-buddicons-pm":"PM Icon","dashicons-buddicons-replies":"Replies Icon","dashicons-buddicons-topics":"Topics Icon","dashicons-buddicons-tracking":"Tracking Icon","dashicons-building":"Building Icon","dashicons-businessman":"Businessman Icon","dashicons-businessperson":"Businessperson Icon","dashicons-businesswoman":"Businesswoman Icon","dashicons-button":"Button Icon","dashicons-calculator":"Calculator Icon","dashicons-calendar":"Calendar Icon","dashicons-calendar-alt":"Calendar (alt) Icon","dashicons-camera":"Camera Icon","dashicons-camera-alt":"Camera (alt) Icon","dashicons-car":"Car Icon","dashicons-carrot":"Carrot Icon","dashicons-cart":"Cart Icon","dashicons-category":"Category Icon","dashicons-chart-area":"Chart Area Icon","dashicons-chart-bar":"Chart Bar Icon","dashicons-chart-line":"Chart Line Icon","dashicons-chart-pie":"Chart Pie Icon","dashicons-clipboard":"Clipboard Icon","dashicons-clock":"Clock Icon","dashicons-cloud":"Cloud Icon","dashicons-cloud-saved":"Cloud Saved Icon","dashicons-cloud-upload":"Cloud Upload Icon","dashicons-code-standards":"Code Standards Icon","dashicons-coffee":"Coffee Icon","dashicons-color-picker":"Color Picker Icon","dashicons-columns":"Columns Icon","dashicons-controls-back":"Back Icon","dashicons-controls-forward":"Forward Icon","dashicons-controls-pause":"Pause Icon","dashicons-controls-play":"Play Icon","dashicons-controls-repeat":"Repeat Icon","dashicons-controls-skipback":"Skip Back Icon","dashicons-controls-skipforward":"Skip Forward Icon","dashicons-controls-volumeoff":"Volume Off Icon","dashicons-controls-volumeon":"Volume On Icon","dashicons-cover-image":"Cover Image Icon","dashicons-dashboard":"Dashboard Icon","dashicons-database":"Database Icon","dashicons-database-add":"Database Add Icon","dashicons-database-export":"Database Export Icon","dashicons-database-import":"Database Import Icon","dashicons-database-remove":"Database Remove Icon","dashicons-database-view":"Database View Icon","dashicons-desktop":"Desktop Icon","dashicons-dismiss":"Dismiss Icon","dashicons-download":"Download Icon","dashicons-drumstick":"Drumstick Icon","dashicons-edit":"Edit Icon","dashicons-edit-large":"Edit Large Icon","dashicons-edit-page":"Edit Page Icon","dashicons-editor-aligncenter":"Align Center Icon","dashicons-editor-alignleft":"Align Left Icon","dashicons-editor-alignright":"Align Right Icon","dashicons-editor-bold":"Bold Icon","dashicons-editor-break":"Break Icon","dashicons-editor-code":"Code Icon","dashicons-editor-contract":"Contract Icon","dashicons-editor-customchar":"Custom Character Icon","dashicons-editor-expand":"Expand Icon","dashicons-editor-help":"Help Icon","dashicons-editor-indent":"Indent Icon","dashicons-editor-insertmore":"Insert More Icon","dashicons-editor-italic":"Italic Icon","dashicons-editor-justify":"Justify Icon","dashicons-editor-kitchensink":"Kitchen Sink Icon","dashicons-editor-ltr":"LTR Icon","dashicons-editor-ol":"Ordered List Icon","dashicons-editor-ol-rtl":"Ordered List RTL Icon","dashicons-editor-outdent":"Outdent Icon","dashicons-editor-paragraph":"Paragraph Icon","dashicons-editor-paste-text":"Paste Text Icon","dashicons-editor-paste-word":"Paste Word Icon","dashicons-editor-quote":"Quote Icon","dashicons-editor-removeformatting":"Remove Formatting Icon","dashicons-editor-rtl":"RTL Icon","dashicons-editor-spellcheck":"Spellcheck Icon","dashicons-editor-strikethrough":"Strikethrough Icon","dashicons-editor-table":"Table Icon","dashicons-editor-textcolor":"Text Color Icon","dashicons-editor-ul":"Unordered List Icon","dashicons-editor-underline":"Underline Icon","dashicons-editor-unlink":"Unlink Icon","dashicons-editor-video":"Video Icon","dashicons-ellipsis":"Ellipsis Icon","dashicons-email":"Email Icon","dashicons-email-alt":"Email (alt) Icon","dashicons-email-alt2":"Email (alt2) Icon","dashicons-embed-audio":"Embed Audio Icon","dashicons-embed-generic":"Embed Generic Icon","dashicons-embed-photo":"Embed Photo Icon","dashicons-embed-post":"Embed Post Icon","dashicons-embed-video":"Embed Video Icon","dashicons-excerpt-view":"Excerpt View Icon","dashicons-exit":"Exit Icon","dashicons-external":"External Icon","dashicons-facebook":"Facebook Icon","dashicons-facebook-alt":"Facebook (alt) Icon","dashicons-feedback":"Feedback Icon","dashicons-filter":"Filter Icon","dashicons-flag":"Flag Icon","dashicons-food":"Food Icon","dashicons-format-aside":"Aside Icon","dashicons-format-audio":"Audio Icon","dashicons-format-chat":"Chat Icon","dashicons-format-gallery":"Gallery Icon","dashicons-format-image":"Image Icon","dashicons-format-quote":"Quote Icon","dashicons-format-status":"Status Icon","dashicons-format-video":"Video Icon","dashicons-forms":"Forms Icon","dashicons-fullscreen-alt":"Fullscreen (alt) Icon","dashicons-fullscreen-exit-alt":"Fullscreen Exit (alt) Icon","dashicons-games":"Games Icon","dashicons-google":"Google Icon","dashicons-grid-view":"Grid View Icon","dashicons-groups":"Groups Icon","dashicons-hammer":"Hammer Icon","dashicons-heading":"Heading Icon","dashicons-heart":"Heart Icon","dashicons-hidden":"Hidden Icon","dashicons-hourglass":"Hourglass Icon","dashicons-html":"HTML Icon","dashicons-id":"ID Icon","dashicons-id-alt":"ID (alt) Icon","dashicons-image-crop":"Crop Icon","dashicons-image-filter":"Filter Icon","dashicons-image-flip-horizontal":"Flip Horizontal Icon","dashicons-image-flip-vertical":"Flip Vertical Icon","dashicons-image-rotate":"Rotate Icon","dashicons-image-rotate-left":"Rotate Left Icon","dashicons-image-rotate-right":"Rotate Right Icon","dashicons-images-alt":"Images (alt) Icon","dashicons-images-alt2":"Images (alt2) Icon","dashicons-index-card":"Index Card Icon","dashicons-info":"Info Icon","dashicons-info-outline":"Info Outline Icon","dashicons-insert":"Insert Icon","dashicons-insert-after":"Insert After Icon","dashicons-insert-before":"Insert Before Icon","dashicons-instagram":"Instagram Icon","dashicons-laptop":"Laptop Icon","dashicons-layout":"Layout Icon","dashicons-leftright":"Left Right Icon","dashicons-lightbulb":"Lightbulb Icon","dashicons-linkedin":"LinkedIn Icon","dashicons-list-view":"List View Icon","dashicons-location":"Location Icon","dashicons-location-alt":"Location (alt) Icon","dashicons-lock":"Lock Icon","dashicons-marker":"Marker Icon","dashicons-media-archive":"Archive Icon","dashicons-media-audio":"Audio Icon","dashicons-media-code":"Code Icon","dashicons-media-default":"Default Icon","dashicons-media-document":"Document Icon","dashicons-media-interactive":"Interactive Icon","dashicons-media-spreadsheet":"Spreadsheet Icon","dashicons-media-text":"Text Icon","dashicons-media-video":"Video Icon","dashicons-megaphone":"Megaphone Icon","dashicons-menu":"Menu Icon","dashicons-menu-alt":"Menu (alt) Icon","dashicons-menu-alt2":"Menu (alt2) Icon","dashicons-menu-alt3":"Menu (alt3) Icon","dashicons-microphone":"Microphone Icon","dashicons-migrate":"Migrate Icon","dashicons-minus":"Minus Icon","dashicons-money":"Money Icon","dashicons-money-alt":"Money (alt) Icon","dashicons-move":"Move Icon","dashicons-nametag":"Nametag Icon","dashicons-networking":"Networking Icon","dashicons-no":"No Icon","dashicons-no-alt":"No (alt) Icon","dashicons-open-folder":"Open Folder Icon","dashicons-palmtree":"Palm Tree Icon","dashicons-paperclip":"Paperclip Icon","dashicons-pdf":"PDF Icon","dashicons-performance":"Performance Icon","dashicons-pets":"Pets Icon","dashicons-phone":"Phone Icon","dashicons-pinterest":"Pinterest Icon","dashicons-playlist-audio":"Playlist Audio Icon","dashicons-playlist-video":"Playlist Video Icon","dashicons-plugins-checked":"Plugins Checked Icon","dashicons-plus":"Plus Icon","dashicons-plus-alt":"Plus (alt) Icon","dashicons-plus-alt2":"Plus (alt2) Icon","dashicons-podio":"Podio Icon","dashicons-portfolio":"Portfolio Icon","dashicons-post-status":"Post Status Icon","dashicons-pressthis":"Pressthis Icon","dashicons-printer":"Printer Icon","dashicons-privacy":"Privacy Icon","dashicons-products":"Products Icon","dashicons-randomize":"Randomize Icon","dashicons-reddit":"Reddit Icon","dashicons-redo":"Redo Icon","dashicons-remove":"Remove Icon","dashicons-rest-api":"REST API Icon","dashicons-rss":"RSS Icon","dashicons-saved":"Saved Icon","dashicons-schedule":"Schedule Icon","dashicons-screenoptions":"Screen Options Icon","dashicons-search":"Search Icon","dashicons-share":"Share Icon","dashicons-share-alt":"Share (alt) Icon","dashicons-share-alt2":"Share (alt2) Icon","dashicons-shield":"Shield Icon","dashicons-shield-alt":"Shield (alt) Icon","dashicons-shortcode":"Shortcode Icon","dashicons-slides":"Slides Icon","dashicons-smartphone":"Smartphone Icon","dashicons-smiley":"Smiley Icon","dashicons-sort":"Sort Icon","dashicons-sos":"Sos Icon","dashicons-spotify":"Spotify Icon","dashicons-star-empty":"Star Empty Icon","dashicons-star-filled":"Star Filled Icon","dashicons-star-half":"Star Half Icon","dashicons-sticky":"Sticky Icon","dashicons-store":"Store Icon","dashicons-superhero":"Superhero Icon","dashicons-superhero-alt":"Superhero (alt) Icon","dashicons-table-col-after":"Table Col After Icon","dashicons-table-col-before":"Table Col Before Icon","dashicons-table-col-delete":"Table Col Delete Icon","dashicons-table-row-after":"Table Row After Icon","dashicons-table-row-before":"Table Row Before Icon","dashicons-table-row-delete":"Table Row Delete Icon","dashicons-tablet":"Tablet Icon","dashicons-tag":"Tag Icon","dashicons-tagcloud":"Tagcloud Icon","dashicons-testimonial":"Testimonial Icon","dashicons-text":"Text Icon","dashicons-text-page":"Text Page Icon","dashicons-thumbs-down":"Thumbs Down Icon","dashicons-thumbs-up":"Thumbs Up Icon","dashicons-tickets":"Tickets Icon","dashicons-tickets-alt":"Tickets (alt) Icon","dashicons-tide":"Tide Icon","dashicons-translation":"Translation Icon","dashicons-trash":"Trash Icon","dashicons-twitch":"Twitch Icon","dashicons-twitter":"Twitter Icon","dashicons-twitter-alt":"Twitter (alt) Icon","dashicons-undo":"Undo Icon","dashicons-universal-access":"Universal Access Icon","dashicons-universal-access-alt":"Universal Access (alt) Icon","dashicons-unlock":"Unlock Icon","dashicons-update":"Update Icon","dashicons-update-alt":"Update (alt) Icon","dashicons-upload":"Upload Icon","dashicons-vault":"Vault Icon","dashicons-video-alt":"Video (alt) Icon","dashicons-video-alt2":"Video (alt2) Icon","dashicons-video-alt3":"Video (alt3) Icon","dashicons-visibility":"Visibility Icon","dashicons-warning":"Warning Icon","dashicons-welcome-add-page":"Add Page Icon","dashicons-welcome-comments":"Comments Icon","dashicons-welcome-learn-more":"Learn More Icon","dashicons-welcome-view-site":"View Site Icon","dashicons-welcome-widgets-menus":"Widgets Menus Icon","dashicons-welcome-write-blog":"Write Blog Icon","dashicons-whatsapp":"WhatsApp Icon","dashicons-wordpress":"WordPress Icon","dashicons-wordpress-alt":"WordPress (alt) Icon","dashicons-xing":"Xing Icon","dashicons-yes":"Yes Icon","dashicons-yes-alt":"Yes (alt) Icon","dashicons-youtube":"YouTube Icon"},"mimeTypeIcon":"https:\/\/baalhatanya.org.il\/wp-includes\/images\/media\/default.png","mimeTypes":{"jpg|jpeg|jpe":"image\/jpeg","gif":"image\/gif","png":"image\/png","bmp":"image\/bmp","tiff|tif":"image\/tiff","webp":"image\/webp","avif":"image\/avif","ico":"image\/x-icon","heic":"image\/heic","heif":"image\/heif","heics":"image\/heic-sequence","heifs":"image\/heif-sequence","asf|asx":"video\/x-ms-asf","wmv":"video\/x-ms-wmv","wmx":"video\/x-ms-wmx","wm":"video\/x-ms-wm","avi":"video\/avi","divx":"video\/divx","flv":"video\/x-flv","mov|qt":"video\/quicktime","mpeg|mpg|mpe":"video\/mpeg","mp4|m4v":"video\/mp4","ogv":"video\/ogg","webm":"video\/webm","mkv":"video\/x-matroska","3gp|3gpp":"video\/3gpp","3g2|3gp2":"video\/3gpp2","txt|asc|c|cc|h|srt":"text\/plain","csv":"text\/csv","tsv":"text\/tab-separated-values","ics":"text\/calendar","rtx":"text\/richtext","css":"text\/css","vtt":"text\/vtt","dfxp":"application\/ttaf+xml","mp3|m4a|m4b":"audio\/mpeg","aac":"audio\/aac","ra|ram":"audio\/x-realaudio","wav|x-wav":"audio\/wav","ogg|oga":"audio\/ogg","flac":"audio\/flac","mid|midi":"audio\/midi","wma":"audio\/x-ms-wma","wax":"audio\/x-ms-wax","mka":"audio\/x-matroska","rtf":"application\/rtf","pdf":"application\/pdf","class":"application\/java","tar":"application\/x-tar","zip":"application\/zip","gz|gzip":"application\/x-gzip","rar":"application\/rar","7z":"application\/x-7z-compressed","psd":"application\/octet-stream","xcf":"application\/octet-stream","doc":"application\/msword","pot|pps|ppt":"application\/vnd.ms-powerpoint","wri":"application\/vnd.ms-write","xla|xls|xlt|xlw":"application\/vnd.ms-excel","mdb":"application\/vnd.ms-access","mpp":"application\/vnd.ms-project","docx":"application\/vnd.openxmlformats-officedocument.wordprocessingml.document","docm":"application\/vnd.ms-word.document.macroEnabled.12","dotx":"application\/vnd.openxmlformats-officedocument.wordprocessingml.template","dotm":"application\/vnd.ms-word.template.macroEnabled.12","xlsx":"application\/vnd.openxmlformats-officedocument.spreadsheetml.sheet","xlsm":"application\/vnd.ms-excel.sheet.macroEnabled.12","xlsb":"application\/vnd.ms-excel.sheet.binary.macroEnabled.12","xltx":"application\/vnd.openxmlformats-officedocument.spreadsheetml.template","xltm":"application\/vnd.ms-excel.template.macroEnabled.12","xlam":"application\/vnd.ms-excel.addin.macroEnabled.12","pptx":"application\/vnd.openxmlformats-officedocument.presentationml.presentation","pptm":"application\/vnd.ms-powerpoint.presentation.macroEnabled.12","ppsx":"application\/vnd.openxmlformats-officedocument.presentationml.slideshow","ppsm":"application\/vnd.ms-powerpoint.slideshow.macroEnabled.12","potx":"application\/vnd.openxmlformats-officedocument.presentationml.template","potm":"application\/vnd.ms-powerpoint.template.macroEnabled.12","ppam":"application\/vnd.ms-powerpoint.addin.macroEnabled.12","sldx":"application\/vnd.openxmlformats-officedocument.presentationml.slide","sldm":"application\/vnd.ms-powerpoint.slide.macroEnabled.12","onetoc|onetoc2|onetmp|onepkg":"application\/onenote","oxps":"application\/oxps","xps":"application\/vnd.ms-xpsdocument","odt":"application\/vnd.oasis.opendocument.text","odp":"application\/vnd.oasis.opendocument.presentation","ods":"application\/vnd.oasis.opendocument.spreadsheet","odg":"application\/vnd.oasis.opendocument.graphics","odc":"application\/vnd.oasis.opendocument.chart","odb":"application\/vnd.oasis.opendocument.database","odf":"application\/vnd.oasis.opendocument.formula","wp|wpd":"application\/wordperfect","key":"application\/vnd.apple.keynote","numbers":"application\/vnd.apple.numbers","pages":"application\/vnd.apple.pages"},"admin_url":"https:\/\/baalhatanya.org.il\/wp-admin\/","ajaxurl":"https:\/\/baalhatanya.org.il\/wp-admin\/admin-ajax.php","nonce":"510a598f9e","acf_version":"6.7.0.2","wp_version":"6.8.3","browser":"","locale":"he_IL","rtl":true,"screen":null,"post_id":null,"validation":null,"editor":"classic","is_pro":true,"debug":false,"StrictMode":false};
+</script>
+<script>
+acf.doAction( 'prepare' );
+</script>
+	</body>
+</html>
+
+<!-- plugin=object-cache-pro client=phpredis metric#hits=5707 metric#misses=24 metric#hit-ratio=99.6 metric#bytes=2588692 metric#prefetches=209 metric#store-reads=45 metric#store-writes=6 metric#store-hits=232 metric#store-misses=15 metric#sql-queries=33 metric#ms-total=2365.88 metric#ms-cache=65.15 metric#ms-cache-avg=1.3030 metric#ms-cache-ratio=2.8 sample#redis-hits=60491810 sample#redis-misses=9572038 sample#redis-hit-ratio=86.3 sample#redis-ops-per-sec=24 sample#redis-evicted-keys=3947262 sample#redis-used-memory=409972256 sample#redis-used-memory-rss=491171840 sample#redis-memory-fragmentation-ratio=1.2 sample#redis-connected-clients=2 sample#redis-tracking-clients=0 sample#redis-rejected-connections=0 sample#redis-keys=389625 -->

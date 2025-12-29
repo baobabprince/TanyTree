@@ -53,4 +53,4 @@ def test_cli_full_flow(runner, tmp_path):
         
         with open(output_ged, "r") as f:
             content = f.read()
-            assert "NAME Test Person" in content
+            assert "NAME Test /Person/" in content
