@@ -40,3 +40,19 @@ def test_hebrew_to_civil():
 
 def test_gregorian_input():
     assert hebrew_to_civil('1745') == "1745"
+
+def test_utils_edge_cases():
+    assert gematria_to_int("") == 0
+    assert parse_hebrew_date("") is None
+    assert hebrew_to_civil("") is None
+
+    # Adar I / Adar II
+    res = parse_hebrew_date("אדר א' תשפ\"ד")
+    assert res["month"] == 12
+    res = parse_hebrew_date("אדר ב' תשפ\"ד")
+    assert res["month"] == 13
+
+def test_hebrew_to_civil_error():
+    # Invalid date that might trigger exception in HebrewDate
+    # 31 Kislev doesn't exist (Kislev has 29 or 30 days)
+    assert hebrew_to_civil("ל\"א בכסלו תשפ\"ד") is None

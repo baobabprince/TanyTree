@@ -66,18 +66,20 @@ def parse_hebrew_date(date_str):
             year += 5000
             
     # Month
-    for part in parts:
+    for i, part in enumerate(parts):
         clean_part = part.replace('ב', '', 1) if part.startswith('ב') else part
+
+        # Check for multi-part months like "אדר א'"
+        if i + 1 < len(parts):
+            next_part = parts[i+1]
+            combined = f"{clean_part} {next_part}"
+            if combined in HEBREW_MONTHS:
+                month = HEBREW_MONTHS[combined]
+                break
+
         if clean_part in HEBREW_MONTHS:
             month = HEBREW_MONTHS[clean_part]
             break
-        # Handle "אדר א'" etc.
-        if part in ["א", "ב", "א'", "ב'"] and parts.index(part) > 0:
-            prev_part = parts[parts.index(part) - 1]
-            if "אדר" in prev_part:
-                full_month = f"אדר {part}"
-                if full_month in HEBREW_MONTHS:
-                    month = HEBREW_MONTHS[full_month]
 
     # Day
     if len(parts) >= 3:
