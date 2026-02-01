@@ -88,6 +88,8 @@ class Scraper:
             for parent_link in parents_container.find_all('a'):
                 href = parent_link.get('href', '')
                 full_url = urljoin(base_url, href) if base_url else href
+                if full_url:
+                    full_url = full_url.replace('//?', '/?')
                 parsed_href = urlparse(full_url)
                 related_id = parse_qs(parsed_href.query).get('i', [None])[0]
                 if related_id:
@@ -103,6 +105,8 @@ class Scraper:
                 if spouse_elem and spouse_elem.find('a'):
                     href = spouse_elem.find('a').get('href', '')
                     full_url = urljoin(base_url, href) if base_url else href
+                    if full_url:
+                        full_url = full_url.replace('//?', '/?')
                     parsed_href = urlparse(full_url)
                     related_id = parse_qs(parsed_href.query).get('i', [None])[0]
                     if related_id:
@@ -114,6 +118,8 @@ class Scraper:
             for child_link in kids_container.find_all('a'):
                 href = child_link.get('href', '')
                 full_url = urljoin(base_url, href) if base_url else href
+                if full_url:
+                    full_url = full_url.replace('//?', '/?')
                 parsed_href = urlparse(full_url)
                 related_id = parse_qs(parsed_href.query).get('i', [None])[0]
                 if related_id:

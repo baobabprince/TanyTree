@@ -16,6 +16,7 @@ class ScraperEngine:
         self.max_workers = max_workers
         self.delay = delay
         self.session = requests.Session()
+        self.session.headers.update({'User-Agent': 'Lynx'})
 
     def scrape_person(self, url):
         result = self._scrape_one(url)
@@ -89,8 +90,9 @@ class ScraperEngine:
         return count
 
     def _scrape_one(self, url):
-        retries = 1
-        backoff = 2
+        url = url.replace('//?', '/?')
+        retries = 3
+        backoff = 5
         for attempt in range(retries + 1):
             try:
                 # Add delay before request to be respectful
@@ -98,14 +100,14 @@ class ScraperEngine:
                     time.sleep(self.delay)
                 
                 try:
-                    response = self.session.get(url, timeout=10)
+                    response = self.session.get(url, timeout=30)
                 except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
                     if attempt < retries:
-                        print(f"Connection error/Timeout for {url} (Attempt {attempt+1}/{retries+1}). Retrying...")
+                        print(f"Connection error/Timeout ({type(e).__name__}) for {url} (Attempt {attempt+1}/{retries+1}). Retrying...")
                         time.sleep(backoff)
                         continue
                     else:
-                        print(f"Failed to connect to {url} after {retries+1} attempts.")
+                        print(f"Failed to connect to {url} after {retries+1} attempts: {type(e).__name__}")
                         return None
 
                 if response.status_code == 429:
@@ -151,13 +153,13 @@ class ScraperEngine:
                     return None
 
             except requests.exceptions.RequestException as e:
-                print(f"HTTP error scraping {url} (Attempt {attempt+1}/{retries+1}): {e}")
+                print(f"HTTP error scraping {url} (Attempt {attempt+1}/{retries+1}): {type(e).__name__}: {e}")
                 if attempt < retries:
                     time.sleep(backoff)
                 else:
                     return None
             except Exception as e:
-                print(f"Unexpected error scraping {url}: {e}")
+                print(f"Unexpected error scraping {url}: {type(e).__name__}: {e}")
                 return None
         return None
 
@@ -225,7 +227,7 @@ class ScraperEngine:
                 print(f"Start node {start_id} already visited. Exploring its relationships to resume crawl...")
                 # Re-scrape just to get fresh relationships and URLs
                 try:
-                    response = self.session.get(start_url, timeout=10)
+                    response = self.session.get(start_url, timeout=30)
                     response.raise_for_status()
                     html_content = response.text
                     rels = self.scraper.extract_relationships(html_content, start_id, base_url=start_url)
