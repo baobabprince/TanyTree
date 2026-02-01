@@ -16,16 +16,22 @@ jobs:
       - name: Check if it is the last day of the month
         id: check
         run: |
-          # If 10 hours from now the day is 1, then it's currently 10h before the end of the month
-          if [ "$(date +%d -d '+10 hours')" = "01" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Triggered manually via workflow_dispatch. Bypassing date check."
+            echo "is_last_day=true" >> $GITHUB_OUTPUT
+          elif [ "$(date +%d -d '+10 hours')" = "01" ]; then
+            echo "Scheduled run. Detected last day of the month."
             echo "is_last_day=true" >> $GITHUB_OUTPUT
           else
+            echo "Scheduled run. Not the last day of the month."
             echo "is_last_day=false" >> $GITHUB_OUTPUT
           fi
 
   update-genealogy:
     needs: check-date
-    if: needs.check-date.outputs.is_last_day == 'true'
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      needs.check-date.outputs.is_last_day == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: write
