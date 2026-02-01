@@ -43,8 +43,8 @@ def test_max_retries_exceeded(mock_db):
             result = engine._scrape_one("http://example.com/?i=p1")
         
         assert result is None
-        # Initial call + 1 retry = 2 calls
-        assert mock_get.call_count == 2
+        # Initial call + 3 retries = 4 calls
+        assert mock_get.call_count == 4
 
 def test_retry_on_timeout(mock_db):
     with patch("requests.Session.get") as mock_get:
@@ -78,7 +78,8 @@ def test_continue_after_failure_in_crawl(mock_db):
         mock_second = MagicMock()
         mock_second.status_code = 500
         
-        mock_get.side_effect = [mock_first, mock_second, mock_second] # 2nd call + 1 retry
+        # 1st call (success) + 2nd call (fail) + 3 retries = 5 calls
+        mock_get.side_effect = [mock_first, mock_second, mock_second, mock_second, mock_second]
         
         engine = ScraperEngine(mock_db, delay=0, max_workers=1)
         with patch("time.sleep"):
