@@ -22138,6 +22138,7 @@
 2 DATE 1980
 2 NOTE ה׳תשל״ו
 1 FAMC @F542@
+1 FAMS @F4304@
 0 @I2329@ INDI
 1 NAME רחל /שניאורסון/
 2 GIVN רחל
@@ -42826,6 +42827,7 @@
 2 DATE 05 Jan 2007
 2 NOTE ט"ו טבת ה׳תשס״ב
 1 FAMC @F1054@
+1 FAMS @F4332@
 0 @I4474@ INDI
 1 NAME שולמית אורה סגל /יקונט/
 2 GIVN שולמית אורה סגל
@@ -62542,6 +62544,7 @@
 2 DATE 27 Jan 1990
 2 NOTE א׳ שבט ה׳תשמ״ה
 1 FAMC @F1410@
+1 FAMS @F4310@
 0 @I6504@ INDI
 1 NAME מר אלחנן /גרונר/
 2 GIVN מר אלחנן
@@ -62747,6 +62750,7 @@
 2 NPFX הרב
 1 SEX M
 1 FAMC @F1415@
+1 FAMS @F4325@
 0 @I6533@ INDI
 1 NAME שלום דובער /רודל/
 2 GIVN שלום דובער
@@ -62909,6 +62913,7 @@
 2 NOTE י"ט תשרי תשנ"ז
 2 PLAC ניו יורק
 1 FAMC @F1417@
+1 FAMS @F4330@
 0 @I6550@ INDI
 1 NAME יוסף יצחק הלוי /סוויד/
 2 GIVN יוסף יצחק הלוי
@@ -100134,6 +100139,7 @@
 2 NOTE י״ב כסלו ה׳תשנ״ז
 1 FAMC @F2326@
 1 FAMS @F3518@
+1 FAMS @F4315@
 0 @I10591@ INDI
 1 NAME אליהו צבי /יעקובוביץ/
 2 GIVN אליהו צבי
@@ -103327,6 +103333,7 @@
 2 NOTE ו׳ תשרי ה׳תשנ״א
 2 PLAC ישראל
 1 FAMC @F2367@
+1 FAMS @F4314@
 0 @I10921@ INDI
 1 NAME חנה /אייזנבך/
 2 GIVN חנה
@@ -103336,6 +103343,7 @@
 2 DATE 20 Nov 1997
 2 NOTE כ׳ חשון ה׳תשנ״ג
 1 FAMC @F2367@
+1 FAMS @F4313@
 0 @I10922@ INDI
 1 NAME שלום דובער /אייזנבך/
 2 GIVN שלום דובער
@@ -103354,6 +103362,7 @@
 2 DATE 20 Dec 2001
 2 NOTE ה׳ טבת ה׳תשנ״ז
 1 FAMC @F2367@
+1 FAMS @F4315@
 0 @I10924@ INDI
 1 NAME שניאור זלמן /אייזנבך/
 2 GIVN שניאור זלמן
@@ -106151,6 +106160,7 @@
 2 DATE 07 Nov 1995
 2 NOTE י״ד חשון ה׳תשנ״א
 1 FAMC @F2414@
+1 FAMS @F4334@
 0 @I11229@ INDI
 1 NAME ר' הלל אברהם /גלבשטיין/
 2 GIVN ר' הלל אברהם
@@ -107004,6 +107014,7 @@
 2 DATE 06 Jun 1998
 2 NOTE י״ב סיון ה׳תשנ״ג
 1 FAMC @F2431@
+1 FAMS @F4305@
 0 @I11321@ INDI
 1 NAME חנה צפורה /שנור/
 2 GIVN חנה צפורה
@@ -111185,6 +111196,7 @@
 2 SURN בעסער
 1 SEX M
 1 FAMC @F2526@
+1 FAMS @F4308@
 0 @I11809@ INDI
 1 NAME פרומט /בעסער/
 2 GIVN פרומט
@@ -111876,6 +111888,7 @@
 1 BIRT
 2 NOTE ל׳ כסלו ה׳תש״ס
 1 FAMC @F2535@
+1 FAMS @F4333@
 0 @I11883@ INDI
 1 NAME אסתר פריי /בירנצוויג/
 2 GIVN אסתר פריי
@@ -116283,6 +116296,7 @@
 2 NOTE כ״ה סיון ה׳תשמ״ה
 2 PLAC ישראל
 1 FAMC @F2588@
+1 FAMS @F4309@
 0 @I12341@ INDI
 1 NAME דבורה פייגל לוטרמן /(בלום)/
 2 GIVN דבורה פייגל לוטרמן
@@ -122715,6 +122729,7 @@
 2 SURN דובקין
 1 SEX M
 1 FAMC @F2707@
+1 FAMS @F4316@
 0 @I13042@ INDI
 1 NAME תמר /שטרן/
 2 GIVN תמר
@@ -124159,6 +124174,7 @@
 2 DATE 03 Oct 1999
 2 NOTE כ״ג תשרי ה׳תשנ״ה
 1 FAMC @F2739@
+1 FAMS @F4338@
 0 @I13193@ INDI
 1 NAME שירה /מאירסון/
 2 GIVN שירה
@@ -129161,6 +129177,7 @@
 2 NOTE י"ג אדר ב' תש"ס
 2 PLAC קליפורניה
 1 FAMC @F2833@
+1 FAMS @F4324@
 0 @I13720@ INDI
 1 NAME חיה /מושקא רודל/
 2 GIVN חיה
@@ -129258,6 +129275,7 @@
 2 NOTE כ"ז אב תשס"ב
 2 PLAC דנמרק
 1 FAMC @F2834@
+1 FAMS @F4336@
 0 @I13729@ INDI
 1 NAME חנה /לעוונטאל/
 2 GIVN חנה
@@ -129370,6 +129388,7 @@
 2 DATE 17 Jan 1996
 2 NOTE כ"ה טבת תשנ"ו
 2 PLAC ניו יורק
+1 FAMS @F4330@
 0 @I13742@ INDI
 1 NAME מושקא סוויד /(זילברברג)/
 2 GIVN מושקא סוויד
@@ -132728,6 +132747,7 @@
 2 DATE 25 Apr 1994
 2 NOTE י״ד אייר ה׳תשמ״ט
 1 FAMC @F2901@
+1 FAMS @F4311@
 0 @I14085@ INDI
 1 NAME גיטל לאה /אייזנבך/
 2 GIVN גיטל לאה
@@ -134669,6 +134689,7 @@
 2 DATE 12 Apr 1992
 2 NOTE ט׳ ניסן ה׳תשמ״ז
 1 FAMC @F2932@
+1 FAMS @F4331@
 0 @I14293@ INDI
 1 NAME דבורה לאה /אבני/
 2 GIVN דבורה לאה
@@ -166100,6 +166121,7 @@
 2 GIVN מר
 2 SURN דרייזין
 1 SEX M
+1 FAMS @F4309@
 0 @I17933@ INDI
 1 NAME מנחם /מענדל רובין/
 2 GIVN מנחם
@@ -173573,6 +173595,7 @@
 2 DATE 05 Sep 2007
 2 NOTE כ״ב אלול ה׳תשס״ב
 1 FAMC @F3927@
+1 FAMS @F4303@
 0 @I18777@ INDI
 1 NAME חנה /גלבשטיין/
 2 GIVN חנה
@@ -175083,6 +175106,7 @@
 2 DATE 21 Mar 2001
 2 NOTE כ"ו אדר תשס"א
 2 PLAC מונטריאל
+1 FAMS @F4324@
 0 @I18964@ INDI
 1 NAME חנה לעוונטאל (שם /טוב)/
 2 GIVN חנה לעוונטאל (שם
@@ -180605,6 +180629,7 @@
 2 GIVN סלמון
 2 NPFX הרב
 1 SEX M
+1 FAMS @F4331@
 0 @I19564@ INDI
 1 NAME פיש //
 2 GIVN פיש
@@ -181520,6 +181545,7 @@
 2 DATE 24 Jul 2001
 2 NOTE ד׳ אב ה׳תשנ״ו
 1 FAMC @F4116@
+1 FAMS @F4312@
 0 @I19665@ INDI
 1 NAME מר //
 2 GIVN מר
@@ -186285,6 +186311,7 @@
 2 DATE 19 Feb 2007
 2 NOTE א׳ אדר ה׳תשס״ב
 1 FAMC @F4255@
+1 FAMS @F4337@
 0 @I20274@ INDI
 1 NAME שמעון הלל /אטיק/
 2 GIVN שמעון הלל
@@ -186765,6 +186792,7 @@
 1 BIRT
 2 DATE 09 Jan 2006
 2 NOTE ט' טבת ה'תשס"א
+1 FAMS @F4303@
 0 @I20327@ INDI
 1 NAME לוי /סלונים/
 2 GIVN לוי
@@ -188406,6 +188434,2253 @@
 2 GIVN בן ציון
 2 SURN אדלר
 2 NPFX הרב
+1 SEX M
+0 @I20522@ INDI
+1 SEX M
+0 @I20523@ INDI
+1 SEX M
+0 @I20524@ INDI
+1 SEX M
+0 @I20525@ INDI
+1 NAME המשפחה //
+2 GIVN המשפחה
+1 SEX M
+0 @I20526@ INDI
+1 SEX M
+0 @I20527@ INDI
+1 NAME המשפחה //
+2 GIVN המשפחה
+1 SEX M
+0 @I20528@ INDI
+1 NAME המשפחה //
+2 GIVN המשפחה
+1 SEX M
+0 @I20529@ INDI
+1 NAME לוי יצחק /וייס/
+2 GIVN לוי יצחק
+2 SURN וייס
+1 SEX M
+1 BIRT
+2 DATE 15 Nov 2025
+2 NOTE כ"ד חשוון תשפ"ו
+1 FAMC @F4303@
+0 @I20530@ INDI
+1 NAME זאב דב /אזדאבא/
+2 GIVN זאב דב
+2 SURN אזדאבא
+1 SEX M
+1 BIRT
+2 DATE 12 Jun 2024
+2 NOTE ו' סיון תשפ"ד
+1 FAMC @F2472@
+0 @I20531@ INDI
+1 NAME שטערנא שרה /אזדאבא/
+2 GIVN שטערנא שרה
+2 SURN אזדאבא
+1 SEX M
+1 FAMC @F2468@
+0 @I20532@ INDI
+1 NAME מושקא /אזדאבא/
+2 GIVN מושקא
+2 SURN אזדאבא
+1 SEX M
+1 FAMC @F2470@
+0 @I20533@ INDI
+1 NAME טליה /לפן/
+2 GIVN טליה
+2 SURN לפן
+2 NPFX מרת
+1 SEX F
+1 FAMS @F4304@
+0 @I20534@ INDI
+1 NAME שלו /לפן/
+2 GIVN שלו
+2 SURN לפן
+1 SEX M
+1 BIRT
+2 DATE 09 May 2012
+2 NOTE י"ז אייר ה'תשס"ז
+2 PLAC תל השומר
+1 FAMC @F4304@
+0 @I20535@ INDI
+1 SEX M
+0 @I20536@ INDI
+1 SEX M
+0 @I20537@ INDI
+1 NAME קופל //
+2 GIVN קופל
+1 SEX M
+0 @I20538@ INDI
+1 NAME איתמר /קופל/
+2 GIVN איתמר
+2 SURN קופל
+1 SEX M
+1 BIRT
+2 DATE 10 Oct 2012
+2 NOTE כ"ד תשרי ה'תשס"ח
+2 PLAC ירושלים
+1 FAMC @F1160@
+0 @I20539@ INDI
+1 SEX M
+0 @I20540@ INDI
+1 NAME פייגא מינטשא שנור /מנלה/
+2 GIVN פייגא מינטשא שנור
+2 SURN מנלה
+2 NPFX מרת
+1 SEX F
+1 FAMS @F4305@
+0 @I20541@ INDI
+1 SEX M
+0 @I20542@ INDI
+1 NAME שלמה זאב /שנור/
+2 GIVN שלמה זאב
+2 SURN שנור
+1 SEX M
+1 FAMC @F4305@
+0 @I20543@ INDI
+1 NAME שרה /שנור/
+2 GIVN שרה
+2 SURN שנור
+1 SEX M
+1 FAMC @F4305@
+0 @I20544@ INDI
+1 NAME אסתר רויזא /שנור/
+2 GIVN אסתר רויזא
+2 SURN שנור
+1 SEX M
+1 FAMC @F4305@
+0 @I20545@ INDI
+1 NAME אפרים /שנור/
+2 GIVN אפרים
+2 SURN שנור
+1 SEX M
+1 FAMC @F4305@
+0 @I20546@ INDI
+1 NAME מלכה /שנור/
+2 GIVN מלכה
+2 SURN שנור
+1 SEX M
+1 FAMC @F4305@
+0 @I20547@ INDI
+1 SEX M
+0 @I20548@ INDI
+1 SEX M
+0 @I20549@ INDI
+1 SEX M
+0 @I20550@ INDI
+1 SEX M
+0 @I20551@ INDI
+1 SEX M
+0 @I20552@ INDI
+1 SEX M
+0 @I20553@ INDI
+1 SEX M
+0 @I20554@ INDI
+1 NAME ר' /מרדכי יוסף שנור/
+2 GIVN ר'
+2 SURN מרדכי יוסף שנור
+1 SEX M
+0 @I20555@ INDI
+1 NAME חיה טילא ליברמן /סופר/
+2 GIVN חיה טילא ליברמן
+2 SURN סופר
+2 NPFX מרת
+1 SEX F
+1 BIRT
+2 DATE 01 May 1999
+2 NOTE ט"ו אייר ה'תשנ"ד
+2 PLAC ירושלים
+0 @I20556@ INDI
+1 SEX M
+0 @I20557@ INDI
+1 SEX M
+0 @I20558@ INDI
+1 NAME יערה /שלו/
+2 GIVN יערה
+2 SURN שלו
+1 SEX M
+1 BIRT
+2 DATE 02 Nov 2030
+2 NOTE ו' חשון ה'תשפ"ו
+1 FAMC @F2677@
+0 @I20559@ INDI
+1 SEX M
+0 @I20560@ INDI
+1 SEX M
+0 @I20561@ INDI
+1 SEX M
+0 @I20562@ INDI
+1 SEX M
+0 @I20563@ INDI
+1 NAME פייגא מלכה לעוויטין /קלמנסון/
+2 GIVN פייגא מלכה לעוויטין
+2 SURN קלמנסון
+2 NPFX מרת
+1 SEX F
+1 FAMS @F4306@
+0 @I20564@ INDI
+1 NAME יצחק דובער הלוי /לעוויטין/
+2 GIVN יצחק דובער הלוי
+2 SURN לעוויטין
+2 NPFX הרב
+1 SEX M
+1 FAMC @F582@
+1 FAMS @F4306@
+0 @I20565@ INDI
+1 NAME פינחס הלוי /לעוויטין/
+2 GIVN פינחס הלוי
+2 SURN לעוויטין
+2 NPFX הרב
+1 SEX M
+1 FAMC @F4306@
+1 FAMS @F4307@
+0 @I20566@ INDI
+1 NAME פרומא איטא לעוויטין /שוסטערמאן/
+2 GIVN פרומא איטא לעוויטין
+2 SURN שוסטערמאן
+2 NPFX מרת
+1 SEX F
+1 FAMS @F4307@
+0 @I20567@ INDI
+1 NAME צבי הלוי /לעוויטין/
+2 GIVN צבי הלוי
+2 SURN לעוויטין
+1 SEX M
+1 FAMC @F4307@
+0 @I20568@ INDI
+1 SEX M
+0 @I20569@ INDI
+1 SEX M
+0 @I20570@ INDI
+1 SEX M
+0 @I20571@ INDI
+1 SEX M
+0 @I20572@ INDI
+1 SEX M
+0 @I20573@ INDI
+1 SEX M
+0 @I20574@ INDI
+1 NAME שניאור זלמן /ווילשאנסקי/
+2 GIVN שניאור זלמן
+2 SURN ווילשאנסקי
+1 SEX M
+1 FAMC @F2032@
+0 @I20575@ INDI
+1 NAME משה /ווילשאנסקי/
+2 GIVN משה
+2 SURN ווילשאנסקי
+1 SEX M
+1 FAMC @F2032@
+0 @I20576@ INDI
+1 NAME שמואל /ווילשאנסקי/
+2 GIVN שמואל
+2 SURN ווילשאנסקי
+1 SEX M
+1 FAMC @F2032@
+0 @I20577@ INDI
+1 NAME חיה /מושקא ווילשאנסקי/
+2 GIVN חיה
+2 SURN מושקא ווילשאנסקי
+1 SEX M
+1 FAMC @F2032@
+0 @I20578@ INDI
+1 NAME חנה /ווילשאנסקי/
+2 GIVN חנה
+2 SURN ווילשאנסקי
+1 SEX M
+1 FAMC @F2032@
+0 @I20579@ INDI
+1 NAME דבורה לאה /ווילשאנסקי/
+2 GIVN דבורה לאה
+2 SURN ווילשאנסקי
+1 SEX M
+1 FAMC @F2032@
+0 @I20580@ INDI
+1 NAME רפאל /ווילשאנסקי/
+2 GIVN רפאל
+2 SURN ווילשאנסקי
+1 SEX M
+1 FAMC @F2032@
+0 @I20581@ INDI
+1 NAME ישראל אריה לייב /ווילשאנסקי/
+2 GIVN ישראל אריה לייב
+2 SURN ווילשאנסקי
+1 SEX M
+1 FAMC @F2032@
+0 @I20582@ INDI
+1 NAME שטערנא שרה /ווילשאנסקי/
+2 GIVN שטערנא שרה
+2 SURN ווילשאנסקי
+1 SEX M
+1 FAMC @F2032@
+0 @I20583@ INDI
+1 NAME זלאטע יהודית /ווילשאנסקי/
+2 GIVN זלאטע יהודית
+2 SURN ווילשאנסקי
+1 SEX M
+1 FAMC @F2032@
+0 @I20584@ INDI
+1 SEX M
+0 @I20585@ INDI
+1 SEX M
+0 @I20586@ INDI
+1 SEX M
+0 @I20587@ INDI
+1 SEX M
+0 @I20588@ INDI
+1 SEX M
+0 @I20589@ INDI
+1 SEX M
+0 @I20590@ INDI
+1 SEX M
+0 @I20591@ INDI
+1 SEX M
+0 @I20592@ INDI
+1 SEX M
+0 @I20593@ INDI
+1 SEX M
+0 @I20594@ INDI
+1 NAME יעקב /מאיר נעמענאוו/
+2 GIVN יעקב
+2 SURN מאיר נעמענאוו
+1 SEX M
+1 BIRT
+2 DATE 10 Oct 2030
+2 NOTE י"ג תשרי ה'תשפ"ו
+1 FAMC @F3533@
+0 @I20595@ INDI
+1 SEX M
+0 @I20596@ INDI
+1 NAME מר יהונתן /רבינוביץ/
+2 GIVN מר יהונתן
+2 SURN רבינוביץ
+1 SEX M
+1 BIRT
+2 DATE 14 Jan 2012
+2 NOTE י"ט טבת ה'תשס"ז
+2 PLAC בני ברק
+1 FAMC @F1142@
+0 @I20597@ INDI
+1 SEX M
+0 @I20598@ INDI
+1 SEX M
+0 @I20599@ INDI
+1 NAME שלום /גרינברגר/
+2 GIVN שלום
+2 SURN גרינברגר
+2 NPFX הרב
+1 SEX M
+1 FAMS @F4308@
+0 @I20600@ INDI
+1 NAME אלתר חיים /גרינברגר/
+2 GIVN אלתר חיים
+2 SURN גרינברגר
+1 SEX M
+1 FAMC @F4308@
+0 @I20601@ INDI
+1 NAME אילה לאה פייגנבוים /גרינברגר/
+2 GIVN אילה לאה פייגנבוים
+2 SURN גרינברגר
+1 SEX M
+1 FAMC @F4308@
+0 @I20602@ INDI
+1 NAME שירה גרינברגר /מושקוביץ/
+2 GIVN שירה גרינברגר
+2 SURN מושקוביץ
+2 NPFX מרת
+1 SEX F
+1 FAMC @F4308@
+0 @I20603@ INDI
+1 NAME ישראל /משה גרינברגר/
+2 GIVN ישראל
+2 SURN משה גרינברגר
+2 NPFX הרב
+1 SEX M
+1 FAMC @F4308@
+0 @I20604@ INDI
+1 NAME אברהם פנחס /גרינברגר/
+2 GIVN אברהם פנחס
+2 SURN גרינברגר
+2 NPFX הרב
+1 SEX M
+1 FAMC @F4308@
+0 @I20605@ INDI
+1 SEX M
+0 @I20606@ INDI
+1 SEX M
+0 @I20607@ INDI
+1 SEX M
+0 @I20608@ INDI
+1 SEX M
+0 @I20609@ INDI
+1 SEX M
+0 @I20610@ INDI
+1 SEX M
+0 @I20611@ INDI
+1 NAME אנה לפן /שיינפלד/
+2 GIVN אנה לפן
+2 SURN שיינפלד
+2 NPFX מרת
+1 SEX F
+1 BIRT
+2 DATE 1963
+2 NOTE כ״ב תמוז, תשכ״ד
+2 PLAC צ׳רנוביץ
+0 @I20612@ INDI
+1 SEX M
+0 @I20613@ INDI
+1 NAME חנה /דרייזין/
+2 GIVN חנה
+2 SURN דרייזין
+1 SEX M
+1 BIRT
+2 DATE 22 Aug 2011
+2 NOTE כ"ב אב ה'תשס"ו
+1 FAMC @F4309@
+0 @I20614@ INDI
+1 NAME גיטל /דרייזין/
+2 GIVN גיטל
+2 SURN דרייזין
+1 SEX M
+1 BIRT
+2 DATE 14 Mar 2013
+2 NOTE ג' ניסן ה'תשס"ח
+1 FAMC @F4309@
+0 @I20615@ INDI
+1 NAME חיה /דרייזין/
+2 GIVN חיה
+2 SURN דרייזין
+1 SEX M
+1 BIRT
+2 DATE 22 Dec 2014
+2 NOTE ל' כסלו ה'תש"ע
+1 FAMC @F4309@
+0 @I20616@ INDI
+1 NAME ישראל /דרייזין/
+2 GIVN ישראל
+2 SURN דרייזין
+1 SEX M
+1 BIRT
+2 DATE 13 Feb 2017
+2 NOTE י"ז שבט ה'תשע"ב
+1 FAMC @F4309@
+0 @I20617@ INDI
+1 NAME משה /דרייזין/
+2 GIVN משה
+2 SURN דרייזין
+1 SEX M
+1 BIRT
+2 DATE 01 Mar 2019
+2 NOTE כ"ד אדר א' ה'תשע"ד
+1 FAMC @F4309@
+0 @I20618@ INDI
+1 NAME אלימלך אשר זעליג /דרייזין/
+2 GIVN אלימלך אשר זעליג
+2 SURN דרייזין
+1 SEX M
+1 BIRT
+2 DATE 10 Apr 2023
+2 NOTE י"ט ניסן ה'תשע"ח
+1 FAMC @F4309@
+0 @I20619@ INDI
+1 NAME מאיר /דרייזין/
+2 GIVN מאיר
+2 SURN דרייזין
+1 SEX M
+1 BIRT
+2 DATE 08 Mar 2025
+2 NOTE ח' אדר ה'תש"פ
+1 FAMC @F4309@
+0 @I20620@ INDI
+1 SEX M
+0 @I20621@ INDI
+1 SEX M
+0 @I20622@ INDI
+1 SEX M
+0 @I20623@ INDI
+1 SEX M
+0 @I20624@ INDI
+1 SEX M
+0 @I20625@ INDI
+1 SEX M
+0 @I20626@ INDI
+1 SEX M
+0 @I20627@ INDI
+1 SEX M
+0 @I20628@ INDI
+1 NAME ר' יהודה אריה /קורנט/
+2 GIVN ר' יהודה אריה
+2 SURN קורנט
+1 SEX M
+1 BIRT
+2 DATE 17 Dec 2006
+2 NOTE כ״ו כסלו ה׳תשס״ב
+2 PLAC ישראל
+0 @I20629@ INDI
+1 SEX M
+0 @I20630@ INDI
+1 NAME שניאור זלמן הכהן /ויספיש/
+2 GIVN שניאור זלמן הכהן
+2 SURN ויספיש
+1 SEX M
+1 BIRT
+2 DATE 08 Dec 2025
+2 NOTE ח״י כסלו תשפ״ו
+1 FAMC @F4270@
+0 @I20631@ INDI
+1 SEX M
+0 @I20632@ INDI
+1 SEX M
+0 @I20633@ INDI
+1 SEX M
+0 @I20634@ INDI
+1 SEX M
+0 @I20635@ INDI
+1 SEX M
+0 @I20636@ INDI
+1 NAME יעקב הלוי /נויהויזר/
+2 GIVN יעקב הלוי
+2 SURN נויהויזר
+1 SEX M
+1 BIRT
+2 DATE 17 Sep 2010
+2 NOTE ט׳ בתשרי ה׳תשס״ו
+2 PLAC ישראל
+1 FAMC @F2016@
+0 @I20637@ INDI
+1 NAME אליהו הלוי /נויהויזר/
+2 GIVN אליהו הלוי
+2 SURN נויהויזר
+1 SEX M
+1 BIRT
+2 DATE 16 Feb 2013
+2 NOTE ו׳ אדר ב׳ ה׳תשס״ח
+2 PLAC ישראל
+1 FAMC @F2016@
+0 @I20638@ INDI
+1 SEX M
+0 @I20639@ INDI
+1 NAME דבורה לאה /נויהויזר/
+2 GIVN דבורה לאה
+2 SURN נויהויזר
+1 SEX M
+1 BIRT
+2 DATE 09 Feb 2015
+2 NOTE כ׳ בשבט ה׳תש״ע
+2 PLAC ישראל
+1 FAMC @F2016@
+0 @I20640@ INDI
+1 NAME מנוחה רחל /נויהויזר/
+2 GIVN מנוחה רחל
+2 SURN נויהויזר
+1 SEX M
+1 BIRT
+2 DATE 06 Jul 2017
+2 NOTE י״ב בתמוז ה׳תשע״ב
+2 PLAC ישראל
+1 FAMC @F2016@
+0 @I20641@ INDI
+1 NAME שניאור זלמן הלוי /נויהויזר/
+2 GIVN שניאור זלמן הלוי
+2 SURN נויהויזר
+1 SEX M
+1 BIRT
+2 DATE 09 Sep 2019
+2 NOTE ט׳ באלול ה׳תשע״ד
+2 PLAC ישראל
+1 FAMC @F2016@
+0 @I20642@ INDI
+1 NAME חיים שלום הלוי /נויהויזר/
+2 GIVN חיים שלום הלוי
+2 SURN נויהויזר
+1 SEX M
+1 BIRT
+2 DATE 15 Sep 2023
+2 NOTE כ״ט באלול ה׳תשע״ח
+2 PLAC ישראל
+1 FAMC @F2016@
+0 @I20643@ INDI
+1 SEX M
+0 @I20644@ INDI
+1 SEX M
+0 @I20645@ INDI
+1 SEX M
+0 @I20646@ INDI
+1 SEX M
+0 @I20647@ INDI
+1 SEX M
+0 @I20648@ INDI
+1 SEX M
+0 @I20649@ INDI
+1 SEX M
+0 @I20650@ INDI
+1 NAME אורי /יונתן/
+2 GIVN אורי
+2 SURN יונתן
+1 SEX M
+1 BIRT
+2 DATE 25 Sep 2019
+2 NOTE כ״ה אלול תשע״ט
+2 PLAC פתח תיקוה
+1 FAMC @F2982@
+0 @I20651@ INDI
+1 NAME דניאל /יונתן/
+2 GIVN דניאל
+2 SURN יונתן
+1 SEX M
+1 BIRT
+2 DATE 2012
+2 NOTE כ״ט כסליו תשע״ג
+2 PLAC פתח תקוה
+1 FAMC @F2982@
+0 @I20652@ INDI
+1 SEX M
+0 @I20653@ INDI
+1 SEX M
+0 @I20654@ INDI
+1 SEX M
+0 @I20655@ INDI
+1 SEX M
+0 @I20656@ INDI
+1 SEX M
+0 @I20657@ INDI
+1 NAME מר פרץ /איינהורן/
+2 GIVN מר פרץ
+2 SURN איינהורן
+1 SEX M
+1 BIRT
+2 DATE 01 Feb 1988
+2 NOTE י"ג שבט ה'תשמ"ג
+1 FAMS @F4310@
+0 @I20658@ INDI
+1 NAME IMG_3308.jpeg //
+2 GIVN IMG_3308.jpeg
+1 SEX M
+0 @I20659@ INDI
+1 NAME מר יעקב בניה /איינהורן/
+2 GIVN מר יעקב בניה
+2 SURN איינהורן
+1 SEX M
+1 BIRT
+2 DATE 2011
+2 NOTE ו' ה'תשס"ז
+1 FAMC @F4310@
+0 @I20660@ INDI
+1 NAME תפארת איינהורן /שטיין/
+2 GIVN תפארת איינהורן
+2 SURN שטיין
+2 NPFX מרת
+1 SEX F
+0 @I20661@ INDI
+1 NAME אוריה /איינהורן/
+2 GIVN אוריה
+2 SURN איינהורן
+1 SEX M
+1 BIRT
+2 DATE 20 Jan 2014
+2 NOTE י"ט שבט ה'תשס"ט
+1 FAMC @F4310@
+0 @I20662@ INDI
+1 NAME שרה /איינהורן/
+2 GIVN שרה
+2 SURN איינהורן
+1 SEX M
+1 BIRT
+2 DATE 23 Apr 2017
+2 NOTE כ"ז ניסן ה'תשע"ב
+1 FAMC @F4310@
+0 @I20663@ INDI
+1 NAME הודיה /איינהורן/
+2 GIVN הודיה
+2 SURN איינהורן
+1 SEX M
+1 BIRT
+2 DATE 07 Sep 2019
+2 NOTE ז' אלול ה'תשע"ד
+2 PLAC ישראל
+1 FAMC @F4310@
+0 @I20664@ INDI
+1 NAME תמה /איינהורן/
+2 GIVN תמה
+2 SURN איינהורן
+1 SEX M
+1 BIRT
+2 DATE 16 Jun 2022
+2 NOTE י"ז סיון ה'תשע"ז
+1 FAMC @F4310@
+0 @I20665@ INDI
+1 SEX M
+0 @I20666@ INDI
+1 NAME אפרת /מרים איינהורן/
+2 GIVN אפרת
+2 SURN מרים איינהורן
+1 SEX M
+1 BIRT
+2 DATE 19 Jan 2025
+2 NOTE י"ט טבת ה'תש"פ
+1 FAMC @F4310@
+0 @I20667@ INDI
+1 NAME מבשר טוב /איינהורן/
+2 GIVN מבשר טוב
+2 SURN איינהורן
+1 SEX M
+1 BIRT
+2 DATE 09 Sep 2027
+2 NOTE ז' אלול ה'תשפ"ב
+1 FAMC @F4310@
+0 @I20668@ INDI
+1 NAME אליהו אורי /איינהורן/
+2 GIVN אליהו אורי
+2 SURN איינהורן
+1 SEX M
+1 BIRT
+2 DATE 18 Jun 2030
+2 NOTE י"ז סיון ה'תשפ"ה
+1 FAMC @F4310@
+0 @I20669@ INDI
+1 SEX M
+0 @I20670@ INDI
+1 SEX M
+0 @I20671@ INDI
+1 SEX M
+0 @I20672@ INDI
+1 SEX M
+0 @I20673@ INDI
+1 SEX M
+0 @I20674@ INDI
+1 SEX M
+0 @I20675@ INDI
+1 SEX M
+0 @I20676@ INDI
+1 SEX M
+0 @I20677@ INDI
+1 SEX M
+0 @I20678@ INDI
+1 SEX M
+0 @I20679@ INDI
+1 SEX M
+0 @I20680@ INDI
+1 SEX M
+0 @I20681@ INDI
+1 SEX M
+0 @I20682@ INDI
+1 NAME שרה יוכבד /אייזנבך/
+2 GIVN שרה יוכבד
+2 SURN אייזנבך
+2 NPFX מרת
+1 SEX F
+1 FAMS @F4311@
+0 @I20683@ INDI
+1 NAME שלמה /אייזנבך/
+2 GIVN שלמה
+2 SURN אייזנבך
+1 SEX M
+1 BIRT
+2 DATE 22 Dec 2015
+2 NOTE י' טבת ה'תשע"א
+2 PLAC ישראל
+1 FAMC @F4311@
+0 @I20684@ INDI
+1 SEX M
+0 @I20685@ INDI
+1 SEX M
+0 @I20686@ INDI
+1 NAME יהודה /לביא/
+2 GIVN יהודה
+2 SURN לביא
+1 SEX M
+0 @I20687@ INDI
+1 NAME פעסיל פייגא /גרוס/
+2 GIVN פעסיל פייגא
+2 SURN גרוס
+2 NPFX מרת
+1 SEX F
+0 @I20688@ INDI
+1 NAME אברהם /פרידמן/
+2 GIVN אברהם
+2 SURN פרידמן
+2 NPFX הרב
+1 SEX M
+1 BIRT
+2 DATE 22 Nov 2000
+2 NOTE כ"ד חשון ה'תשנ"ו
+1 FAMS @F4312@
+0 @I20689@ INDI
+1 SEX M
+0 @I20690@ INDI
+1 NAME אשירה /פרידמן/
+2 GIVN אשירה
+2 SURN פרידמן
+1 SEX M
+1 BIRT
+2 DATE 24 Jul 2026
+2 NOTE י' אב ה'תשפ"א
+1 FAMC @F4312@
+0 @I20691@ INDI
+1 NAME דוד אורי /פרידמן/
+2 GIVN דוד אורי
+2 SURN פרידמן
+1 SEX M
+1 BIRT
+2 DATE 24 Aug 2028
+2 NOTE ב' אלול ה'תשפ"ג
+1 FAMC @F4312@
+0 @I20692@ INDI
+1 SEX M
+0 @I20693@ INDI
+1 SEX M
+0 @I20694@ INDI
+1 SEX M
+0 @I20695@ INDI
+1 SEX M
+0 @I20696@ INDI
+1 NAME איילה בריינדל /גרוס/
+2 GIVN איילה בריינדל
+2 SURN גרוס
+1 SEX M
+1 FAMC @F3257@
+0 @I20697@ INDI
+1 NAME יעקב ישראל /גרוס/
+2 GIVN יעקב ישראל
+2 SURN גרוס
+1 SEX M
+1 FAMC @F3257@
+0 @I20698@ INDI
+1 NAME יהודית /גרוס/
+2 GIVN יהודית
+2 SURN גרוס
+1 SEX M
+1 FAMC @F3257@
+0 @I20699@ INDI
+1 NAME ראצל גולדה /גרוס/
+2 GIVN ראצל גולדה
+2 SURN גרוס
+1 SEX M
+1 FAMC @F3257@
+0 @I20700@ INDI
+1 NAME חיה שרה /גרוס/
+2 GIVN חיה שרה
+2 SURN גרוס
+1 SEX M
+1 FAMC @F3257@
+0 @I20701@ INDI
+1 NAME דבורה לאה /גרוס/
+2 GIVN דבורה לאה
+2 SURN גרוס
+1 SEX M
+1 FAMC @F3257@
+0 @I20702@ INDI
+1 SEX M
+0 @I20703@ INDI
+1 SEX M
+0 @I20704@ INDI
+1 SEX M
+0 @I20705@ INDI
+1 SEX M
+0 @I20706@ INDI
+1 SEX M
+0 @I20707@ INDI
+1 NAME פעשא הדסה /גרוזמן/
+2 GIVN פעשא הדסה
+2 SURN גרוזמן
+1 SEX M
+1 BIRT
+2 DATE 26 Feb 2021
+2 NOTE י״ד אדר ראשון ה׳תשע״ו
+2 PLAC ארצות הברית
+1 FAMC @F3593@
+0 @I20708@ INDI
+1 SEX M
+0 @I20709@ INDI
+1 NAME מאיר צבי /גרוזמן/
+2 GIVN מאיר צבי
+2 SURN גרוזמן
+1 SEX M
+1 BIRT
+2 DATE 04 Oct 2022
+2 NOTE ט׳ תשרי ה׳תשע״ח
+2 PLAC דיסעלדורף, גרמניה
+1 FAMC @F3593@
+0 @I20710@ INDI
+1 NAME ראובן /גרוזמן/
+2 GIVN ראובן
+2 SURN גרוזמן
+1 SEX M
+1 BIRT
+2 DATE 02 Oct 2024
+2 NOTE כ״ט אלול ה׳תשע״ט
+2 PLAC אאכען, גרמניה
+1 FAMC @F3593@
+0 @I20711@ INDI
+1 SEX M
+0 @I20712@ INDI
+1 NAME חנה /גרוזמן/
+2 GIVN חנה
+2 SURN גרוזמן
+1 SEX M
+1 BIRT
+2 DATE 05 Jul 2026
+2 NOTE כ׳ תמוז ה׳תשפ״א
+2 PLAC אאכען, גרמניה
+1 FAMC @F3593@
+0 @I20713@ INDI
+1 SEX M
+0 @I20714@ INDI
+1 NAME ברכה /גרוזמן/
+2 GIVN ברכה
+2 SURN גרוזמן
+1 SEX M
+1 BIRT
+2 DATE 22 Jan 2028
+2 NOTE כ״ג טבת ה׳תשפ״ג
+2 PLAC אאכען, גרמניה
+1 FAMC @F3593@
+0 @I20715@ INDI
+1 NAME ישראל אריה לייב /גרוזמן/
+2 GIVN ישראל אריה לייב
+2 SURN גרוזמן
+1 SEX M
+1 BIRT
+2 DATE 09 Dec 2029
+2 NOTE ג׳ טבת ה׳תשפ״ה
+2 PLAC אאכען, גרמניה
+1 FAMC @F3593@
+0 @I20716@ INDI
+1 SEX M
+0 @I20717@ INDI
+1 SEX M
+0 @I20718@ INDI
+1 SEX M
+0 @I20719@ INDI
+1 SEX M
+0 @I20720@ INDI
+1 SEX M
+0 @I20721@ INDI
+1 SEX M
+0 @I20722@ INDI
+1 NAME רבקה דבורה גרוזמן /קארצאג/
+2 GIVN רבקה דבורה גרוזמן
+2 SURN קארצאג
+2 NPFX מרת
+1 SEX F
+0 @I20723@ INDI
+1 NAME שלום דובער /אייזנבך/
+2 GIVN שלום דובער
+2 SURN אייזנבך
+1 SEX M
+0 @I20724@ INDI
+1 NAME יולי /מלכה/
+2 GIVN יולי
+2 SURN מלכה
+1 SEX M
+1 BIRT
+2 DATE 19 Jul 2016
+2 NOTE י״ג תמוז תשע״ו
+1 FAMC @F1942@
+0 @I20725@ INDI
+1 NAME איב /מלכה/
+2 GIVN איב
+2 SURN מלכה
+1 SEX M
+1 BIRT
+2 DATE 20 Feb 2024
+2 NOTE י"א אדר א' ה'תשע"ט
+1 FAMC @F1942@
+0 @I20726@ INDI
+1 SEX M
+0 @I20727@ INDI
+1 SEX M
+0 @I20728@ INDI
+1 NAME Screenshot_20260219_011434_WhatsApp.jpg //
+2 GIVN Screenshot_20260219_011434_WhatsApp.jpg
+1 SEX M
+0 @I20729@ INDI
+1 NAME חיים /הרשקוביץ/
+2 GIVN חיים
+2 SURN הרשקוביץ
+2 NPFX הרב
+1 SEX M
+1 BIRT
+2 DATE JAN 1551
+2 NOTE ה' שבט
+1 FAMS @F4313@
+0 @I20730@ INDI
+1 NAME חיה /מושקא הרשקוביץ/
+2 GIVN חיה
+2 SURN מושקא הרשקוביץ
+1 SEX M
+1 BIRT
+2 DATE MAY 1366
+2 NOTE כ"א סיון
+1 FAMC @F4313@
+0 @I20731@ INDI
+1 NAME דבורה לאה /הרשקוביץ/
+2 GIVN דבורה לאה
+2 SURN הרשקוביץ
+1 SEX M
+1 BIRT
+2 DATE MAY 1366
+2 NOTE כ"ד סיון
+1 FAMC @F4313@
+0 @I20732@ INDI
+1 NAME שיינא /הרשקוביץ/
+2 GIVN שיינא
+2 SURN הרשקוביץ
+1 SEX M
+1 BIRT
+2 DATE AUG 1307
+2 NOTE ז' אלול
+1 FAMC @F4313@
+0 @I20733@ INDI
+1 SEX M
+0 @I20734@ INDI
+1 NAME מיכל /הרשקוביץ/
+2 GIVN מיכל
+2 SURN הרשקוביץ
+1 SEX M
+1 BIRT
+2 DATE APR 1461
+2 NOTE י"ג אייר
+1 FAMC @F4313@
+0 @I20735@ INDI
+1 NAME שניאור זלמן /הרשקוביץ/
+2 GIVN שניאור זלמן
+2 SURN הרשקוביץ
+1 SEX M
+1 BIRT
+2 DATE OCT 2149
+2 NOTE י' תשרי
+1 FAMC @F4313@
+0 @I20736@ INDI
+1 SEX M
+0 @I20737@ INDI
+1 SEX M
+0 @I20738@ INDI
+1 SEX M
+0 @I20739@ INDI
+1 SEX M
+0 @I20740@ INDI
+1 SEX M
+0 @I20741@ INDI
+1 SEX M
+0 @I20742@ INDI
+1 NAME מנחם /מענדל רוזנברג/
+2 GIVN מנחם
+2 SURN מענדל רוזנברג
+2 NPFX הרב
+1 SEX M
+1 FAMS @F4314@
+0 @I20743@ INDI
+1 NAME שמעון צבי /רוזנברג/
+2 GIVN שמעון צבי
+2 SURN רוזנברג
+1 SEX M
+1 FAMC @F4314@
+0 @I20744@ INDI
+1 SEX M
+0 @I20745@ INDI
+1 NAME שניאור זלמן /רוזנברג/
+2 GIVN שניאור זלמן
+2 SURN רוזנברג
+1 SEX M
+1 FAMC @F4314@
+0 @I20746@ INDI
+1 NAME חיה /מושקא רוזנברג/
+2 GIVN חיה
+2 SURN מושקא רוזנברג
+1 SEX M
+1 FAMC @F4314@
+0 @I20747@ INDI
+1 NAME שלום דובער /רוזנברג/
+2 GIVN שלום דובער
+2 SURN רוזנברג
+1 SEX M
+1 FAMC @F4314@
+0 @I20748@ INDI
+1 SEX M
+0 @I20749@ INDI
+1 SEX M
+0 @I20750@ INDI
+1 SEX M
+0 @I20751@ INDI
+1 SEX M
+0 @I20752@ INDI
+1 SEX M
+0 @I20753@ INDI
+1 SEX M
+0 @I20754@ INDI
+1 NAME חנה /מאשה יעקובוביץ'/
+2 GIVN חנה
+2 SURN מאשה יעקובוביץ'
+1 SEX M
+1 FAMC @F4315@
+0 @I20755@ INDI
+1 NAME שניאור זלמן /יעקובוביץ'/
+2 GIVN שניאור זלמן
+2 SURN יעקובוביץ'
+1 SEX M
+1 FAMC @F4315@
+0 @I20756@ INDI
+1 NAME מיכלא /יעקובוביץ'/
+2 GIVN מיכלא
+2 SURN יעקובוביץ'
+1 SEX M
+1 FAMC @F4315@
+0 @I20757@ INDI
+1 SEX M
+0 @I20758@ INDI
+1 SEX M
+0 @I20759@ INDI
+1 SEX M
+0 @I20760@ INDI
+1 NAME שלמה יחיאל /הלפרין/
+2 GIVN שלמה יחיאל
+2 SURN הלפרין
+1 SEX M
+1 FAMC @F3417@
+0 @I20761@ INDI
+1 SEX M
+0 @I20762@ INDI
+1 SEX M
+0 @I20763@ INDI
+1 NAME שמואל /לייב/
+2 GIVN שמואל
+2 SURN לייב
+2 NPFX הרב
+1 SEX M
+0 @I20764@ INDI
+1 SEX M
+0 @I20765@ INDI
+1 NAME שיעור--יונה-שטרנבוך-שליטא-2-1.jpg //
+2 GIVN שיעור--יונה-שטרנבוך-שליטא-2-1.jpg
+2 NPFX רבי
+1 SEX M
+0 @I20766@ INDI
+1 NAME IMG_0336.jpg //
+2 GIVN IMG_0336.jpg
+1 SEX M
+0 @I20767@ INDI
+1 NAME מנחם /מענדל קונסטנטיני/
+2 GIVN מנחם
+2 SURN מענדל קונסטנטיני
+2 NPFX הרב
+1 SEX M
+1 BIRT
+2 DATE 23 Sep 1994
+2 NOTE י״ח תשרי תשנ״ה
+1 FAMS @F4316@
+0 @I20768@ INDI
+1 NAME ישראל /מרדכי קונסטנטיני/
+2 GIVN ישראל
+2 SURN מרדכי קונסטנטיני
+1 SEX M
+1 BIRT
+2 DATE 14 Jun 2019
+2 NOTE י״א סיון תשע״ט
+2 PLAC צפת
+1 FAMC @F4316@
+0 @I20769@ INDI
+1 NAME שניאור זלמן /קונסטנטיני/
+2 GIVN שניאור זלמן
+2 SURN קונסטנטיני
+1 SEX M
+1 BIRT
+2 DATE 15 Dec 2025
+2 NOTE כ״ה כסלו שתפ״ו
+2 PLAC ירושלים
+0 @I20770@ INDI
+1 SEX M
+0 @I20771@ INDI
+1 SEX M
+0 @I20772@ INDI
+1 SEX M
+0 @I20773@ INDI
+1 NAME ברכה גיטל /דובקין/
+2 GIVN ברכה גיטל
+2 SURN דובקין
+2 NPFX מרת
+1 SEX F
+0 @I20774@ INDI
+1 NAME חיה אסתר הלברשטם /הגר/
+2 GIVN חיה אסתר הלברשטם
+2 SURN הגר
+2 NPFX הרבנית
+1 SEX F
+0 @I20775@ INDI
+1 NAME ר' בנימין /דורפמן/
+2 GIVN ר' בנימין
+2 SURN דורפמן
+1 SEX M
+1 BIRT
+2 DATE 09 Nov 2012
+2 NOTE כ״ד חשון התשס״ח
+2 PLAC ישראל
+1 FAMC @F1354@
+0 @I20776@ INDI
+1 SEX M
+0 @I20777@ INDI
+1 NAME יחזקאל /ראדאל/
+2 GIVN יחזקאל
+2 SURN ראדאל
+2 NPFX הרב
+1 SEX M
+1 FAMC @F1415@
+1 FAMS @F4317@
+0 @I20778@ INDI
+1 NAME רבקה ראדאל /מאלזינער/
+2 GIVN רבקה ראדאל
+2 SURN מאלזינער
+2 NPFX מרת
+1 SEX F
+1 FAMS @F4317@
+0 @I20779@ INDI
+1 SEX M
+0 @I20780@ INDI
+1 NAME יעקב /מיכאל ראדאל/
+2 GIVN יעקב
+2 SURN מיכאל ראדאל
+1 SEX M
+1 FAMC @F4317@
+0 @I20781@ INDI
+1 NAME חנה /מושקא ראדאל/
+2 GIVN חנה
+2 SURN מושקא ראדאל
+1 SEX M
+1 FAMC @F4317@
+0 @I20782@ INDI
+1 NAME פייגא /ראדאל/
+2 GIVN פייגא
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4317@
+0 @I20783@ INDI
+1 NAME ישראל /ראדאל/
+2 GIVN ישראל
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4317@
+0 @I20784@ INDI
+1 NAME מנחם אהרן /ראדאל/
+2 GIVN מנחם אהרן
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4317@
+0 @I20785@ INDI
+1 SEX M
+0 @I20786@ INDI
+1 SEX M
+0 @I20787@ INDI
+1 SEX M
+0 @I20788@ INDI
+1 SEX M
+0 @I20789@ INDI
+1 SEX M
+0 @I20790@ INDI
+1 SEX M
+0 @I20791@ INDI
+1 SEX M
+0 @I20792@ INDI
+1 SEX M
+0 @I20793@ INDI
+1 NAME דבורה לאה /היידינגספעלד/
+2 GIVN דבורה לאה
+2 SURN היידינגספעלד
+2 NPFX מרת
+1 SEX F
+1 FAMC @F1415@
+1 FAMS @F4318@
+0 @I20794@ INDI
+1 SEX M
+0 @I20795@ INDI
+1 NAME שמעון /היידינגספעלד/
+2 GIVN שמעון
+2 SURN היידינגספעלד
+2 NPFX הרב
+1 SEX M
+1 FAMS @F4318@
+0 @I20796@ INDI
+1 NAME שמואל יוסף /היידינגספעלד/
+2 GIVN שמואל יוסף
+2 SURN היידינגספעלד
+1 SEX M
+1 FAMC @F4318@
+0 @I20797@ INDI
+1 NAME יצחק דוד /היידינגספעלד/
+2 GIVN יצחק דוד
+2 SURN היידינגספעלד
+1 SEX M
+1 FAMC @F4318@
+0 @I20798@ INDI
+1 NAME לוי /היידינגספעלד/
+2 GIVN לוי
+2 SURN היידינגספעלד
+1 SEX M
+1 FAMC @F4318@
+0 @I20799@ INDI
+1 NAME חיה /מושקא היידינגספעלד/
+2 GIVN חיה
+2 SURN מושקא היידינגספעלד
+1 SEX M
+1 FAMC @F4318@
+0 @I20800@ INDI
+1 NAME פייגא /היידינגספעלד/
+2 GIVN פייגא
+2 SURN היידינגספעלד
+1 SEX M
+1 FAMC @F4318@
+0 @I20801@ INDI
+1 NAME חנה /היידינגספעלד/
+2 GIVN חנה
+2 SURN היידינגספעלד
+1 SEX M
+1 FAMC @F4318@
+0 @I20802@ INDI
+1 NAME מנחם אהרן /היידינגספעלד/
+2 GIVN מנחם אהרן
+2 SURN היידינגספעלד
+1 SEX M
+1 FAMC @F4318@
+0 @I20803@ INDI
+1 NAME שרה נחמה /היידינגספעלד/
+2 GIVN שרה נחמה
+2 SURN היידינגספעלד
+1 SEX M
+1 FAMC @F4318@
+0 @I20804@ INDI
+1 SEX M
+0 @I20805@ INDI
+1 SEX M
+0 @I20806@ INDI
+1 SEX M
+0 @I20807@ INDI
+1 SEX M
+0 @I20808@ INDI
+1 SEX M
+0 @I20809@ INDI
+1 SEX M
+0 @I20810@ INDI
+1 SEX M
+0 @I20811@ INDI
+1 SEX M
+0 @I20812@ INDI
+1 SEX M
+0 @I20813@ INDI
+1 NAME חנה רייזל סאסאנקא /ראדאל/
+2 GIVN חנה רייזל סאסאנקא
+2 SURN ראדאל
+2 NPFX מרת
+1 SEX F
+1 FAMC @F1415@
+1 FAMS @F4319@
+0 @I20814@ INDI
+1 NAME מנחם /מענדל סאסאנקא/
+2 GIVN מנחם
+2 SURN מענדל סאסאנקא
+2 NPFX הרב
+1 SEX M
+1 FAMS @F4319@
+0 @I20815@ INDI
+1 NAME שלום דובער /סאסאנקא/
+2 GIVN שלום דובער
+2 SURN סאסאנקא
+1 SEX M
+1 FAMC @F4319@
+0 @I20816@ INDI
+1 NAME חיה /מושקא סאסאנקא/
+2 GIVN חיה
+2 SURN מושקא סאסאנקא
+1 SEX M
+1 FAMC @F4319@
+0 @I20817@ INDI
+1 NAME אשר /סאסאנקא/
+2 GIVN אשר
+2 SURN סאסאנקא
+1 SEX M
+1 FAMC @F4319@
+0 @I20818@ INDI
+1 NAME אהרן /סאסאנקא/
+2 GIVN אהרן
+2 SURN סאסאנקא
+1 SEX M
+1 FAMC @F4319@
+0 @I20819@ INDI
+1 NAME צדיק /סאסאנקא/
+2 GIVN צדיק
+2 SURN סאסאנקא
+1 SEX M
+1 FAMC @F4319@
+0 @I20820@ INDI
+1 SEX M
+0 @I20821@ INDI
+1 SEX M
+0 @I20822@ INDI
+1 SEX M
+0 @I20823@ INDI
+1 SEX M
+0 @I20824@ INDI
+1 SEX M
+0 @I20825@ INDI
+1 SEX M
+0 @I20826@ INDI
+1 NAME מאיר יצחק /ראדאל/
+2 GIVN מאיר יצחק
+2 SURN ראדאל
+2 NPFX הרב
+1 SEX M
+1 FAMC @F1415@
+1 FAMS @F4320@
+0 @I20827@ INDI
+1 NAME חיה מושקא ראדאל /קארפ/
+2 GIVN חיה מושקא ראדאל
+2 SURN קארפ
+2 NPFX מרת
+1 SEX F
+1 FAMS @F4320@
+0 @I20828@ INDI
+1 NAME מרדכי /ראדאל/
+2 GIVN מרדכי
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4320@
+0 @I20829@ INDI
+1 NAME פייגא /ראדאל/
+2 GIVN פייגא
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4320@
+0 @I20830@ INDI
+1 NAME אברהם /ראדאל/
+2 GIVN אברהם
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4320@
+0 @I20831@ INDI
+1 NAME חנה /ראדאל/
+2 GIVN חנה
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4320@
+0 @I20832@ INDI
+1 NAME מנחם אהרן /ראדאל/
+2 GIVN מנחם אהרן
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4320@
+0 @I20833@ INDI
+1 NAME דוואשא /ראדאל/
+2 GIVN דוואשא
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4320@
+0 @I20834@ INDI
+1 NAME שרה נחמה /ראדאל/
+2 GIVN שרה נחמה
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4320@
+0 @I20835@ INDI
+1 NAME שניאור זלמן /ראדאל/
+2 GIVN שניאור זלמן
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4320@
+0 @I20836@ INDI
+1 SEX M
+0 @I20837@ INDI
+1 NAME סימא /ראדאל/
+2 GIVN סימא
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4320@
+0 @I20838@ INDI
+1 SEX M
+0 @I20839@ INDI
+1 SEX M
+0 @I20840@ INDI
+1 SEX M
+0 @I20841@ INDI
+1 SEX M
+0 @I20842@ INDI
+1 SEX M
+0 @I20843@ INDI
+1 SEX M
+0 @I20844@ INDI
+1 SEX M
+0 @I20845@ INDI
+1 NAME חיה מושקא ראדאל /קארפ/
+2 GIVN חיה מושקא ראדאל
+2 SURN קארפ
+2 NPFX מרת
+1 SEX F
+0 @I20846@ INDI
+1 NAME יוסף /ראדאל/
+2 GIVN יוסף
+2 SURN ראדאל
+2 NPFX הרב
+1 SEX M
+1 FAMC @F1415@
+1 FAMS @F4321@
+0 @I20847@ INDI
+1 NAME מלכה ראדאל /ליוועל/
+2 GIVN מלכה ראדאל
+2 SURN ליוועל
+2 NPFX מרת
+1 SEX F
+1 FAMS @F4321@
+0 @I20848@ INDI
+1 NAME יצחק /ראדאל/
+2 GIVN יצחק
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4321@
+0 @I20849@ INDI
+1 NAME שמואל טוביה /ראדאל/
+2 GIVN שמואל טוביה
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4321@
+0 @I20850@ INDI
+1 NAME מנחם אהרן /ראדאל/
+2 GIVN מנחם אהרן
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4321@
+0 @I20851@ INDI
+1 NAME יהודה /ראדאל/
+2 GIVN יהודה
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4321@
+0 @I20852@ INDI
+1 NAME שלום /מענדל ראדאל/
+2 GIVN שלום
+2 SURN מענדל ראדאל
+1 SEX M
+1 FAMC @F4321@
+0 @I20853@ INDI
+1 SEX M
+0 @I20854@ INDI
+1 SEX M
+0 @I20855@ INDI
+1 NAME מלכה ראדאל /ליוועל/
+2 GIVN מלכה ראדאל
+2 SURN ליוועל
+2 NPFX מרת
+1 SEX F
+0 @I20856@ INDI
+1 SEX M
+0 @I20857@ INDI
+1 SEX M
+0 @I20858@ INDI
+1 NAME חיה מושקא חזן /ראדאל/
+2 GIVN חיה מושקא חזן
+2 SURN ראדאל
+2 NPFX מרת
+1 SEX F
+1 FAMC @F1415@
+1 FAMS @F4322@
+0 @I20859@ INDI
+1 NAME מנחם /מענדל חזן/
+2 GIVN מנחם
+2 SURN מענדל חזן
+2 NPFX הרב
+1 SEX M
+1 FAMS @F4322@
+0 @I20860@ INDI
+1 SEX M
+0 @I20861@ INDI
+1 NAME פייגא /חזן/
+2 GIVN פייגא
+2 SURN חזן
+1 SEX M
+1 FAMC @F4322@
+0 @I20862@ INDI
+1 NAME כתריאל שלום /חזן/
+2 GIVN כתריאל שלום
+2 SURN חזן
+1 SEX M
+1 FAMC @F4322@
+0 @I20863@ INDI
+1 NAME נחמה /חזן/
+2 GIVN נחמה
+2 SURN חזן
+1 SEX M
+1 FAMC @F4322@
+0 @I20864@ INDI
+1 NAME אהרן /חזן/
+2 GIVN אהרן
+2 SURN חזן
+1 SEX M
+1 FAMC @F4322@
+0 @I20865@ INDI
+1 SEX M
+0 @I20866@ INDI
+1 NAME שניאור זלמן /חזן/
+2 GIVN שניאור זלמן
+2 SURN חזן
+1 SEX M
+1 FAMC @F4322@
+0 @I20867@ INDI
+1 SEX M
+0 @I20868@ INDI
+1 SEX M
+0 @I20869@ INDI
+1 SEX M
+0 @I20870@ INDI
+1 SEX M
+0 @I20871@ INDI
+1 SEX M
+0 @I20872@ INDI
+1 SEX M
+0 @I20873@ INDI
+1 SEX M
+0 @I20874@ INDI
+1 SEX M
+0 @I20875@ INDI
+1 SEX M
+0 @I20876@ INDI
+1 NAME ברכה אסתר מן /ראדאל/
+2 GIVN ברכה אסתר מן
+2 SURN ראדאל
+2 NPFX מרת
+1 SEX F
+1 FAMC @F1415@
+1 FAMS @F4323@
+0 @I20877@ INDI
+1 NAME מנחם /מענדל מן/
+2 GIVN מנחם
+2 SURN מענדל מן
+2 NPFX הרב
+1 SEX M
+1 FAMS @F4323@
+0 @I20878@ INDI
+1 NAME לוי יצחק /מן/
+2 GIVN לוי יצחק
+2 SURN מן
+1 SEX M
+1 FAMC @F4323@
+0 @I20879@ INDI
+1 NAME נחום אהרן /מן/
+2 GIVN נחום אהרן
+2 SURN מן
+1 SEX M
+1 FAMC @F4323@
+0 @I20880@ INDI
+1 NAME חיה /מושקא מן/
+2 GIVN חיה
+2 SURN מושקא מן
+1 SEX M
+1 FAMC @F4323@
+0 @I20881@ INDI
+1 SEX M
+0 @I20882@ INDI
+1 SEX M
+0 @I20883@ INDI
+1 SEX M
+0 @I20884@ INDI
+1 SEX M
+0 @I20885@ INDI
+1 SEX M
+0 @I20886@ INDI
+1 SEX M
+0 @I20887@ INDI
+1 SEX M
+0 @I20888@ INDI
+1 SEX M
+0 @I20889@ INDI
+1 SEX M
+0 @I20890@ INDI
+1 SEX M
+0 @I20891@ INDI
+1 NAME חיה /מושקא ראדאל/
+2 GIVN חיה
+2 SURN מושקא ראדאל
+1 SEX M
+1 FAMC @F4324@
+0 @I20892@ INDI
+1 SEX M
+0 @I20893@ INDI
+1 NAME שרה ראדאל /וויינבוים/
+2 GIVN שרה ראדאל
+2 SURN וויינבוים
+2 NPFX מרת
+1 SEX F
+1 FAMS @F4325@
+0 @I20894@ INDI
+1 NAME חיה מושקא לאשאק /ראדאל/
+2 GIVN חיה מושקא לאשאק
+2 SURN ראדאל
+2 NPFX מרת
+1 SEX F
+1 FAMC @F4325@
+1 FAMS @F4326@
+0 @I20895@ INDI
+1 NAME חיים /לאשאק/
+2 GIVN חיים
+2 SURN לאשאק
+2 NPFX הרב
+1 SEX M
+1 FAMS @F4326@
+0 @I20896@ INDI
+1 NAME נחמה קריינדעל /לאשאק/
+2 GIVN נחמה קריינדעל
+2 SURN לאשאק
+1 SEX M
+1 FAMC @F4326@
+0 @I20897@ INDI
+1 NAME חנה /לאשאק/
+2 GIVN חנה
+2 SURN לאשאק
+1 SEX M
+1 FAMC @F4326@
+0 @I20898@ INDI
+1 NAME יוסף /לאשאק/
+2 GIVN יוסף
+2 SURN לאשאק
+1 SEX M
+1 FAMC @F4326@
+0 @I20899@ INDI
+1 NAME שיינא /לאשאק/
+2 GIVN שיינא
+2 SURN לאשאק
+1 SEX M
+1 FAMC @F4326@
+0 @I20900@ INDI
+1 SEX M
+0 @I20901@ INDI
+1 SEX M
+0 @I20902@ INDI
+1 SEX M
+0 @I20903@ INDI
+1 SEX M
+0 @I20904@ INDI
+1 SEX M
+0 @I20905@ INDI
+1 SEX M
+0 @I20906@ INDI
+1 SEX M
+0 @I20907@ INDI
+1 NAME יוסף /ראדאל/
+2 GIVN יוסף
+2 SURN ראדאל
+2 NPFX הרב
+1 SEX M
+1 FAMC @F4325@
+1 FAMS @F4327@
+0 @I20908@ INDI
+1 SEX M
+0 @I20909@ INDI
+1 NAME מנחם /מענדל ראדאל/
+2 GIVN מנחם
+2 SURN מענדל ראדאל
+1 SEX M
+1 FAMC @F4327@
+0 @I20910@ INDI
+1 NAME זעלדא ראדאל /עמאר/
+2 GIVN זעלדא ראדאל
+2 SURN עמאר
+2 NPFX מרת
+1 SEX F
+1 FAMS @F4327@
+0 @I20911@ INDI
+1 NAME שלום דובער /ראדאל/
+2 GIVN שלום דובער
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4327@
+0 @I20912@ INDI
+1 NAME שלום דובער /ראדאל/
+2 GIVN שלום דובער
+2 SURN ראדאל
+1 SEX M
+0 @I20913@ INDI
+1 SEX M
+0 @I20914@ INDI
+1 SEX M
+0 @I20915@ INDI
+1 SEX M
+0 @I20916@ INDI
+1 SEX M
+0 @I20917@ INDI
+1 NAME צביה /הענדעל/
+2 GIVN צביה
+2 SURN הענדעל
+2 NPFX מרת
+1 SEX F
+1 FAMC @F4325@
+1 FAMS @F4328@
+0 @I20918@ INDI
+1 NAME לוי יצחק /הענדעל/
+2 GIVN לוי יצחק
+2 SURN הענדעל
+1 SEX M
+1 FAMC @F4328@
+0 @I20919@ INDI
+1 NAME מנחם /מענדל הענדעל/
+2 GIVN מנחם
+2 SURN מענדל הענדעל
+2 NPFX הרב
+1 SEX M
+1 FAMS @F4328@
+0 @I20920@ INDI
+1 NAME חיה /מושקא הענדעל/
+2 GIVN חיה
+2 SURN מושקא הענדעל
+1 SEX M
+1 FAMC @F4328@
+0 @I20921@ INDI
+1 SEX M
+0 @I20922@ INDI
+1 SEX M
+0 @I20923@ INDI
+1 SEX M
+0 @I20924@ INDI
+1 NAME חנה /כהן/
+2 GIVN חנה
+2 SURN כהן
+2 NPFX מרת
+1 SEX F
+1 FAMC @F4325@
+1 FAMS @F4329@
+1 FAMS @F4335@
+0 @I20925@ INDI
+1 NAME יוסף יצחק /כהן/
+2 GIVN יוסף יצחק
+2 SURN כהן
+2 NPFX הרב
+1 SEX M
+1 FAMS @F4329@
+1 FAMS @F4335@
+0 @I20926@ INDI
+1 NAME חיה /מושקא כהן/
+2 GIVN חיה
+2 SURN מושקא כהן
+1 SEX M
+1 FAMC @F4329@
+0 @I20927@ INDI
+1 SEX M
+0 @I20928@ INDI
+1 SEX M
+0 @I20929@ INDI
+1 SEX M
+0 @I20930@ INDI
+1 SEX M
+0 @I20931@ INDI
+1 NAME צבי דוב /ראדאל/
+2 GIVN צבי דוב
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4325@
+0 @I20932@ INDI
+1 NAME מנוחה רחל /ראדאל/
+2 GIVN מנוחה רחל
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4325@
+0 @I20933@ INDI
+1 NAME שיינא /ראדאל/
+2 GIVN שיינא
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4325@
+0 @I20934@ INDI
+1 NAME לוי יצחק /ראדאל/
+2 GIVN לוי יצחק
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4325@
+0 @I20935@ INDI
+1 NAME שיינא /ראדאל/
+2 GIVN שיינא
+2 SURN ראדאל
+1 SEX M
+0 @I20936@ INDI
+1 NAME שניאור זלמן /ראדאל/
+2 GIVN שניאור זלמן
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4325@
+0 @I20937@ INDI
+1 NAME ישראל /ראדאל/
+2 GIVN ישראל
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4325@
+0 @I20938@ INDI
+1 NAME שלום דובער /ראדאל/
+2 GIVN שלום דובער
+2 SURN ראדאל
+1 SEX M
+1 FAMC @F4325@
+0 @I20939@ INDI
+1 NAME קלמן אהרן /קרינסקי/
+2 GIVN קלמן אהרן
+2 SURN קרינסקי
+1 SEX M
+1 FAMC @F3968@
+0 @I20940@ INDI
+1 SEX M
+0 @I20941@ INDI
+1 NAME חנה לעווינטאל /הלברשטם/
+2 GIVN חנה לעווינטאל
+2 SURN הלברשטם
+2 NPFX מרת
+1 SEX F
+1 FAMS @F4336@
+0 @I20942@ INDI
+1 SEX M
+0 @I20943@ INDI
+1 NAME חיה מרים לוי /לודמיר/
+2 GIVN חיה מרים לוי
+2 SURN לודמיר
+1 SEX M
+1 FAMC @F3795@
+0 @I20944@ INDI
+1 NAME יצחק /לוי/
+2 GIVN יצחק
+2 SURN לוי
+2 NPFX הרב
+1 SEX M
+0 @I20945@ INDI
+1 SEX M
+0 @I20946@ INDI
+1 NAME יונה טויבא לודמיר /אלטשטוק/
+2 GIVN יונה טויבא לודמיר
+2 SURN אלטשטוק
+2 NPFX מרת
+1 SEX F
+0 @I20947@ INDI
+1 NAME יעקב /צייטאג/
+2 GIVN יעקב
+2 SURN צייטאג
+2 NPFX הרב
+1 SEX M
+0 @I20948@ INDI
+1 SEX M
+0 @I20949@ INDI
+1 NAME מנחם /מענדל סוויד/
+2 GIVN מנחם
+2 SURN מענדל סוויד
+1 SEX M
+1 FAMC @F2836@
+0 @I20950@ INDI
+1 SEX M
+0 @I20951@ INDI
+1 NAME אליה /סוויד/
+2 GIVN אליה
+2 SURN סוויד
+1 SEX M
+1 FAMC @F4330@
+0 @I20952@ INDI
+1 NAME אליה /סוויד/
+2 GIVN אליה
+2 SURN סוויד
+1 SEX M
+0 @I20953@ INDI
+1 SEX M
+0 @I20954@ INDI
+1 NAME ר' אלכסנדר /שילר/
+2 GIVN ר' אלכסנדר
+2 SURN שילר
+1 SEX M
+1 BIRT
+2 DATE 30 Jul 1995
+2 NOTE ג' אב ה'תש"נ
+0 @I20955@ INDI
+1 NAME מנחם /מענדל סלמון/
+2 GIVN מנחם
+2 SURN מענדל סלמון
+1 SEX M
+1 BIRT
+2 DATE 26 Mar 2010
+2 NOTE י״א ניסן תש״ע
+2 PLAC קרית מלאכי
+1 FAMC @F4331@
+0 @I20956@ INDI
+1 NAME לוי יצחק /סלמון/
+2 GIVN לוי יצחק
+2 SURN סלמון
+1 SEX M
+1 BIRT
+2 DATE 15 Mar 2012
+2 NOTE כ״א אדר תשע״ב
+2 PLAC מבוא חורון
+1 FAMC @F4331@
+0 @I20957@ INDI
+1 NAME אלישע /סלמון/
+2 GIVN אלישע
+2 SURN סלמון
+1 SEX M
+1 BIRT
+2 DATE 30 Jan 2014
+2 NOTE כ״ט שבט תשע״ד
+2 PLAC מבוא חורון
+1 FAMC @F4331@
+0 @I20958@ INDI
+1 NAME שולמית /סלמון/
+2 GIVN שולמית
+2 SURN סלמון
+1 SEX M
+1 BIRT
+2 DATE 11 Apr 2016
+2 NOTE ג׳ ניסן תשע״ו
+2 PLAC מבוא חורון
+1 FAMC @F4331@
+0 @I20959@ INDI
+1 NAME חיה /מושקא סלמון/
+2 GIVN חיה
+2 SURN מושקא סלמון
+1 SEX M
+1 BIRT
+2 DATE 11 Feb 2019
+2 NOTE ו׳ אדר א׳ תשע״ט
+2 PLAC מבוא חורון
+1 FAMC @F4331@
+0 @I20960@ INDI
+1 NAME שניאור זלמן /סלמון/
+2 GIVN שניאור זלמן
+2 SURN סלמון
+1 SEX M
+1 BIRT
+2 DATE 01 Aug 2021
+2 NOTE כ״ג אב תשפ״א
+2 PLAC מגדל העמק
+1 FAMC @F4331@
+0 @I20961@ INDI
+1 SEX M
+0 @I20962@ INDI
+1 SEX M
+0 @I20963@ INDI
+1 SEX M
+0 @I20964@ INDI
+1 SEX M
+0 @I20965@ INDI
+1 SEX M
+0 @I20966@ INDI
+1 SEX M
+0 @I20967@ INDI
+1 SEX M
+0 @I20968@ INDI
+1 NAME שטערנא שרה קורנט /איידלמן/
+2 GIVN שטערנא שרה קורנט
+2 SURN איידלמן
+2 NPFX מרת
+1 SEX F
+1 BIRT
+2 DATE 20 Jan 1244
+2 NOTE א שבט התשס׳׳ ד
+2 PLAC עפולה
+1 FAMS @F4332@
+0 @I20969@ INDI
+1 NAME מושקא /קורנט/
+2 GIVN מושקא
+2 SURN קורנט
+1 SEX M
+1 BIRT
+2 DATE 01 Nov 1245
+2 NOTE ג חשוון התשפ׳׳ ו
+2 PLAC חיפה
+1 FAMC @F4332@
+0 @I20970@ INDI
+1 NAME מושקא /קורנט/
+2 GIVN מושקא
+2 SURN קורנט
+1 SEX M
+0 @I20971@ INDI
+1 SEX M
+0 @I20972@ INDI
+1 SEX M
+0 @I20973@ INDI
+1 SEX M
+0 @I20974@ INDI
+1 SEX M
+0 @I20975@ INDI
+1 NAME ר' יהודה /הכט/
+2 GIVN ר' יהודה
+2 SURN הכט
+1 SEX M
+1 FAMS @F4333@
+0 @I20976@ INDI
+1 NAME יהונתן /הכט/
+2 GIVN יהונתן
+2 SURN הכט
+1 SEX M
+1 FAMC @F4333@
+0 @I20977@ INDI
+1 SEX M
+0 @I20978@ INDI
+1 SEX M
+0 @I20979@ INDI
+1 NAME מר אברהם אלחנן /הלפגוט/
+2 GIVN מר אברהם אלחנן
+2 SURN הלפגוט
+1 SEX M
+1 BIRT
+2 DATE 30 Sep 1994
+2 NOTE כ"ה תשרי ה'תש"נ
+1 FAMS @F4334@
+0 @I20980@ INDI
+1 NAME הילה /הלפגוט/
+2 GIVN הילה
+2 SURN הלפגוט
+1 SEX M
+1 BIRT
+2 DATE 31 Jan 2017
+2 NOTE ד' שבט ה'תשע"ב
+1 FAMC @F4334@
+0 @I20981@ INDI
+1 NAME אורי /הלפגוט/
+2 GIVN אורי
+2 SURN הלפגוט
+1 SEX M
+1 BIRT
+2 DATE 27 Aug 2020
+2 NOTE ז' אלול ה'תשע"ה
+2 PLAC בני ברק
+1 FAMC @F4334@
+0 @I20982@ INDI
+1 SEX M
+0 @I20983@ INDI
+1 SEX M
+0 @I20984@ INDI
+1 SEX M
+0 @I20985@ INDI
+1 SEX M
+0 @I20986@ INDI
+1 SEX M
+0 @I20987@ INDI
+1 NAME מנחם /מענדל כהן/
+2 GIVN מנחם
+2 SURN מענדל כהן
+1 SEX M
+1 FAMC @F4335@
+0 @I20988@ INDI
+1 SEX M
+0 @I20989@ INDI
+1 NAME מנחם /מענדל באטלער/
+2 GIVN מנחם
+2 SURN מענדל באטלער
+1 SEX M
+1 BIRT
+2 DATE 26 Feb 2031
+2 NOTE ג' אדר ה'תשפ"ו
+1 FAMC @F3969@
+0 @I20990@ INDI
+1 SEX M
+0 @I20991@ INDI
+1 NAME חוה באטלער /(לעוונטאל)/
+2 GIVN חוה באטלער
+2 SURN (לעוונטאל)
+2 NPFX מרת
+1 SEX F
+0 @I20992@ INDI
+1 NAME חיה /מושקא לעווינטאל/
+2 GIVN חיה
+2 SURN מושקא לעווינטאל
+1 SEX M
+1 FAMC @F4336@
+0 @I20993@ INDI
+1 SEX M
+0 @I20994@ INDI
+1 NAME חנה /היידינגספעלד/
+2 GIVN חנה
+2 SURN היידינגספעלד
+1 SEX M
+1 FAMC @F4318@
+0 @I20995@ INDI
+1 SEX M
+0 @I20996@ INDI
+1 NAME עלקא אטיק /שיינברגר/
+2 GIVN עלקא אטיק
+2 SURN שיינברגר
+2 NPFX הרבנית
+1 SEX F
+1 FAMS @F4337@
+0 @I20997@ INDI
+1 NAME רבקה /אטיק/
+2 GIVN רבקה
+2 SURN אטיק
+1 SEX M
+1 FAMC @F4337@
+0 @I20998@ INDI
+1 NAME יצחק זאב /אטיק/
+2 GIVN יצחק זאב
+2 SURN אטיק
+1 SEX M
+1 FAMC @F4337@
+0 @I20999@ INDI
+1 NAME מרדכי צבי /אטיק/
+2 GIVN מרדכי צבי
+2 SURN אטיק
+1 SEX M
+1 FAMC @F4337@
+0 @I21000@ INDI
+1 SEX M
+0 @I21001@ INDI
+1 SEX M
+0 @I21002@ INDI
+1 SEX M
+0 @I21003@ INDI
+1 SEX M
+0 @I21004@ INDI
+1 NAME רבקה הלברשטם /זעלטענרייך/
+2 GIVN רבקה הלברשטם
+2 SURN זעלטענרייך
+2 NPFX מרת
+1 SEX F
+0 @I21005@ INDI
+1 NAME יצחק חיים /זעלטענרייך/
+2 GIVN יצחק חיים
+2 SURN זעלטענרייך
+2 NPFX הרב
+1 SEX M
+1 FAMC @F578@
+0 @I21006@ INDI
+1 NAME מאיר יוסף דוד /זעלטענרייך/
+2 GIVN מאיר יוסף דוד
+2 SURN זעלטענרייך
+1 SEX M
+1 FAMC @F578@
+0 @I21007@ INDI
+1 SEX M
+0 @I21008@ INDI
+1 SEX M
+0 @I21009@ INDI
+1 SEX M
+0 @I21010@ INDI
+1 SEX M
+0 @I21011@ INDI
+1 SEX M
+0 @I21012@ INDI
+1 SEX M
+0 @I21013@ INDI
+1 NAME נמרוד /משולם/
+2 GIVN נמרוד
+2 SURN משולם
+1 SEX M
+1 FAMS @F4338@
+0 @I21014@ INDI
+1 NAME סיני /משולם/
+2 GIVN סיני
+2 SURN משולם
+1 SEX M
+1 BIRT
+2 DATE 22 Feb 2026
+2 NOTE ה' אדר תשפ"ו
+1 FAMC @F4338@
+0 @I21015@ INDI
+1 SEX M
+0 @I21016@ INDI
+1 SEX M
+0 @I21017@ INDI
+1 SEX M
+0 @I21018@ INDI
+1 SEX M
+0 @I21019@ INDI
+1 SEX M
+0 @I21020@ INDI
+1 SEX M
+0 @I21021@ INDI
 1 SEX M
 0 @F1@ FAM
 1 HUSB @I2@
@@ -191980,6 +194255,8 @@
 1 HUSB @I1182@
 1 WIFE @I2452@
 1 CHIL @I2453@
+1 CHIL @I21005@
+1 CHIL @I21006@
 0 @F579@ FAM
 1 HUSB @I2454@
 1 WIFE @I1183@
@@ -191998,6 +194275,7 @@
 1 HUSB @I2464@
 1 WIFE @I1194@
 1 CHIL @I2465@
+1 CHIL @I20564@
 0 @F583@ FAM
 1 HUSB @I1197@
 1 WIFE @I2466@
@@ -195699,6 +197977,7 @@
 1 WIFE @I5065@
 1 CHIL @I5066@
 1 CHIL @I5067@
+1 CHIL @I20596@
 0 @F1143@ FAM
 1 HUSB @I5068@
 1 WIFE @I2224@
@@ -195806,6 +198085,7 @@
 1 CHIL @I5137@
 1 CHIL @I5138@
 1 CHIL @I5139@
+1 CHIL @I20538@
 0 @F1161@ FAM
 1 HUSB @I2272@
 1 WIFE @I5140@
@@ -197291,6 +199571,7 @@
 1 CHIL @I6247@
 1 CHIL @I6248@
 1 CHIL @I6249@
+1 CHIL @I20775@
 0 @F1355@ FAM
 1 HUSB @I6250@
 1 WIFE @I2654@
@@ -197698,6 +199979,13 @@
 1 CHIL @I6533@
 1 CHIL @I6534@
 1 CHIL @I6535@
+1 CHIL @I20777@
+1 CHIL @I20793@
+1 CHIL @I20813@
+1 CHIL @I20826@
+1 CHIL @I20846@
+1 CHIL @I20858@
+1 CHIL @I20876@
 0 @F1416@ FAM
 1 HUSB @I6536@
 1 WIFE @I2753@
@@ -200855,6 +203143,8 @@
 1 HUSB @I8668@
 1 WIFE @I3943@
 1 CHIL @I8669@
+1 CHIL @I20724@
+1 CHIL @I20725@
 0 @F1943@ FAM
 1 HUSB @I3963@
 1 WIFE @I8670@
@@ -201459,6 +203749,12 @@
 1 HUSB @I9118@
 1 WIFE @I4286@
 1 CHIL @I9119@
+1 CHIL @I20636@
+1 CHIL @I20637@
+1 CHIL @I20639@
+1 CHIL @I20640@
+1 CHIL @I20641@
+1 CHIL @I20642@
 0 @F2017@ FAM
 1 HUSB @I4288@
 1 WIFE @I9120@
@@ -201554,6 +203850,16 @@
 1 WIFE @I4322@
 1 CHIL @I9180@
 1 CHIL @I9181@
+1 CHIL @I20574@
+1 CHIL @I20575@
+1 CHIL @I20576@
+1 CHIL @I20577@
+1 CHIL @I20578@
+1 CHIL @I20579@
+1 CHIL @I20580@
+1 CHIL @I20581@
+1 CHIL @I20582@
+1 CHIL @I20583@
 0 @F2033@ FAM
 1 HUSB @I4323@
 1 WIFE @I9172@
@@ -204702,6 +207008,7 @@
 1 CHIL @I11497@
 1 CHIL @I11498@
 1 CHIL @I11499@
+1 CHIL @I20531@
 0 @F2469@ FAM
 1 HUSB @I11500@
 1 WIFE @I5745@
@@ -204715,6 +207022,7 @@
 1 CHIL @I11505@
 1 CHIL @I11506@
 1 CHIL @I11507@
+1 CHIL @I20532@
 0 @F2471@ FAM
 1 HUSB @I6030@
 1 WIFE @I12673@
@@ -204731,6 +207039,7 @@
 1 HUSB @I5747@
 1 WIFE @I11508@
 1 CHIL @I11509@
+1 CHIL @I20530@
 0 @F2473@ FAM
 1 HUSB @I11510@
 1 WIFE @I5753@
@@ -206539,6 +208848,7 @@
 1 CHIL @I12917@
 1 CHIL @I12918@
 1 CHIL @I12919@
+1 CHIL @I20558@
 0 @F2678@ FAM
 1 HUSB @I12920@
 1 WIFE @I6141@
@@ -207652,6 +209962,7 @@
 1 HUSB @I6550@
 1 WIFE @I13742@
 1 CHIL @I13743@
+1 CHIL @I20949@
 0 @F2837@ FAM
 1 HUSB @I6562@
 1 WIFE @I13744@
@@ -208682,6 +210993,8 @@
 1 HUSB @I14484@
 1 WIFE @I6947@
 1 CHIL @I14485@
+1 CHIL @I20650@
+1 CHIL @I20651@
 0 @F2983@ FAM
 1 HUSB @I6948@
 1 WIFE @I14486@
@@ -210242,6 +212555,12 @@
 1 CHIL @I15520@
 1 CHIL @I15521@
 1 CHIL @I15522@
+1 CHIL @I20696@
+1 CHIL @I20697@
+1 CHIL @I20698@
+1 CHIL @I20699@
+1 CHIL @I20700@
+1 CHIL @I20701@
 0 @F3258@ FAM
 1 HUSB @I15523@
 1 WIFE @I8086@
@@ -211270,6 +213589,7 @@
 1 CHIL @I16273@
 1 CHIL @I16274@
 1 CHIL @I16275@
+1 CHIL @I20760@
 0 @F3418@ FAM
 1 HUSB @I10321@
 1 WIFE @I16276@
@@ -212161,6 +214481,7 @@
 1 CHIL @I16965@
 1 CHIL @I16966@
 1 CHIL @I16967@
+1 CHIL @I20594@
 0 @F3534@ FAM
 1 HUSB @I10624@
 1 WIFE @I16968@
@@ -212524,6 +214845,12 @@
 1 CHIL @I17222@
 1 CHIL @I17223@
 1 CHIL @I17224@
+1 CHIL @I20707@
+1 CHIL @I20709@
+1 CHIL @I20710@
+1 CHIL @I20712@
+1 CHIL @I20714@
+1 CHIL @I20715@
 0 @F3594@ FAM
 1 HUSB @I17225@
 1 WIFE @I11027@
@@ -213724,6 +216051,7 @@
 1 WIFE @I18027@
 1 CHIL @I18028@
 1 CHIL @I18029@
+1 CHIL @I20943@
 0 @F3796@ FAM
 1 HUSB @I18070@
 1 WIFE @I12474@
@@ -214932,10 +217260,12 @@
 1 CHIL @I18968@
 1 CHIL @I18969@
 1 CHIL @I18970@
+1 CHIL @I20939@
 0 @F3969@ FAM
 1 HUSB @I18971@
 1 WIFE @I13727@
 1 CHIL @I18972@
+1 CHIL @I20989@
 0 @F3970@ FAM
 1 HUSB @I18973@
 1 WIFE @I13747@
@@ -216803,6 +219133,7 @@
 1 HUSB @I20343@
 1 WIFE @I19048@
 1 CHIL @I20344@
+1 CHIL @I20630@
 0 @F4271@ FAM
 1 HUSB @I20347@
 1 WIFE @I19117@
@@ -216984,4 +219315,236 @@
 1 HUSB @I20512@
 1 WIFE @I20184@
 1 CHIL @I20513@
+0 @F4303@ FAM
+1 HUSB @I20326@
+1 WIFE @I18776@
+1 CHIL @I20529@
+0 @F4304@ FAM
+1 HUSB @I2328@
+1 WIFE @I20533@
+1 CHIL @I20534@
+0 @F4305@ FAM
+1 HUSB @I11320@
+1 WIFE @I20540@
+1 CHIL @I20542@
+1 CHIL @I20543@
+1 CHIL @I20544@
+1 CHIL @I20545@
+1 CHIL @I20546@
+0 @F4306@ FAM
+1 HUSB @I20564@
+1 WIFE @I20563@
+1 CHIL @I20565@
+0 @F4307@ FAM
+1 HUSB @I20565@
+1 WIFE @I20566@
+1 CHIL @I20567@
+0 @F4308@ FAM
+1 HUSB @I20599@
+1 WIFE @I11808@
+1 CHIL @I20600@
+1 CHIL @I20601@
+1 CHIL @I20602@
+1 CHIL @I20603@
+1 CHIL @I20604@
+0 @F4309@ FAM
+1 HUSB @I17932@
+1 WIFE @I12340@
+1 CHIL @I20613@
+1 CHIL @I20614@
+1 CHIL @I20615@
+1 CHIL @I20616@
+1 CHIL @I20617@
+1 CHIL @I20618@
+1 CHIL @I20619@
+0 @F4310@ FAM
+1 HUSB @I20657@
+1 WIFE @I6503@
+1 CHIL @I20659@
+1 CHIL @I20661@
+1 CHIL @I20662@
+1 CHIL @I20663@
+1 CHIL @I20664@
+1 CHIL @I20666@
+1 CHIL @I20667@
+1 CHIL @I20668@
+0 @F4311@ FAM
+1 HUSB @I14084@
+1 WIFE @I20682@
+1 CHIL @I20683@
+0 @F4312@ FAM
+1 HUSB @I20688@
+1 WIFE @I19664@
+1 CHIL @I20690@
+1 CHIL @I20691@
+0 @F4313@ FAM
+1 HUSB @I20729@
+1 WIFE @I10921@
+1 CHIL @I20730@
+1 CHIL @I20731@
+1 CHIL @I20732@
+1 CHIL @I20734@
+1 CHIL @I20735@
+0 @F4314@ FAM
+1 HUSB @I20742@
+1 WIFE @I10920@
+1 CHIL @I20743@
+1 CHIL @I20745@
+1 CHIL @I20746@
+1 CHIL @I20747@
+0 @F4315@ FAM
+1 HUSB @I10590@
+1 WIFE @I10923@
+1 CHIL @I20754@
+1 CHIL @I20755@
+1 CHIL @I20756@
+0 @F4316@ FAM
+1 HUSB @I20767@
+1 WIFE @I13041@
+1 CHIL @I20768@
+0 @F4317@ FAM
+1 HUSB @I20777@
+1 WIFE @I20778@
+1 CHIL @I20780@
+1 CHIL @I20781@
+1 CHIL @I20782@
+1 CHIL @I20783@
+1 CHIL @I20784@
+0 @F4318@ FAM
+1 HUSB @I20795@
+1 WIFE @I20793@
+1 CHIL @I20796@
+1 CHIL @I20797@
+1 CHIL @I20798@
+1 CHIL @I20799@
+1 CHIL @I20800@
+1 CHIL @I20801@
+1 CHIL @I20802@
+1 CHIL @I20803@
+1 CHIL @I20994@
+0 @F4319@ FAM
+1 HUSB @I20814@
+1 WIFE @I20813@
+1 CHIL @I20815@
+1 CHIL @I20816@
+1 CHIL @I20817@
+1 CHIL @I20818@
+1 CHIL @I20819@
+0 @F4320@ FAM
+1 HUSB @I20826@
+1 WIFE @I20827@
+1 CHIL @I20828@
+1 CHIL @I20829@
+1 CHIL @I20830@
+1 CHIL @I20831@
+1 CHIL @I20832@
+1 CHIL @I20833@
+1 CHIL @I20834@
+1 CHIL @I20835@
+1 CHIL @I20837@
+0 @F4321@ FAM
+1 HUSB @I20846@
+1 WIFE @I20847@
+1 CHIL @I20848@
+1 CHIL @I20849@
+1 CHIL @I20850@
+1 CHIL @I20851@
+1 CHIL @I20852@
+0 @F4322@ FAM
+1 HUSB @I20859@
+1 WIFE @I20858@
+1 CHIL @I20861@
+1 CHIL @I20862@
+1 CHIL @I20863@
+1 CHIL @I20864@
+1 CHIL @I20866@
+0 @F4323@ FAM
+1 HUSB @I20877@
+1 WIFE @I20876@
+1 CHIL @I20878@
+1 CHIL @I20879@
+1 CHIL @I20880@
+0 @F4324@ FAM
+1 HUSB @I13719@
+1 WIFE @I18963@
+1 CHIL @I20891@
+0 @F4325@ FAM
+1 HUSB @I6532@
+1 WIFE @I20893@
+1 CHIL @I20894@
+1 CHIL @I20907@
+1 CHIL @I20917@
+1 CHIL @I20924@
+1 CHIL @I20931@
+1 CHIL @I20932@
+1 CHIL @I20933@
+1 CHIL @I20934@
+1 CHIL @I20936@
+1 CHIL @I20937@
+1 CHIL @I20938@
+0 @F4326@ FAM
+1 HUSB @I20895@
+1 WIFE @I20894@
+1 CHIL @I20896@
+1 CHIL @I20897@
+1 CHIL @I20898@
+1 CHIL @I20899@
+0 @F4327@ FAM
+1 HUSB @I20907@
+1 WIFE @I20910@
+1 CHIL @I20909@
+1 CHIL @I20911@
+0 @F4328@ FAM
+1 HUSB @I20919@
+1 WIFE @I20917@
+1 CHIL @I20918@
+1 CHIL @I20920@
+0 @F4329@ FAM
+1 HUSB @I20925@
+1 WIFE @I20924@
+1 CHIL @I20926@
+0 @F4330@ FAM
+1 HUSB @I6549@
+1 WIFE @I13741@
+1 CHIL @I20951@
+0 @F4331@ FAM
+1 HUSB @I19563@
+1 WIFE @I14292@
+1 CHIL @I20955@
+1 CHIL @I20956@
+1 CHIL @I20957@
+1 CHIL @I20958@
+1 CHIL @I20959@
+1 CHIL @I20960@
+0 @F4332@ FAM
+1 HUSB @I4473@
+1 WIFE @I20968@
+1 CHIL @I20969@
+0 @F4333@ FAM
+1 HUSB @I20975@
+1 WIFE @I11882@
+1 CHIL @I20976@
+0 @F4334@ FAM
+1 HUSB @I20979@
+1 WIFE @I11228@
+1 CHIL @I20980@
+1 CHIL @I20981@
+0 @F4335@ FAM
+1 HUSB @I20924@
+1 WIFE @I20925@
+1 CHIL @I20987@
+0 @F4336@ FAM
+1 HUSB @I13728@
+1 WIFE @I20941@
+1 CHIL @I20992@
+0 @F4337@ FAM
+1 HUSB @I20273@
+1 WIFE @I20996@
+1 CHIL @I20997@
+1 CHIL @I20998@
+1 CHIL @I20999@
+0 @F4338@ FAM
+1 HUSB @I21013@
+1 WIFE @I13192@
+1 CHIL @I21014@
 0 TRLR
