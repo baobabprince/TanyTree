@@ -2,7 +2,7 @@ import requests
 import time
 import random
 from urllib.parse import urlparse, urlunparse, parse_qs, urlencode
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed, wait, FIRST_COMPLETED
 from src.scraper import Scraper
 import threading
 from queue import Queue, Empty
@@ -108,7 +108,6 @@ class ScraperEngine:
                     continue
                     
                 # Wait for at least one future to complete
-                from concurrent.futures import wait, FIRST_COMPLETED
                 done, not_done = wait(futures.keys(), return_when=FIRST_COMPLETED)
                 
                 for future in done:
@@ -190,7 +189,6 @@ class ScraperEngine:
             rows = cursor.fetchall()
             
         added = 0
-        from urllib.parse import urlparse, urlunparse, parse_qs, urlencode
         
         for related_id, parent_url in rows:
             # Construct URL based on parent_url but with related_id
@@ -232,7 +230,6 @@ class ScraperEngine:
         else:
             # If already visited, we might still want to start crawling from its relationships
             # to continue where we left off.
-            from urllib.parse import urlparse, parse_qs
             parsed_url = urlparse(start_url)
             start_id = parse_qs(parsed_url.query).get('i', [None])[0]
             
