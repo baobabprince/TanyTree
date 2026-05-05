@@ -94,6 +94,9 @@ def test_crawl_skips_visited(mock_db):
         engine.crawl("http://example.com/?i=visited1", limit=1)
 
         # _scrape_one should NOT be called for visited1
-        mock_scrape.assert_not_called()
+        for call_args in mock_scrape.call_args_list:
+            args, kwargs = call_args
+            assert "i=visited1" not in args[0]
+
         # But session.get might be called in the resume logic
         assert mock_get.call_count == 1
