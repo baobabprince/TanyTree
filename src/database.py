@@ -33,11 +33,17 @@ class DatabaseHelper:
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS discovered_urls (
                 id TEXT PRIMARY KEY,
-                url TEXT
+                url TEXT,
+                failure_count INTEGER DEFAULT 0
             )
         """)
 
         # Ensure all columns exist (simple migration)
+        cursor.execute("PRAGMA table_info(discovered_urls)")
+        existing_discovered_columns = [row[1] for row in cursor.fetchall()]
+        if "failure_count" not in existing_discovered_columns:
+            cursor.execute("ALTER TABLE discovered_urls ADD COLUMN failure_count INTEGER DEFAULT 0")
+
         cursor.execute("PRAGMA table_info(individuals)")
         existing_columns = [row[1] for row in cursor.fetchall()]
         required_columns = [
@@ -128,16 +134,43 @@ class DatabaseHelper:
             """, (person_id, url))
             self.conn.commit()
 
-    def get_pending_urls(self):
+    def get_pending_urls(self, max_failures=3):
         with self.lock:
             cursor = self.conn.cursor()
             cursor.execute("""
                 SELECT d.id, d.url 
                 FROM discovered_urls d
                 LEFT JOIN individuals i ON d.id = i.id
-                WHERE i.id IS NULL
-            """)
+                WHERE i.id IS NULL AND d.failure_count < ?
+            """, (max_failures,))
             return [dict(row) for row in cursor.fetchall()]
+
+    def increment_failure_count(self, person_id):
+        with self.lock:
+            cursor = self.conn.cursor()
+            cursor.execute("""
+                UPDATE discovered_urls
+                SET failure_count = failure_count + 1
+                WHERE id = ?
+            """, (person_id,))
+            self.conn.commit()
+
+    def reset_failure_count(self, person_id):
+        with self.lock:
+            cursor = self.conn.cursor()
+            cursor.execute("""
+                UPDATE discovered_urls
+                SET failure_count = 0
+                WHERE id = ?
+            """, (person_id,))
+            self.conn.commit()
+
+    def get_max_id(self):
+        with self.lock:
+            cursor = self.conn.cursor()
+            cursor.execute("SELECT MAX(CAST(id AS INTEGER)) FROM individuals")
+            row = cursor.fetchone()
+            return row[0] if row and row[0] else 0
 
     def close(self):
         self.conn.close()

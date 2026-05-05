@@ -134,14 +134,21 @@ class ScraperEngine:
 
     def _scrape_one(self, url):
         url = url.replace('//?', '/?')
+        parsed_url = urlparse(url)
+        person_id = parse_qs(parsed_url.query).get('i', [None])[0]
+
         response = self._request_with_retry(url)
         if not response:
+            if person_id:
+                self.db.increment_failure_count(person_id)
             return None
 
         try:
             html_content = response.text
             if not html_content:
                 print(f"Received empty response from {url}")
+                if person_id:
+                    self.db.increment_failure_count(person_id)
                 return None
 
             # Extract biographical data
@@ -155,6 +162,7 @@ class ScraperEngine:
                     self.visited_ids.add(person_id)
 
                 self.db.add_individual(data)
+                self.db.reset_failure_count(person_id)
                 
                 # Extract relationships
                 rels = self.scraper.extract_relationships(html_content, person_id, base_url=url)
@@ -165,9 +173,13 @@ class ScraperEngine:
                     
                 return data, rels
             else:
+                if person_id:
+                    self.db.increment_failure_count(person_id)
                 return None
         except Exception as e:
             print(f"Unexpected error scraping {url}: {type(e).__name__}: {e}")
+            if person_id:
+                self.db.increment_failure_count(person_id)
             return None
 
     def _discover_from_db(self, limit=1000):
@@ -203,6 +215,44 @@ class ScraperEngine:
             
         if added > 0:
             print(f"Heuristically discovered {added} URLs from existing relationships in database.")
+        return added
+
+    def _probe_new_ids(self, base_url, limit=100, lookahead=500):
+        """Probe for new IDs starting from the max ID in database."""
+        max_id = self.db.get_max_id()
+        try:
+            max_id_int = int(max_id)
+        except (ValueError, TypeError):
+            max_id_int = 0
+
+        added = 0
+        parsed = urlparse(base_url)
+
+        # We'll probe IDs from max_id_int + 1 up to max_id_int + lookahead
+        # But we only add those that are not in visited_ids and not in pending_ids
+        for i in range(1, lookahead + 1):
+            if added >= limit:
+                break
+
+            probe_id = str(max_id_int + i)
+            with self.lock:
+                if probe_id in self.visited_ids or probe_id in self.pending_ids:
+                    continue
+
+            query = parse_qs(parsed.query)
+            query['i'] = [probe_id]
+            new_query = urlencode(query, doseq=True)
+            new_url = urlunparse((parsed.scheme, parsed.netloc, parsed.path, parsed.params, new_query, parsed.fragment))
+
+            # We don't add to DB yet, just to the queue for checking
+            with self.lock:
+                if probe_id not in self.pending_ids:
+                    self.pending_ids.add(probe_id)
+                    self.queue.put((probe_id, new_url))
+                    added += 1
+
+        if added > 0:
+            print(f"Probing {added} new IDs starting from {max_id_int + 1}...")
         return added
 
     def crawl(self, start_url, limit=100):
@@ -276,6 +326,13 @@ class ScraperEngine:
                 return
 
         if count < limit:
+            # First pass with existing queue
             count += self._process_queue(limit=limit - count)
             
+            # If still below limit, try probing for new IDs
+            if count < limit:
+                self._probe_new_ids(start_url, limit=limit - count)
+                if self.queue.qsize() > 0:
+                    count += self._process_queue(limit=limit - count)
+
         print(f"Crawl finished. Total individuals scraped in this session: {count}")
