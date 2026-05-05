@@ -207,7 +207,6 @@ class ScraperEngine:
         return added
 
     def crawl(self, start_url, limit=100):
-        from urllib.parse import urlparse, parse_qs
         parsed_url = urlparse(start_url)
         start_id = parse_qs(parsed_url.query).get('i', [None])[0]
 
