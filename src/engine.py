@@ -1,6 +1,7 @@
 import requests
 import time
 import random
+from urllib.parse import urlparse, urlunparse, parse_qs, urlencode
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from src.scraper import Scraper
 import threading
