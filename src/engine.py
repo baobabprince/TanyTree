@@ -20,8 +20,8 @@ class ScraperEngine:
         self.session = requests.Session()
         self.session.headers.update({'User-Agent': 'Lynx'})
 
-    def scrape_person(self, url):
-        result = self._scrape_one(url)
+    def scrape_person(self, url, force=False):
+        result = self._scrape_one(url, force=force)
         return result[0] if result else None
 
     def _request_with_retry(self, url, max_retries=3, backoff_factor=5):
@@ -132,10 +132,15 @@ class ScraperEngine:
                 time.sleep(0.05)
         return count
 
-    def _scrape_one(self, url):
+    def _scrape_one(self, url, force=False):
         url = url.replace('//?', '/?')
         parsed_url = urlparse(url)
         person_id = parse_qs(parsed_url.query).get('i', [None])[0]
+
+        if person_id and not force:
+            with self.lock:
+                if person_id in self.visited_ids:
+                    return None
 
         response = self._request_with_retry(url)
         if not response:
@@ -157,7 +162,7 @@ class ScraperEngine:
                 person_id = data["id"]
                 
                 with self.lock:
-                    if person_id in self.visited_ids:
+                    if not force and person_id in self.visited_ids:
                         return None
                     self.visited_ids.add(person_id)
 
