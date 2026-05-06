@@ -58,7 +58,7 @@ class Scraper:
         for li in info_container.find_all('li'):
             text = li.get_text(strip=True)
             if 'תאריך לידה' in text:
-                data["birth_date"] = normalize_whitespace(text.replace('תאריך לידה:', '').strip())
+                data["birth_date"] = normalize_whitespace(text.replace('תאריך לידה:', ''))
                 data["birth_date_civil"] = hebrew_to_civil(data["birth_date"])
             elif 'מקום לידה' in text:
                 data["birth_place"] = normalize_whitespace(text.replace('מקום לידה:', '').strip())
