@@ -33,7 +33,7 @@ class Scraper:
         name = normalize_whitespace(name_elem.get_text(strip=True)) if name_elem else ""
         
         # Detect gender using NameParser
-        gender = self.name_parser.detect_gender(name) or "M" # Default to M if unknown
+        gender = self.name_parser.detect_gender(name)
 
         parsed_name = self.name_parser.parse_name(name)
 
@@ -74,6 +74,25 @@ class Scraper:
              data["gender"] = "F"
         elif "male" in classes:
              data["gender"] = "M"
+
+        # If gender still unknown or we want to be more robust, check other links to the same person on the page
+        if data["gender"] not in ["F", "M"]:
+            # Find all links on the page
+            for a in soup.find_all('a', href=True):
+                href = a['href']
+                # Check if it links to the same person ID
+                if f"i={person_id}" in href:
+                    a_classes = a.get('class', [])
+                    if "female" in a_classes:
+                        data["gender"] = "F"
+                        break
+                    elif "male" in a_classes:
+                        data["gender"] = "M"
+                        break
+
+        # Default to U (Unknown) if still unknown
+        if not data["gender"]:
+            data["gender"] = "U"
 
         return data
 

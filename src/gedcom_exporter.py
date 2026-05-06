@@ -113,7 +113,12 @@ class GedcomExporter:
                     f.write(f"1 NAME {row['name']}\n")
 
                 if row['gender']:
-                    sex = "M" if row['gender'] in ["זכר", "M", "male"] else "F"
+                    if row['gender'] in ["זכר", "M", "male"]:
+                        sex = "M"
+                    elif row['gender'] in ["נקבה", "F", "female"]:
+                        sex = "F"
+                    else:
+                        sex = "U"
                     f.write(f"1 SEX {sex}\n")
                 
                 if row['birth_date'] or row['birth_date_civil']:
