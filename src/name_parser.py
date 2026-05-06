@@ -21,22 +21,52 @@ class NameParser:
         self.title_regex = re.compile(r'\b(' + '|'.join(re.escape(t) for t in sorted_titles) + r')\b', re.IGNORECASE)
 
     def detect_gender(self, full_name):
-        """Detect gender based on titles and keywords in the name."""
+        """Detect gender based on titles, keywords, and common names."""
         if not full_name:
             return None
 
-        # Check for female indicators first
+        # 1. Check for explicit female indicators
         female_indicators = [
             'הרבנית', 'מרת', 'ע"ה', 'הצדקנית', 'אמנו', 'בת ', 'אשת '
         ]
-        
         if any(ind in full_name for ind in female_indicators):
             return "F"
 
+        # 2. Check for explicit male indicators
         male_indicators = [
             'רבי', 'הרה"ק', 'אדמו"ר', 'הרה"צ', 'הרה"ג', 'הרה"ח', 'החסיד', 'הרב', 'מרן', 'אבינו', 'בן '
         ]
         if any(ind in full_name for ind in male_indicators):
+            return "M"
+
+        # 3. Name-based detection
+        # Extract first name (or parts of it)
+        parts = full_name.split()
+        if not parts:
+            return None
+
+        first_name = parts[0]
+        # Handle double names (e.g., חיה מושקא)
+        double_name = ' '.join(parts[:2]) if len(parts) >= 2 else None
+
+        female_names = {
+            'שרה', 'רבקה', 'רחל', 'לאה', 'אסתר', 'חנה', 'מרים', 'דבורה', 'ציפורה',
+            'פייגא', 'מושקא', 'פריידא', 'חיה', 'שטערנא', 'רייזל', 'גולדה', 'ברכה',
+            'בתיה', 'יוכבד', 'הדסה', 'תמר', 'שלומית', 'מינדל', 'גיטל', 'שיינא',
+            'צירל', 'נחמה', 'הינדה', 'ביילא', 'דינה', 'מנוחה', 'רלקה', 'פריידל'
+        }
+
+        male_names = {
+            'אברהם', 'יצחק', 'יעקב', 'משה', 'אהרן', 'יוסף', 'דוד', 'שלמה', 'פנחס',
+            'לוי', 'יהודה', 'שמעון', 'ראובן', 'נפתלי', 'גד', 'אשר', 'יששכר',
+            'זבולון', 'בנימין', 'מנחם', 'מרדכי', 'חיים', 'שמואל', 'אליעזר', 'נתן',
+            'ישראל', 'מאיר', 'זלמן', 'דובער', 'שמריהו', 'ברוך', 'מנחם מענדל',
+            'שניאור', 'יוסף יצחק', 'שלום דובער'
+        }
+
+        if first_name in female_names or (double_name and double_name in female_names):
+            return "F"
+        if first_name in male_names or (double_name and double_name in male_names):
             return "M"
 
         return None
