@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import re
 from urllib.parse import urlparse, parse_qs
-from src.utils import hebrew_to_civil
+from src.utils import hebrew_to_civil, normalize_whitespace
 from src.name_parser import NameParser
 
 class Scraper:
@@ -30,7 +30,7 @@ class Scraper:
             return None
 
         name_elem = info_container.find('h2')
-        name = name_elem.get_text(strip=True) if name_elem else ""
+        name = normalize_whitespace(name_elem.get_text(strip=True)) if name_elem else ""
         
         # Detect gender using NameParser
         gender = self.name_parser.detect_gender(name) or "M" # Default to M if unknown
@@ -58,15 +58,15 @@ class Scraper:
         for li in info_container.find_all('li'):
             text = li.get_text(strip=True)
             if 'תאריך לידה' in text:
-                data["birth_date"] = text.replace('תאריך לידה:', '').strip()
+                data["birth_date"] = normalize_whitespace(text.replace('תאריך לידה:', '').strip())
                 data["birth_date_civil"] = hebrew_to_civil(data["birth_date"])
             elif 'מקום לידה' in text:
-                data["birth_place"] = text.replace('מקום לידה:', '').strip()
+                data["birth_place"] = normalize_whitespace(text.replace('מקום לידה:', '').strip())
             elif 'תאריך פטירה' in text:
-                data["death_date"] = text.replace('תאריך פטירה:', '').strip()
+                data["death_date"] = normalize_whitespace(text.replace('תאריך פטירה:', '').strip())
                 data["death_date_civil"] = hebrew_to_civil(data["death_date"])
             elif 'מקום פטירה' in text:
-                data["death_place"] = text.replace('מקום פטירה:', '').strip()
+                data["death_place"] = normalize_whitespace(text.replace('מקום פטירה:', '').strip())
                 
         # Explicit gender detection from class overrides name detection
         classes = person_container.get('class', [])

@@ -1,4 +1,5 @@
 import re
+from src.utils import normalize_whitespace
 
 class NameParser:
     def __init__(self):
@@ -64,7 +65,7 @@ class NameParser:
         
         # Clean the name from ALL titles
         name = self.title_regex.sub('', name).strip()
-        name = re.sub(r'\s{2,}', ' ', name)
+        name = normalize_whitespace(name)
 
         last_name = None
         last_name_match = re.search(r'\[(.*?)\]', name)

@@ -1,6 +1,11 @@
 import re
 from pyluach.dates import HebrewDate, GregorianDate
 
+def normalize_whitespace(text):
+    if not text:
+        return text
+    return " ".join(text.split())
+
 HEBREW_MONTHS = {
     "ניסן": 1,
     "אייר": 2,
