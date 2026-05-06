@@ -1,4 +1,5 @@
 import sqlite3
+from src.utils import normalize_whitespace
 
 class GedcomExporter:
     def __init__(self, db_helper):
@@ -95,7 +96,7 @@ class GedcomExporter:
                 suffix = row['suffix'] or ""
                 
                 if first_name or last_name:
-                    name_line = f"1 NAME {first_name} /{last_name}/".replace("  ", " ").strip()
+                    name_line = normalize_whitespace(f"1 NAME {first_name} /{last_name}/")
                     if suffix:
                         name_line += f" {suffix}"
                     f.write(f"{name_line}\n")
