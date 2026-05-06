@@ -38,40 +38,102 @@ def gematria_to_int(text):
         total += GEMATRIA_VALUES.get(char, 0)
     return total
 
+def parse_hebrew_year(year_str):
+    """
+    Carefully parse a Hebrew year string.
+    Handles the thousands prefix 'ה' correctly.
+    """
+    if not year_str:
+        return None
+
+    # Remove common non-year punctuation but keep Hebrew letters
+    clean_year = "".join([c for c in year_str if c in GEMATRIA_VALUES])
+
+    if not clean_year:
+        return None
+
+    # Check if it's likely a year (usually starts with 'ת')
+    # If it starts with 'ה' and is followed by 'ת', the 'ה' is 5000.
+    # Example: ה'תשל"ו -> ה (5) + תשל"ו (736).
+    # If we just sum them, we get 741.
+    # We should treat leading 'ה' as 5000 if it's followed by letters summing to 400-999.
+
+    total = 0
+    if len(clean_year) > 1 and clean_year[0] == 'ה':
+        # Potential thousands prefix
+        remainder = clean_year[1:]
+        remainder_val = gematria_to_int(remainder)
+        if remainder_val >= 400: # Years in our range start with 'ת' (400)
+            return 5000 + remainder_val
+        else:
+            # Just sum it up normally
+            return gematria_to_int(clean_year)
+    else:
+        total = gematria_to_int(clean_year)
+        if 0 < total < 1000:
+            return 5000 + total
+        return total
+
 def parse_hebrew_date(date_str):
-    if not date_str:
+    if not date_str or date_str == "Array":
         return None
     
     # Check if it's already a Gregorian year (numeric and 4 digits)
-    if re.match(r'^\d{4}$', date_str):
-        return {"year": int(date_str), "month": None, "day": None, "type": "gregorian"}
+    if re.match(r'^\d{4}$', date_str.strip()):
+        return {"year": int(date_str.strip()), "month": None, "day": None, "type": "gregorian"}
 
-    # Try to parse as Hebrew date
-    # Formats: 
-    # 1. 'ט' בכסלו תרנ"ד'
-    # 2. 'כסלו תרנ"ד'
-    # 3. 'תרנ"ד'
-    
-    parts = date_str.split()
+    # Replace special Hebrew quotes with standard ones for easier splitting if needed
+    # but split() handles whitespace which is most important.
+    # Normalize Hebrew punctuation
+    normalized = date_str.replace('׳', "'").replace('״', '"')
+    parts = normalized.split()
     
     day = None
     month = None
     year = None
+    year_type = "hebrew"
     
-    # Year is usually the last part
-    if parts:
-        year_str = parts[-1]
-        year = gematria_to_int(year_str)
-        if year < 1000:
-            year += 5000
+    # Try to find a Gregorian year anywhere in the string
+    for part in parts:
+        if re.match(r'^\d{4}$', part):
+            year = int(part)
+            year_type = "gregorian"
+            # If we found a Gregorian year, we might still want to parse the rest
+            break
+
+    # If no Gregorian year, look for Hebrew year
+    if not year:
+        # Years usually come last, but we might have extra words like "בעומר"
+        # We need to find the part that looks like a year (starts with ת or ה'ת)
+        for i in reversed(range(len(parts))):
+            part = parts[i]
+            clean_part = "".join([c for c in part if c in GEMATRIA_VALUES])
             
+            # A Hebrew year in our context starts with 'ת' or is 'ה' followed by 'ת'
+            # Also check if it's a month name - if so, it's NOT a year
+            is_month = False
+            for m_name in HEBREW_MONTHS:
+                if m_name in part:
+                    is_month = True
+                    break
+
+            if is_month:
+                continue
+
+            if clean_part.startswith('ת') or (len(clean_part) > 1 and clean_part.startswith('הת')):
+                year = parse_hebrew_year(part)
+                break
+
     # Month
     for i, part in enumerate(parts):
         clean_part = part.replace('ב', '', 1) if part.startswith('ב') else part
 
+        # Remove punctuation for matching
+        clean_part = clean_part.replace("'", "").replace('"', '')
+
         # Check for multi-part months like "אדר א'"
         if i + 1 < len(parts):
-            next_part = parts[i+1]
+            next_part = parts[i+1].replace("'", "").replace('"', '')
             combined = f"{clean_part} {next_part}"
             if combined in HEBREW_MONTHS:
                 month = HEBREW_MONTHS[combined]
@@ -82,12 +144,22 @@ def parse_hebrew_date(date_str):
             break
 
     # Day
-    if len(parts) >= 3:
-        day_str = parts[0]
-        day = gematria_to_int(day_str)
+    # Day is usually the first part if it's a full date
+    if parts:
+        first_part = parts[0]
+        # Check if first part is a month - if so, day is probably missing
+        first_clean = first_part.replace("'", "").replace('"', '')
+        if first_clean not in HEBREW_MONTHS and first_clean.replace('ב', '', 1) not in HEBREW_MONTHS:
+            # Check if it's numeric
+            if first_part.isdigit():
+                day_val = int(first_part)
+            else:
+                day_val = gematria_to_int(first_part)
+            if 0 < day_val <= 31:
+                day = day_val
         
     if year:
-        return {"year": year, "month": month, "day": day, "type": "hebrew"}
+        return {"year": year, "month": month, "day": day, "type": year_type}
     
     return None
 
@@ -96,6 +168,10 @@ def hebrew_to_civil(date_str):
     if not parsed:
         return None
     
+    # If year is missing, we don't calculate civil date
+    if parsed.get("year") is None:
+        return None
+
     if parsed["type"] == "gregorian":
         return str(parsed["year"])
         
@@ -107,9 +183,7 @@ def hebrew_to_civil(date_str):
             gd = hd.to_pydate()
             return gd.strftime("%d %b %Y")
         elif parsed["month"]:
-            # Just month and year, return first of month or just month year?
-            # For GEDCOM, partial dates are OK.
-            # But conversion needs a day. Let's use 1st of month but maybe just return year/month
+            # Just month and year
             hd = HebrewDate(parsed["year"], parsed["month"], 1)
             gd = hd.to_pydate()
             # GEDCOM format for month year: "MON YYYY"
@@ -117,11 +191,6 @@ def hebrew_to_civil(date_str):
             return f"{months[gd.month-1]} {gd.year}"
         else:
             # Just year
-            # Hebrew year spans two Gregorian years.
-            # e.g. 5784 is 2023-2024.
-            # GEDCOM doesn't have a great way for this other than "ABT 2024" or "2023/24"
-            # Let's return the Gregorian year that mostly overlaps or just a range.
-            # 1 Tishrei 5784 is Sept 2023.
             hd = HebrewDate(parsed["year"], 7, 1)
             gd = hd.to_pydate()
             return str(gd.year)

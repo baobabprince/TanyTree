@@ -56,3 +56,22 @@ def test_hebrew_to_civil_error():
     # Invalid date that might trigger exception in HebrewDate
     # 31 Kislev doesn't exist (Kislev has 29 or 30 days)
     assert hebrew_to_civil("ל\"א בכסלו תשפ\"ד") is None
+
+def test_new_requirements():
+    # No year = no civil date
+    assert hebrew_to_civil("ט' אלול") is None
+    assert hebrew_to_civil("י\"ח אייר ל\"ג בעומר") is None
+
+    # Thousands prefix 'ה'
+    # ה׳ אדר ב׳ ה׳תשל״ו -> 7 Mar 1976 (5736)
+    assert hebrew_to_civil("ה׳ אדר ב׳ ה׳תשל״ו") == "07 Mar 1976"
+
+    # כ״ב טבת ה׳תרל״ח -> 28 Dec 1877 (5638)
+    assert hebrew_to_civil("כ״ב טבת ה'תרל\"ח") == "28 Dec 1877"
+
+    # Array
+    assert parse_hebrew_date("Array") is None
+    assert hebrew_to_civil("Array") is None
+
+    # Gregorian year in string
+    assert hebrew_to_civil("15 בינואר 1980") == "1980"
