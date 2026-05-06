@@ -112,7 +112,22 @@ class Scraper:
                 parsed_href = urlparse(full_url)
                 related_id = parse_qs(parsed_href.query).get('i', [None])[0]
                 if related_id:
-                    rel_type = "father" if "male" in parent_link.get('class', []) else "mother"
+                    classes = parent_link.get('class', [])
+                    if "male" in classes:
+                        rel_type = "father"
+                    elif "female" in classes:
+                        rel_type = "mother"
+                    else:
+                        # Fallback to name detection if class is missing
+                        parent_name = normalize_whitespace(parent_link.get_text(strip=True))
+                        detected_gender = self.name_parser.detect_gender(parent_name)
+                        if detected_gender == "M":
+                            rel_type = "father"
+                        elif detected_gender == "F":
+                            rel_type = "mother"
+                        else:
+                            # Default to mother if still unknown (as it was before, but now more robust)
+                            rel_type = "mother"
                     relationships.append({"person_id": person_id, "related_id": related_id, "type": rel_type, "url": full_url})
             
         # Spouse

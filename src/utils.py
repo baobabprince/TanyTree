@@ -80,7 +80,11 @@ def parse_hebrew_year(year_str):
         return total
 
 def parse_hebrew_date(date_str):
-    if not date_str or date_str == "Array":
+    if not date_str:
+        return None
+
+    clean_date = normalize_whitespace(date_str).strip()
+    if clean_date.lower() == "array":
         return None
     
     # Check if it's already a Gregorian year (numeric and 4 digits)
@@ -163,6 +167,8 @@ def parse_hebrew_date(date_str):
             if 0 < day_val <= 31:
                 day = day_val
         
+    # Validation: If we have a day or month but no year, we shouldn't return a partial date
+    # that might lead to an incorrect year being inferred (like 5170 from a month name)
     if year:
         return {"year": year, "month": month, "day": day, "type": year_type}
     

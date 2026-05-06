@@ -20,12 +20,16 @@ def main():
 @click.option('--url', default=DEFAULT_URL, help='URL of the person to scrape.')
 @click.option('--db', default='genealogy.db', help='Database file path.')
 @click.option('--delay', default=1.0, help='Delay between requests in seconds.')
-def scrape(url, db, delay):
+@click.option('--force', is_flag=True, help='Overwrite existing data.')
+def scrape(url, db, delay, force):
     """Scrape genealogical data from a URL."""
     db_helper = DatabaseHelper(db)
     engine = ScraperEngine(db_helper, delay=delay)
-    click.echo(f"Scraping {url}...")
-    engine.scrape_person(url)
+    if force:
+        click.echo(f"Scraping {url} (forced update)...")
+    else:
+        click.echo(f"Scraping {url}...")
+    engine.scrape_person(url, force=force)
     click.echo("Scrape complete.")
     db_helper.close()
 
