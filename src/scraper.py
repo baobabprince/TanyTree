@@ -66,7 +66,7 @@ class Scraper:
                 data["death_date"] = normalize_whitespace(text.replace('תאריך פטירה:', '').strip())
                 data["death_date_civil"] = hebrew_to_civil(data["death_date"])
             elif 'מקום פטירה' in text:
-                data["death_place"] = normalize_whitespace(text.replace('מקום פטירה:', '').strip())
+                data["death_place"] = normalize_whitespace(text.replace('מקום פטירה:', ''))
                 
         # Explicit gender detection from class overrides name detection
         classes = person_container.get('class', [])
