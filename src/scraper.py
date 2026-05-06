@@ -61,7 +61,7 @@ class Scraper:
                 data["birth_date"] = normalize_whitespace(text.replace('תאריך לידה:', ''))
                 data["birth_date_civil"] = hebrew_to_civil(data["birth_date"])
             elif 'מקום לידה' in text:
-                data["birth_place"] = normalize_whitespace(text.replace('מקום לידה:', '').strip())
+                data["birth_place"] = normalize_whitespace(text.replace('מקום לידה:', ''))
             elif 'תאריך פטירה' in text:
                 data["death_date"] = normalize_whitespace(text.replace('תאריך פטירה:', '').strip())
                 data["death_date_civil"] = hebrew_to_civil(data["death_date"])
