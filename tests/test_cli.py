@@ -20,6 +20,7 @@ def test_cli_export_help(runner):
 def test_cli_full_flow(runner, tmp_path):
     db_path = tmp_path / "test_cli.db"
     output_ged = tmp_path / "output.ged"
+    report_file = tmp_path / "changes.md"
     
     # Mock requests for scrape
     from unittest.mock import patch
@@ -41,7 +42,7 @@ def test_cli_full_flow(runner, tmp_path):
         mock_get.return_value.status_code = 200
         
         # Scrape
-        result = runner.invoke(main, ["scrape", "--url", "http://example.com/?i=p1", "--db", str(db_path)])
+        result = runner.invoke(main, ["scrape", "--url", "http://example.com/?i=p1", "--db", str(db_path), "--report-file", str(report_file)])
         assert result.exit_code == 0
         assert "Scrape complete" in result.output
         
@@ -54,3 +55,19 @@ def test_cli_full_flow(runner, tmp_path):
         with open(output_ged, "r") as f:
             content = f.read()
             assert "NAME Test /Person/" in content
+
+
+def test_cli_summary_command(runner, tmp_path):
+    db_path = tmp_path / "test_summary.db"
+    report_file = tmp_path / "test_summary_report.md"
+
+    # Test summary when report file does not exist (falls back to DB stats)
+    result = runner.invoke(main, ["summary", "--db", str(db_path), "--report-file", str(report_file)])
+    assert result.exit_code == 0
+    assert "נתונים סטטיסטיים" in result.output
+
+    # Test summary when report file exists
+    report_file.write_text("# דוח שינויים קודם\nתקציר השינויים מופיע כאן", encoding="utf-8")
+    result = runner.invoke(main, ["summary", "--db", str(db_path), "--report-file", str(report_file)])
+    assert result.exit_code == 0
+    assert "דוח שינויים קודם" in result.output
