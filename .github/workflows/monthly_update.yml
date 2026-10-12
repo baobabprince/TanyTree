@@ -2,8 +2,7 @@ name: Monthly Scrape and GEDCOM Update
 
 on:
   schedule:
-    # Run at 14:00 (2:00 PM) UTC on the last days of the month (28-31)
-    # 14:00 is exactly 10 hours before the next day (00:00)
+    # Run at 14:00 UTC on days 28-31; check-date job keeps only the real last day
     - cron: '0 14 28-31 * *'
   workflow_dispatch: # Allow manual trigger
 
@@ -29,9 +28,9 @@ jobs:
 
   update-genealogy:
     needs: check-date
-    # Run if it's the last day of the month OR if triggered manually (handled by check-date job)
     if: needs.check-date.outputs.is_last_day == 'true'
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     permissions:
       contents: write
 
@@ -50,17 +49,28 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run incremental crawl
-        run: python -m src.cli crawl --limit 1000 --workers 3 --delay 2.0
+        run: python -m src.cli crawl --limit 2000 --workers 3 --delay 2.0
 
       - name: Retry failed/pending items
-        run: python -m src.cli retry --limit 1000 --workers 3 --delay 2.0
+        run: python -m src.cli retry --limit 2000 --workers 3 --delay 2.0
 
       - name: Export to GEDCOM
         run: python -m src.cli export genealogy.ged
 
-      - name: Commit and push changes
+      - name: Print tree summary
+        run: python -m src.cli summary --db genealogy.db --report-file changes_summary.md
+
+      - name: Upload changes report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: changes-summary-${{ github.run_number }}
+          path: changes_summary.md
+          retention-days: 90
+          if-no-files-found: ignore
+
+      - name: Commit and push DB + GEDCOM
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add genealogy.db genealogy.ged changes_summary.md
+          git add genealogy.db genealogy.ged
           git diff --quiet && git diff --staged --quiet || (git commit -m "Monthly automated update: $(date +%Y-%m-%d)" && git push)
