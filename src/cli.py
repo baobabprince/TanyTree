@@ -9,6 +9,7 @@ from src.database import DatabaseHelper
 from src.engine import ScraperEngine
 from src.gedcom_exporter import GedcomExporter
 from src.change_tracker import ChangeTracker
+from src.tree_enricher import TreeEnricher
 
 DEFAULT_URL = "https://baalhatanya.org.il/%d7%90%d7%99%d7%92%d7%95%d7%93-%d7%94%d7%a6%d7%90%d7%a6%d7%90%d7%99%d7%9d-%d7%a9%d7%9c-%d7%91%d7%a2%d7%9c-%d7%94%d7%aa%d7%a0%d7%99%d7%90-%d7%94%d7%90%d7%93%d7%9e%d7%95%d7%a8-%d7%94%d7%96%d7%a7%d7%9f/%d7%90%d7%99%d7%9c%d7%9f-%d7%94%d7%99%d7%a1%d7%a5/?i=111815"
 
@@ -100,31 +101,56 @@ def summary(db, report_file):
             click.echo(f.read())
     else:
         db_helper = DatabaseHelper(db)
-        cursor = db_helper.conn.cursor()
-        cursor.execute("SELECT * FROM individuals")
-        post_inds = {row["id"]: dict(row) for row in cursor.fetchall()}
-        cursor.execute("SELECT person_id, related_id, type FROM relationships")
-        post_rels = set((row["person_id"], row["related_id"], row["type"]) for row in cursor.fetchall())
-        cursor.execute("SELECT id, url, failure_count FROM discovered_urls")
-        post_urls = {row["id"]: {"url": row["url"], "failure_count": row["failure_count"]} for row in cursor.fetchall()}
-
-        pending_urls = [u for u_id, u in post_urls.items() if u_id not in post_inds and u["failure_count"] < 3]
-
-        total_individuals = len(post_inds)
-        males = sum(1 for p in post_inds.values() if p.get("gender") == "M")
-        females = sum(1 for p in post_inds.values() if p.get("gender") == "F")
-        unknown_gender = total_individuals - (males + females)
-        total_rels = len(post_rels)
-        total_failed_urls = sum(1 for u in post_urls.values() if u["failure_count"] >= 3)
-        total_pending_urls = len(pending_urls)
-
+        enricher = TreeEnricher(db_helper)
+        q = enricher.quality_report()
         click.echo("# נתונים סטטיסטיים כלליים של עץ היחס")
-        click.echo(f"- **סה\"כ אנשים בעץ:** {total_individuals} ({males} זכרים, {females} נקבות, {unknown_gender} ללא ציון מגדר)")
-        click.echo(f"- **סה\"כ קשרים משפחתיים בעץ:** {total_rels}")
-        click.echo(f"- **דפים ממתינים לגרידה:** {total_pending_urls}")
-        click.echo(f"- **דפים שנכשלו באופן קבוע (3 ניסיונות+):** {total_failed_urls}")
-
+        click.echo(
+            f"- **סה\"כ אנשים בעץ:** {q['total_individuals']} "
+            f"({q['gender_M']} זכרים, {q['gender_F']} נקבות, {q['gender_U']} ללא ציון מגדר)"
+        )
+        click.echo(f"- **קשרי spouse:** {q['spouse_links']}")
+        click.echo(f"- **related_ids יתומים (בלי individual):** {q['orphan_related_ids']}")
+        click.echo(f"- **אנשים מבודדים (בלי קשרים):** {q['isolated_individuals']}")
+        click.echo(f"- **קשרי parent לא מפוענחים:** {q['unresolved_parent_links']}")
+        click.echo(f"- **דפים ממתינים לגרידה:** {q['pending_urls']}")
+        click.echo(f"- **דפים שנכשלו באופן קבוע (3 ניסיונות+):** {q['failed_urls']}")
         db_helper.close()
+
+@main.command()
+@click.option('--db', default='genealogy.db', help='Database file path.')
+def enrich(db):
+    """Offline: infer genders, canonicalize relationships, discover orphan IDs."""
+    db_helper = DatabaseHelper(db)
+    enricher = TreeEnricher(db_helper)
+    click.echo("Running offline enrichment...")
+    result = enricher.enrich()
+    click.echo(f"Genders updated: {result['genders_updated']}")
+    click.echo(f"Relationships added (bidirectional): {result['relationships_added']}")
+    click.echo(f"Parent links resolved to father/mother: {result['parents_resolved']}")
+    click.echo(f"Orphan IDs discovered: {result['orphans_discovered']}")
+    q = result['quality']
+    click.echo("\n# Quality after enrich")
+    click.echo(
+        f"Individuals: {q['total_individuals']} "
+        f"(M={q['gender_M']}, F={q['gender_F']}, U={q['gender_U']})"
+    )
+    click.echo(f"Orphan related_ids: {q['orphan_related_ids']}")
+    click.echo(f"Isolated: {q['isolated_individuals']}")
+    click.echo(f"Unresolved parent: {q['unresolved_parent_links']}")
+    click.echo(f"Pending URLs: {q['pending_urls']}")
+    db_helper.close()
+
+@main.command(name='quality')
+@click.option('--db', default='genealogy.db', help='Database file path.')
+def quality(db):
+    """Show data-quality metrics without modifying the database."""
+    db_helper = DatabaseHelper(db)
+    enricher = TreeEnricher(db_helper)
+    q = enricher.quality_report()
+    click.echo("# Data quality")
+    for k, v in q.items():
+        click.echo(f"- {k}: {v}")
+    db_helper.close()
 
 @main.command()
 @click.argument('output')

@@ -93,6 +93,15 @@ class DatabaseHelper:
             ))
             self.conn.commit()
 
+    def update_gender(self, individual_id, gender):
+        with self.lock:
+            cursor = self.conn.cursor()
+            cursor.execute(
+                "UPDATE individuals SET gender = ? WHERE id = ?",
+                (gender, individual_id),
+            )
+            self.conn.commit()
+
     def get_individual(self, individual_id):
         with self.lock:
             cursor = self.conn.cursor()

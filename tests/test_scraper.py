@@ -80,3 +80,15 @@ def test_extract_relationships_empty():
     scraper = Scraper()
     rels = scraper.extract_relationships("<html><body></body></html>", person_id="111815")
     assert rels == []
+
+def test_unknown_parent_not_default_mother():
+    html = """
+    <ul class="parents">
+        <li><a href="?i=99"><h3>אלמוני</h3></a></li>
+    </ul>
+    <div class="person male"><div class="info"><h2>ילד</h2></div></div>
+    """
+    scraper = Scraper()
+    rels = scraper.extract_relationships(html, person_id="1")
+    assert any(r["type"] == "parent" and r["related_id"] == "99" for r in rels)
+    assert not any(r["type"] == "mother" and r["related_id"] == "99" for r in rels)

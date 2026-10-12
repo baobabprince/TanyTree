@@ -75,12 +75,10 @@ class Scraper:
         elif "male" in classes:
              data["gender"] = "M"
 
-        # If gender still unknown or we want to be more robust, check other links to the same person on the page
+        # If gender still unknown, check other links to the same person on the page
         if data["gender"] not in ["F", "M"]:
-            # Find all links on the page
             for a in soup.find_all('a', href=True):
                 href = a['href']
-                # Check if it links to the same person ID
                 if f"i={person_id}" in href:
                     a_classes = a.get('class', [])
                     if "female" in a_classes:
@@ -118,7 +116,7 @@ class Scraper:
                     elif "female" in classes:
                         rel_type = "mother"
                     else:
-                        # Fallback to name detection if class is missing
+                        # Fallback to name detection; never invent mother/father
                         parent_name = normalize_whitespace(parent_link.get_text(strip=True))
                         detected_gender = self.name_parser.detect_gender(parent_name)
                         if detected_gender == "M":
@@ -126,18 +124,19 @@ class Scraper:
                         elif detected_gender == "F":
                             rel_type = "mother"
                         else:
-                            # Default to mother if still unknown (as it was before, but now more robust)
-                            rel_type = "mother"
+                            rel_type = "parent"
                     relationships.append({"person_id": person_id, "related_id": related_id, "type": rel_type, "url": full_url})
             
-        # Spouse
+        # Spouse (support multiple h4 links if present)
         person_elem = soup.find(class_='person')
         if person_elem:
             info_container = person_elem.find(class_='info')
             if info_container:
-                spouse_elem = info_container.find('h4')
-                if spouse_elem and spouse_elem.find('a'):
-                    href = spouse_elem.find('a').get('href', '')
+                for spouse_elem in info_container.find_all('h4'):
+                    link = spouse_elem.find('a')
+                    if not link:
+                        continue
+                    href = link.get('href', '')
                     full_url = urljoin(base_url, href) if base_url else href
                     if full_url:
                         full_url = full_url.replace('//?', '/?')
