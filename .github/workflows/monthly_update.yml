@@ -54,11 +54,16 @@ jobs:
       - name: Retry failed/pending items
         run: python -m src.cli retry --limit 2000 --workers 3 --delay 2.0
 
+      - name: Offline enrich (gender, relationships, orphans)
+        run: python -m src.cli enrich --db genealogy.db
+
       - name: Export to GEDCOM
         run: python -m src.cli export genealogy.ged
 
-      - name: Print tree summary
-        run: python -m src.cli summary --db genealogy.db --report-file changes_summary.md
+      - name: Print quality + summary
+        run: |
+          python -m src.cli quality --db genealogy.db
+          python -m src.cli summary --db genealogy.db --report-file changes_summary.md
 
       - name: Upload changes report as artifact
         uses: actions/upload-artifact@v4
