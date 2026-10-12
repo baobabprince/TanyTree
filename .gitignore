@@ -7,3 +7,4 @@ htmlcov/
 genealogy.db-journal
 *.log
 .gemini/
+changes_summary.md
