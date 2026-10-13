@@ -4,7 +4,7 @@ on:
   schedule:
     # GitHub Actions does NOT support cron "L". Run on 28-31 and gate to real last day.
     - cron: '0 14 28-31 * *'
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch:
 
 jobs:
   check-date:
@@ -58,7 +58,6 @@ jobs:
             exit 0
           fi
 
-          # Prefer latest non-prerelease monthly tag (YYYY-MM); fall back to any latest release
           TAG=$(gh release list --repo "${{ github.repository }}" --limit 50 --json tagName,isPrerelease \
             --jq '[.[] | select(.isPrerelease==false and (.tagName | test("^[0-9]{4}-[0-9]{2}$")))] | .[0].tagName // empty')
 
@@ -73,7 +72,6 @@ jobs:
             echo "No prior release found."
           fi
 
-          # One-time migration bootstrap: last commit that still tracked genealogy.db
           if [ ! -f genealogy.db ]; then
             BOOTSTRAP_SHA="43471a36883b21e85dc331ea43b06ee41ada8fbd"
             echo "Bootstrapping genealogy.db from git history ($BOOTSTRAP_SHA)..."
@@ -87,11 +85,9 @@ jobs:
             echo "WARNING: genealogy.db not restored; crawl/retry will start from empty DB."
           fi
 
-      # Pending queue is the main source of growth — run retry first
       - name: Retry failed/pending items
         run: python -m src.cli retry --limit 2000 --workers 3 --delay 2.0
 
-      # Crawl continues from neighbors / residual pending / probe only if needed
       - name: Run incremental crawl
         run: python -m src.cli crawl --limit 2000 --workers 3 --delay 2.0
 
@@ -134,12 +130,7 @@ jobs:
             PRERELEASE_FLAG=""
           fi
 
-          NOTES="Automated tree snapshot from workflow run ${{ github.run_number }}.
-Event: ${{ github.event_name }}
-Commit: ${{ github.sha }}
-
-Download genealogy.db and genealogy.ged from Assets.
-changes_summary.md is available as a workflow artifact (not attached here)."
+          NOTES="Automated tree snapshot from workflow run ${{ github.run_number }}. Event: ${{ github.event_name }}. Commit: ${{ github.sha }}. Download genealogy.db and genealogy.ged from Assets. changes_summary.md is a workflow artifact only."
 
           if gh release view "$TAG" --repo "${{ github.repository }}" >/dev/null 2>&1; then
             echo "Release $TAG already exists; updating assets."
