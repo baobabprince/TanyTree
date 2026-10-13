@@ -27,6 +27,37 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Restore genealogy.db from latest release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          if [ -f genealogy.db ]; then
+            echo "genealogy.db present in workspace (legacy checkout); keeping it as baseline."
+            exit 0
+          fi
+
+          # Prefer latest non-prerelease monthly tag (YYYY-MM); fall back to any latest release
+          TAG=$(gh release list --repo "${{ github.repository }}" --limit 50 --json tagName,isPrerelease \
+            --jq '[.[] | select(.isPrerelease==false and (.tagName | test("^[0-9]{4}-[0-9]{2}$")))] | .[0].tagName // empty')
+
+          if [ -z "$TAG" ]; then
+            TAG=$(gh release list --repo "${{ github.repository }}" --limit 1 --json tagName --jq '.[0].tagName // empty')
+          fi
+
+          if [ -n "$TAG" ]; then
+            echo "Downloading genealogy.db from release $TAG ..."
+            gh release download "$TAG" --repo "${{ github.repository }}" --pattern 'genealogy.db' || true
+          else
+            echo "No prior release found; starting without existing database."
+          fi
+
+          if [ -f genealogy.db ]; then
+            echo "Restored genealogy.db ($(wc -c < genealogy.db) bytes)"
+          else
+            echo "WARNING: genealogy.db not restored; crawl/retry will start from empty DB."
+          fi
+
       # Pending queue is the main source of growth — run retry first
       - name: Retry failed/pending items
         run: python -m src.cli retry --limit 2000 --workers 3 --delay 2.0
@@ -54,9 +85,96 @@ jobs:
           retention-days: 90
           if-no-files-found: ignore
 
-      - name: Commit and push DB + GEDCOM
+      - name: Publish GitHub Release (db + ged)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add genealogy.db genealogy.ged
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Monthly automated update: $(date +%Y-%m-%d)" && git push)
+          set -e
+          if [ ! -f genealogy.db ] || [ ! -f genealogy.ged ]; then
+            echo "Missing genealogy.db or genealogy.ged; skipping release."
+            exit 1
+          fi
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TAG="$(date -u +%Y-%m)-manual-${{ github.run_number }}"
+            TITLE="TanyTree ${TAG} (manual)"
+            PRERELEASE_FLAG="--prerelease"
+          else
+            TAG="$(date -u +%Y-%m)"
+            TITLE="TanyTree snapshot ${TAG}"
+            PRERELEASE_FLAG=""
+          fi
+
+          NOTES="Automated tree snapshot from workflow run ${{ github.run_number }}.
+Event: ${{ github.event_name }}
+Commit: ${{ github.sha }}
+
+Download genealogy.db and genealogy.ged from Assets.
+changes_summary.md is available as a workflow artifact (not attached here)."
+
+          if gh release view "$TAG" --repo "${{ github.repository }}" >/dev/null 2>&1; then
+            echo "Release $TAG already exists; updating assets."
+            gh release upload "$TAG" genealogy.db genealogy.ged --repo "${{ github.repository }}" --clobber
+            gh release edit "$TAG" --repo "${{ github.repository }}" --title "$TITLE" --notes "$NOTES" $PRERELEASE_FLAG
+          else
+            echo "Creating release $TAG ..."
+            gh release create "$TAG" genealogy.db genealogy.ged \
+              --repo "${{ github.repository }}" \
+              --title "$TITLE" \
+              --notes "$NOTES" \
+              $PRERELEASE_FLAG
+          fi
+
+          echo "Published release: $TAG"
+
+      - name: Prune old releases (keep 5 latest stable + first; trim manual)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          # Stable monthly tags: YYYY-MM
+          # Keep the oldest stable release forever, plus the 5 most recent stable.
+          mapfile -t STABLE < <(gh release list --repo "${{ github.repository }}" --limit 100 --json tagName,isPrerelease,createdAt \
+            --jq '[.[] | select(.isPrerelease==false and (.tagName | test("^[0-9]{4}-[0-9]{2}$")))] | sort_by(.createdAt) | .[].tagName')
+
+          COUNT=${#STABLE[@]}
+          echo "Stable releases ($COUNT): ${STABLE[*]}"
+
+          if [ "$COUNT" -gt 6 ]; then
+            # indices 0 = first (keep); keep last 5; delete middle
+            KEEP_FIRST="${STABLE[0]}"
+            # last 5
+            DECLARE_KEEP=()
+            for ((i=COUNT-5; i<COUNT; i++)); do
+              DECLARE_KEEP+=("${STABLE[i]}")
+            done
+            for TAG in "${STABLE[@]}"; do
+              if [ "$TAG" = "$KEEP_FIRST" ]; then
+                continue
+              fi
+              SKIP=false
+              for K in "${DECLARE_KEEP[@]}"; do
+                if [ "$TAG" = "$K" ]; then SKIP=true; break; fi
+              done
+              if [ "$SKIP" = true ]; then
+                continue
+              fi
+              echo "Deleting old stable release: $TAG"
+              gh release delete "$TAG" --repo "${{ github.repository }}" --yes --cleanup-tag || true
+            done
+          else
+            echo "No stable pruning needed."
+          fi
+
+          # Manual/prerelease: keep only the 3 most recent
+          mapfile -t PRE < <(gh release list --repo "${{ github.repository }}" --limit 100 --json tagName,isPrerelease,createdAt \
+            --jq '[.[] | select(.isPrerelease==true)] | sort_by(.createdAt) | reverse | .[].tagName')
+
+          PRE_COUNT=${#PRE[@]}
+          echo "Prereleases ($PRE_COUNT): ${PRE[*]}"
+          if [ "$PRE_COUNT" -gt 3 ]; then
+            for ((i=3; i<PRE_COUNT; i++)); do
+              echo "Deleting old prerelease: ${PRE[i]}"
+              gh release delete "${PRE[i]}" --repo "${{ github.repository }}" --yes --cleanup-tag || true
+            done
+          fi
