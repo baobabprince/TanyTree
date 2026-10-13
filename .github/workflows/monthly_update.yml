@@ -2,12 +2,33 @@ name: Monthly Scrape and GEDCOM Update
 
 on:
   schedule:
-    # Last day of every month at 14:00 UTC (GitHub Actions supports L)
-    - cron: '0 14 L * *'
+    # GitHub Actions does NOT support cron "L". Run on 28-31 and gate to real last day.
+    - cron: '0 14 28-31 * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
+  check-date:
+    runs-on: ubuntu-latest
+    outputs:
+      is_last_day: ${{ steps.check.outputs.is_last_day }}
+    steps:
+      - name: Check if it is the last day of the month
+        id: check
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Triggered manually via workflow_dispatch. Bypassing date check."
+            echo "is_last_day=true" >> $GITHUB_OUTPUT
+          elif [ "$(date -u -d '+1 day' +%d)" = "01" ]; then
+            echo "Scheduled run. Detected last day of the month (UTC)."
+            echo "is_last_day=true" >> $GITHUB_OUTPUT
+          else
+            echo "Scheduled run. Not the last day of the month."
+            echo "is_last_day=false" >> $GITHUB_OUTPUT
+          fi
+
   update-genealogy:
+    needs: check-date
+    if: needs.check-date.outputs.is_last_day == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 90
     permissions:
@@ -140,8 +161,6 @@ changes_summary.md is available as a workflow artifact (not attached here)."
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -e
-          # Stable monthly tags: YYYY-MM
-          # Keep the oldest stable release forever, plus the 5 most recent stable.
           mapfile -t STABLE < <(gh release list --repo "${{ github.repository }}" --limit 100 --json tagName,isPrerelease,createdAt \
             --jq '[.[] | select(.isPrerelease==false and (.tagName | test("^[0-9]{4}-[0-9]{2}$")))] | sort_by(.createdAt) | .[].tagName')
 
@@ -172,7 +191,6 @@ changes_summary.md is available as a workflow artifact (not attached here)."
             echo "No stable pruning needed."
           fi
 
-          # Manual/prerelease: keep only the 3 most recent
           mapfile -t PRE < <(gh release list --repo "${{ github.repository }}" --limit 100 --json tagName,isPrerelease,createdAt \
             --jq '[.[] | select(.isPrerelease==true)] | sort_by(.createdAt) | reverse | .[].tagName')
 
