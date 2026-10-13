@@ -66,50 +66,62 @@ class ScraperEngine:
                 return None
         return None
 
+    def _seed_pending_from_db(self, limit):
+        """Load pending discovered URLs into the queue (highest priority work)."""
+        pending = self.db.get_pending_urls()
+        if not pending:
+            return 0
+
+        added_count = 0
+        for item in pending:
+            if added_count >= limit:
+                break
+            with self.lock:
+                if item["id"] not in self.visited_ids and item["id"] not in self.pending_ids:
+                    self.pending_ids.add(item["id"])
+                    self.queue.put((item["id"], item["url"]))
+                    added_count += 1
+
+        if added_count > 0:
+            print(f"Seeded {added_count} pending URLs from database into queue.")
+        return added_count
+
     def retry_failed(self, limit=100):
         pending = self.db.get_pending_urls()
         if not pending:
             print("No pending/failed URLs to retry.")
             return
-            
+
         print(f"Retrying {len(pending)} pending/failed URLs...")
-        for item in pending:
-            with self.lock:
-                if item["id"] not in self.visited_ids and item["id"] not in self.pending_ids:
-                    self.pending_ids.add(item["id"])
-                    self.queue.put((item["id"], item["url"]))
-        
+        self._seed_pending_from_db(limit=limit)
         self._process_queue(limit=limit)
 
     def _process_queue(self, limit=100):
         count = 0
         with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
             futures = {}
-            
+
             while (self.queue.qsize() > 0 or futures) and count < limit:
-                # Fill up the futures
                 while len(futures) < self.max_workers and count + len(futures) < limit:
                     try:
                         person_id, url = self.queue.get_nowait()
-                        # Double check visited_ids in case it was finished by another thread
                         with self.lock:
                             if person_id in self.visited_ids:
                                 continue
-                        
+
                         future = executor.submit(self._scrape_one, url)
                         futures[future] = url
                     except Empty:
                         break
-                
+
                 if not futures:
                     if self.queue.qsize() == 0:
                         break
                     time.sleep(0.1)
                     continue
-                    
-                # Wait for at least one future to complete
+
                 done, not_done = wait(futures.keys(), return_when=FIRST_COMPLETED)
-                
+
                 for future in done:
                     url = futures.pop(future)
                     try:
@@ -119,7 +131,6 @@ class ScraperEngine:
                             data, rels = result
                             print(f"Crawled {data['id']}: {url} ({count}/{limit if limit < 1000000 else 'all'})")
                             for rel in rels:
-                                # Save discovered URL to DB
                                 self.db.add_discovered_url(rel["related_id"], rel["url"])
                                 with self.lock:
                                     if rel["related_id"] not in self.visited_ids and rel["related_id"] not in self.pending_ids:
@@ -127,8 +138,7 @@ class ScraperEngine:
                                         self.queue.put((rel["related_id"], rel["url"]))
                     except Exception as e:
                         print(f"Future for {url} raised exception: {e}")
-                
-                # Be a bit nice
+
                 time.sleep(0.05)
         return count
 
@@ -156,11 +166,10 @@ class ScraperEngine:
                     self.db.increment_failure_count(person_id)
                 return None
 
-            # Extract biographical data
             data = self.scraper.extract_biographical_data(html_content, url)
             if data and data.get("id"):
                 person_id = data["id"]
-                
+
                 with self.lock:
                     if not force and person_id in self.visited_ids:
                         return None
@@ -168,14 +177,12 @@ class ScraperEngine:
 
                 self.db.add_individual(data)
                 self.db.reset_failure_count(person_id)
-                
-                # Extract relationships
+
                 rels = self.scraper.extract_relationships(html_content, person_id, base_url=url)
                 for rel in rels:
                     self.db.add_relationship(rel["person_id"], rel["related_id"], rel["type"])
-                    # Always save discovered URL to DB for future crawling/retries
                     self.db.add_discovered_url(rel["related_id"], rel["url"])
-                    
+
                 return data, rels
             else:
                 if person_id:
@@ -188,12 +195,9 @@ class ScraperEngine:
             return None
 
     def _discover_from_db(self, limit=1000):
-        """Try to find missing URLs by looking at relationships of already visited people."""
-        # Find people in 'individuals' who have relationships with people NOT in 'individuals'
-        # and we don't have a URL for those related people in 'discovered_urls'.
+        """Find related_ids missing from individuals/discovered_urls and register URLs."""
         with self.lock:
             cursor = self.db.conn.cursor()
-            # This is a bit complex, let's find IDs first
             cursor.execute("""
                 SELECT DISTINCT r.related_id, i.url
                 FROM relationships r
@@ -204,26 +208,25 @@ class ScraperEngine:
                 LIMIT ?
             """, (limit,))
             rows = cursor.fetchall()
-            
+
         added = 0
-        
         for related_id, parent_url in rows:
-            # Construct URL based on parent_url but with related_id
+            if not parent_url:
+                continue
             parsed = urlparse(parent_url)
             query = parse_qs(parsed.query)
             query['i'] = [related_id]
             new_query = urlencode(query, doseq=True)
             new_url = urlunparse((parsed.scheme, parsed.netloc, parsed.path, parsed.params, new_query, parsed.fragment))
-            
             self.db.add_discovered_url(related_id, new_url)
             added += 1
-            
+
         if added > 0:
             print(f"Heuristically discovered {added} URLs from existing relationships in database.")
         return added
 
     def _probe_new_ids(self, base_url, limit=100, lookahead=500):
-        """Probe for new IDs starting from the max ID in database."""
+        """Probe for new IDs starting from the max ID in database (last resort)."""
         max_id = self.db.get_max_id()
         try:
             max_id_int = int(max_id)
@@ -233,8 +236,6 @@ class ScraperEngine:
         added = 0
         parsed = urlparse(base_url)
 
-        # We'll probe IDs from max_id_int + 1 up to max_id_int + lookahead
-        # But we only add those that are not in visited_ids and not in pending_ids
         for i in range(1, lookahead + 1):
             if added >= limit:
                 break
@@ -249,7 +250,6 @@ class ScraperEngine:
             new_query = urlencode(query, doseq=True)
             new_url = urlunparse((parsed.scheme, parsed.netloc, parsed.path, parsed.params, new_query, parsed.fragment))
 
-            # We don't add to DB yet, just to the queue for checking
             with self.lock:
                 if probe_id not in self.pending_ids:
                     self.pending_ids.add(probe_id)
@@ -261,83 +261,58 @@ class ScraperEngine:
         return added
 
     def crawl(self, start_url, limit=100):
+        """Crawl with pending-DB priority; probe only as last resort."""
         parsed_url = urlparse(start_url)
         start_id = parse_qs(parsed_url.query).get('i', [None])[0]
-
-        # Initial scrape to start the process
-        first_res = None
-        if start_id not in self.visited_ids:
-            first_res = self._scrape_one(start_url)
-        
         count = 0
-        if first_res:
-            data, rels = first_res
-            count = 1
-            print(f"Crawled {data['id']}: {start_url} ({count}/{limit})")
-            
-            # Add discovered URLs to queue and DB
-            for rel in rels:
-                self.db.add_discovered_url(rel["related_id"], rel["url"])
-                with self.lock:
-                    if rel["related_id"] not in self.visited_ids and rel["related_id"] not in self.pending_ids:
-                        self.pending_ids.add(rel["related_id"])
-                        self.queue.put((rel["related_id"], rel["url"]))
-        else:
-            # If already visited, we might still want to start crawling from its relationships
-            # to continue where we left off.
-            parsed_url = urlparse(start_url)
-            start_id = parse_qs(parsed_url.query).get('i', [None])[0]
-            
-            if start_id in self.visited_ids:
-                print(f"Start node {start_id} already visited. Exploring its relationships to resume crawl...")
-                # Re-scrape just to get fresh relationships and URLs
-                try:
-                    response = self.session.get(start_url, timeout=30)
-                    response.raise_for_status()
-                    html_content = response.text
-                    rels = self.scraper.extract_relationships(html_content, start_id, base_url=start_url)
-                    for rel in rels:
-                        self.db.add_discovered_url(rel["related_id"], rel["url"])
-                        with self.lock:
-                            if rel["related_id"] not in self.visited_ids and rel["related_id"] not in self.pending_ids:
-                                self.pending_ids.add(rel["related_id"])
-                                self.queue.put((rel["related_id"], rel["url"]))
-                    print(f"Added {len(rels)} neighbors of {start_id} to queue.")
-                    
-                    # If we still don't have enough work, try to discover URLs from DB
-                    if self.queue.qsize() < limit:
-                         self._discover_from_db(limit=limit)
-                    
-                    # If we don't have enough pending work in the queue to reach the limit,
-                    # pull pending URLs from the DB.
-                    if self.queue.qsize() < limit:
-                        pending = self.db.get_pending_urls()
-                        if pending:
-                            added_count = 0
-                            for item in pending:
-                                with self.lock:
-                                    if item["id"] not in self.visited_ids and item["id"] not in self.pending_ids:
-                                        self.pending_ids.add(item["id"])
-                                        self.queue.put((item["id"], item["url"]))
-                                        added_count += 1
-                                if added_count + self.queue.qsize() >= limit:
-                                    break
-                            if added_count > 0:
-                                print(f"Added {added_count} pending URLs from database to resume crawl.")
-                except Exception as e:
-                    print(f"Error re-scraping {start_url} to resume: {e}")
-            else:
-                print(f"Failed to scrape start URL: {start_url}")
-                return
 
+        # 1) Highest priority: work already known in discovered_urls
+        self._seed_pending_from_db(limit=limit)
+
+        # 2) Discover orphan related_ids from relationships
+        if self.queue.qsize() < limit:
+            self._discover_from_db(limit=limit)
+            self._seed_pending_from_db(limit=limit - self.queue.qsize())
+
+        # 3) Start URL: scrape if new, else pull neighbors
+        if start_id and start_id not in self.visited_ids:
+            first_res = self._scrape_one(start_url)
+            if first_res:
+                data, rels = first_res
+                count = 1
+                print(f"Crawled {data['id']}: {start_url} ({count}/{limit})")
+                for rel in rels:
+                    self.db.add_discovered_url(rel["related_id"], rel["url"])
+                    with self.lock:
+                        if rel["related_id"] not in self.visited_ids and rel["related_id"] not in self.pending_ids:
+                            self.pending_ids.add(rel["related_id"])
+                            self.queue.put((rel["related_id"], rel["url"]))
+        elif start_id in self.visited_ids:
+            print(f"Start node {start_id} already visited. Seeding from pending DB / neighbors.")
+            try:
+                response = self.session.get(start_url, timeout=30)
+                response.raise_for_status()
+                html_content = response.text
+                rels = self.scraper.extract_relationships(html_content, start_id, base_url=start_url)
+                for rel in rels:
+                    self.db.add_discovered_url(rel["related_id"], rel["url"])
+                    with self.lock:
+                        if rel["related_id"] not in self.visited_ids and rel["related_id"] not in self.pending_ids:
+                            self.pending_ids.add(rel["related_id"])
+                            self.queue.put((rel["related_id"], rel["url"]))
+                print(f"Added {len(rels)} neighbors of {start_id} to queue.")
+            except Exception as e:
+                print(f"Error re-scraping {start_url} for neighbors: {e}")
+
+        # 4) Process known work
         if count < limit:
-            # First pass with existing queue
             count += self._process_queue(limit=limit - count)
-            
-            # If still below limit, try probing for new IDs
-            if count < limit:
-                self._probe_new_ids(start_url, limit=limit - count)
-                if self.queue.qsize() > 0:
-                    count += self._process_queue(limit=limit - count)
+
+        # 5) Last resort only: probe new IDs if still under limit and queue empty
+        if count < limit and self.queue.qsize() == 0:
+            remaining = limit - count
+            self._probe_new_ids(start_url, limit=min(remaining, 200), lookahead=min(remaining, 200))
+            if self.queue.qsize() > 0:
+                count += self._process_queue(limit=limit - count)
 
         print(f"Crawl finished. Total individuals scraped in this session: {count}")

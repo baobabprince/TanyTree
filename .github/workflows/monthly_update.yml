@@ -2,33 +2,12 @@ name: Monthly Scrape and GEDCOM Update
 
 on:
   schedule:
-    # Run at 14:00 UTC on days 28-31; check-date job keeps only the real last day
-    - cron: '0 14 28-31 * *'
+    # Last day of every month at 14:00 UTC (GitHub Actions supports L)
+    - cron: '0 14 L * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
-  check-date:
-    runs-on: ubuntu-latest
-    outputs:
-      is_last_day: ${{ steps.check.outputs.is_last_day }}
-    steps:
-      - name: Check if it is the last day of the month
-        id: check
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "Triggered manually via workflow_dispatch. Bypassing date check."
-            echo "is_last_day=true" >> $GITHUB_OUTPUT
-          elif [ "$(date +%d -d '+10 hours')" = "01" ]; then
-            echo "Scheduled run. Detected last day of the month."
-            echo "is_last_day=true" >> $GITHUB_OUTPUT
-          else
-            echo "Scheduled run. Not the last day of the month."
-            echo "is_last_day=false" >> $GITHUB_OUTPUT
-          fi
-
   update-genealogy:
-    needs: check-date
-    if: needs.check-date.outputs.is_last_day == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 90
     permissions:
@@ -48,11 +27,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run incremental crawl
-        run: python -m src.cli crawl --limit 2000 --workers 3 --delay 2.0
-
+      # Pending queue is the main source of growth — run retry first
       - name: Retry failed/pending items
         run: python -m src.cli retry --limit 2000 --workers 3 --delay 2.0
+
+      # Crawl continues from neighbors / residual pending / probe only if needed
+      - name: Run incremental crawl
+        run: python -m src.cli crawl --limit 2000 --workers 3 --delay 2.0
 
       - name: Offline enrich (gender, relationships, orphans)
         run: python -m src.cli enrich --db genealogy.db
