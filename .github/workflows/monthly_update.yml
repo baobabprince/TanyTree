@@ -30,8 +30,7 @@ jobs:
     needs: check-date
     if: needs.check-date.outputs.is_last_day == 'true'
     runs-on: ubuntu-latest
-    # Retry+crawl of 2000 each can exceed 90m; keep headroom for export/release
-    timeout-minutes: 360
+    timeout-minutes: 90
     permissions:
       contents: write
 
@@ -87,9 +86,8 @@ jobs:
           fi
 
       - name: Retry failed/pending items
-        run: python -m src.cli retry --limit 2000 --workers 3 --delay 2.0
+        run: python -m src.cli retry --limit 1000 --workers 3 --delay 2.0
 
-      # Save progress even if the job is later cancelled/timed out
       - name: Checkpoint DB after retry
         if: always()
         uses: actions/upload-artifact@v4
@@ -101,7 +99,7 @@ jobs:
 
       - name: Run incremental crawl
         continue-on-error: true
-        run: python -m src.cli crawl --limit 2000 --workers 3 --delay 2.0
+        run: python -m src.cli crawl --limit 1000 --workers 3 --delay 2.0
 
       - name: Checkpoint DB after crawl
         if: always()
