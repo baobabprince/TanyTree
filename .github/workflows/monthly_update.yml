@@ -30,7 +30,8 @@ jobs:
     needs: check-date
     if: needs.check-date.outputs.is_last_day == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    # Retry+crawl of 2000 each can exceed 90m; keep headroom for export/release
+    timeout-minutes: 360
     permissions:
       contents: write
 
@@ -88,21 +89,48 @@ jobs:
       - name: Retry failed/pending items
         run: python -m src.cli retry --limit 2000 --workers 3 --delay 2.0
 
+      # Save progress even if the job is later cancelled/timed out
+      - name: Checkpoint DB after retry
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: genealogy-db-after-retry-${{ github.run_number }}
+          path: genealogy.db
+          retention-days: 14
+          if-no-files-found: ignore
+
       - name: Run incremental crawl
+        continue-on-error: true
         run: python -m src.cli crawl --limit 2000 --workers 3 --delay 2.0
 
+      - name: Checkpoint DB after crawl
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: genealogy-db-after-crawl-${{ github.run_number }}
+          path: genealogy.db
+          retention-days: 14
+          if-no-files-found: ignore
+
       - name: Offline enrich (gender, relationships, orphans)
+        if: always() && hashFiles('genealogy.db') != ''
+        continue-on-error: true
         run: python -m src.cli enrich --db genealogy.db
 
       - name: Export to GEDCOM
+        if: always() && hashFiles('genealogy.db') != ''
+        continue-on-error: true
         run: python -m src.cli export genealogy.ged
 
       - name: Print quality + summary
+        if: always() && hashFiles('genealogy.db') != ''
+        continue-on-error: true
         run: |
           python -m src.cli quality --db genealogy.db
           python -m src.cli summary --db genealogy.db --report-file changes_summary.md
 
       - name: Upload changes report as artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: changes-summary-${{ github.run_number }}
@@ -111,13 +139,19 @@ jobs:
           if-no-files-found: ignore
 
       - name: Publish GitHub Release (db + ged)
+        if: always() && hashFiles('genealogy.db') != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -e
-          if [ ! -f genealogy.db ] || [ ! -f genealogy.ged ]; then
-            echo "Missing genealogy.db or genealogy.ged; skipping release."
-            exit 1
+          if [ ! -f genealogy.db ]; then
+            echo "No genealogy.db; skipping release."
+            exit 0
+          fi
+
+          if [ ! -f genealogy.ged ]; then
+            echo "No genealogy.ged yet; exporting now..."
+            python -m src.cli export genealogy.ged || true
           fi
 
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
@@ -132,13 +166,16 @@ jobs:
 
           NOTES="Automated tree snapshot from workflow run ${{ github.run_number }}. Event: ${{ github.event_name }}. Commit: ${{ github.sha }}. Download genealogy.db and genealogy.ged from Assets. changes_summary.md is a workflow artifact only."
 
+          ASSETS=(genealogy.db)
+          if [ -f genealogy.ged ]; then ASSETS+=(genealogy.ged); fi
+
           if gh release view "$TAG" --repo "${{ github.repository }}" >/dev/null 2>&1; then
             echo "Release $TAG already exists; updating assets."
-            gh release upload "$TAG" genealogy.db genealogy.ged --repo "${{ github.repository }}" --clobber
+            gh release upload "$TAG" "${ASSETS[@]}" --repo "${{ github.repository }}" --clobber
             gh release edit "$TAG" --repo "${{ github.repository }}" --title "$TITLE" --notes "$NOTES" $PRERELEASE_FLAG
           else
             echo "Creating release $TAG ..."
-            gh release create "$TAG" genealogy.db genealogy.ged \
+            gh release create "$TAG" "${ASSETS[@]}" \
               --repo "${{ github.repository }}" \
               --title "$TITLE" \
               --notes "$NOTES" \
@@ -148,6 +185,7 @@ jobs:
           echo "Published release: $TAG"
 
       - name: Prune old releases (keep 5 latest stable + first; trim manual)
+        if: always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
