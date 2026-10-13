@@ -1,10 +1,29 @@
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+.mypy_cache/
+.ruff_cache/
 .pytest_cache/
 .coverage
 htmlcov/
-genealogy.db-journal
+
+# Project outputs (published via GitHub Releases / Actions artifacts)
+*.db
+*.db-journal
+*.ged
+changes_summary.md
+
+# Logs / local tooling
 *.log
 .gemini/
-changes_summary.md
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
