@@ -66,6 +66,14 @@ class ScraperEngine:
                 return None
         return None
 
+    def _build_url(self, base_url, person_id):
+        """Build a person URL by swapping the i= query param."""
+        parsed = urlparse(base_url)
+        query = parse_qs(parsed.query)
+        query['i'] = [str(person_id)]
+        new_query = urlencode(query, doseq=True)
+        return urlunparse((parsed.scheme, parsed.netloc, parsed.path, parsed.params, new_query, parsed.fragment))
+
     def _seed_pending_from_db(self, limit):
         """Load pending discovered URLs into the queue (highest priority work)."""
         pending = self.db.get_pending_urls()
@@ -213,11 +221,7 @@ class ScraperEngine:
         for related_id, parent_url in rows:
             if not parent_url:
                 continue
-            parsed = urlparse(parent_url)
-            query = parse_qs(parsed.query)
-            query['i'] = [related_id]
-            new_query = urlencode(query, doseq=True)
-            new_url = urlunparse((parsed.scheme, parsed.netloc, parsed.path, parsed.params, new_query, parsed.fragment))
+            new_url = self._build_url(parent_url, related_id)
             self.db.add_discovered_url(related_id, new_url)
             added += 1
 
@@ -225,8 +229,17 @@ class ScraperEngine:
             print(f"Heuristically discovered {added} URLs from existing relationships in database.")
         return added
 
-    def _probe_new_ids(self, base_url, limit=100, lookahead=500):
-        """Probe for new IDs starting from the max ID in database (last resort)."""
+    def _probe_new_ids(self, base_url, limit=500):
+        """Adaptive probe for new IDs.
+
+        Strategy:
+        - Prefer filling internal gaps (IDs that appear in relationships but are missing).
+        - Then walk forward from max_id with adaptive step size:
+          * consecutive 404s → increase step (search further / faster)
+          * success → reset step to 1 and densify around the hit
+        - Do NOT give up early just because of failures; use failures as a signal
+          to jump and keep searching.
+        """
         max_id = self.db.get_max_id()
         try:
             max_id_int = int(max_id)
@@ -234,21 +247,34 @@ class ScraperEngine:
             max_id_int = 0
 
         added = 0
-        parsed = urlparse(base_url)
+        successes = 0
+        consecutive_misses = 0
+        step = 1
+        current = max_id_int
+        highest_probed = max_id_int
+        highest_hit = max_id_int
 
-        for i in range(1, lookahead + 1):
-            if added >= limit:
-                break
+        print(f"Adaptive probe starting from max_id={max_id_int}, budget={limit}")
 
-            probe_id = str(max_id_int + i)
+        while added < limit:
+            # Adaptive step: after several consecutive misses, jump further
+            if consecutive_misses >= 8:
+                step = min(step * 2, 200)
+            elif consecutive_misses >= 4:
+                step = min(step * 2, 50)
+            else:
+                step = 1
+
+            current += step
+            probe_id = str(current)
+            highest_probed = max(highest_probed, current)
+
             with self.lock:
                 if probe_id in self.visited_ids or probe_id in self.pending_ids:
+                    consecutive_misses = 0  # already known / in flight
                     continue
 
-            query = parse_qs(parsed.query)
-            query['i'] = [probe_id]
-            new_query = urlencode(query, doseq=True)
-            new_url = urlunparse((parsed.scheme, parsed.netloc, parsed.path, parsed.params, new_query, parsed.fragment))
+            new_url = self._build_url(base_url, probe_id)
 
             with self.lock:
                 if probe_id not in self.pending_ids:
@@ -256,12 +282,49 @@ class ScraperEngine:
                     self.queue.put((probe_id, new_url))
                     added += 1
 
-        if added > 0:
-            print(f"Probing {added} new IDs starting from {max_id_int + 1}...")
+            # We don't know yet if it exists; the actual scrape result will tell us.
+            # For step control we treat "already queued" as progress and let
+            # _process_queue + failure_count handle real 404s.
+            # To get live feedback we occasionally process a small batch.
+            if added % 30 == 0 and self.queue.qsize() > 0:
+                before = successes
+                # Process a bit so we can adapt based on real outcomes
+                got = self._process_queue(limit=min(20, limit - successes))
+                successes += got
+                if got > 0:
+                    consecutive_misses = 0
+                    step = 1
+                    # After a hit, also queue nearby IDs for densification
+                    for delta in range(1, 6):
+                        for sign in (1, -1):
+                            near_id = str(current + sign * delta)
+                            with self.lock:
+                                if near_id not in self.visited_ids and near_id not in self.pending_ids:
+                                    self.pending_ids.add(near_id)
+                                    self.queue.put((near_id, self._build_url(base_url, near_id)))
+                                    added += 1
+                                    if added >= limit:
+                                        break
+                        if added >= limit:
+                            break
+                    highest_hit = max(highest_hit, current)
+                    print(f"  Hit near {current}; densifying. successes={successes}, step reset to 1")
+                else:
+                    consecutive_misses += 1
+
+            # Safety: don't run forever if the ID space is empty far ahead
+            if current > max_id_int + 5000 and successes == 0:
+                print(f"  No hits after probing up to {current}; stopping adaptive probe.")
+                break
+
+        print(
+            f"Probe queued {added} IDs (highest probed={highest_probed}, "
+            f"known max before={max_id_int}). Will process remaining queue."
+        )
         return added
 
     def crawl(self, start_url, limit=100):
-        """Crawl with pending-DB priority; probe only as last resort."""
+        """Crawl with pending-DB priority; adaptive probe as last resort."""
         parsed_url = urlparse(start_url)
         start_id = parse_qs(parsed_url.query).get('i', [None])[0]
         count = 0
@@ -308,10 +371,11 @@ class ScraperEngine:
         if count < limit:
             count += self._process_queue(limit=limit - count)
 
-        # 5) Last resort only: probe new IDs if still under limit and queue empty
-        if count < limit and self.queue.qsize() == 0:
+        # 5) Adaptive probe if still under limit and queue is empty / low
+        if count < limit and self.queue.qsize() < 10:
             remaining = limit - count
-            self._probe_new_ids(start_url, limit=min(remaining, 200), lookahead=min(remaining, 200))
+            # Give a generous budget; timeout is 90 min and we are not in a hurry
+            self._probe_new_ids(start_url, limit=min(remaining, 800))
             if self.queue.qsize() > 0:
                 count += self._process_queue(limit=limit - count)
 
