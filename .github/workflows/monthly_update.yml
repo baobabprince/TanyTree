@@ -86,7 +86,7 @@ jobs:
           fi
 
       - name: Retry failed/pending items
-        run: python -m src.cli retry --limit 1000 --workers 3 --delay 2.0
+        run: python -m src.cli retry --limit 1500 --workers 3 --delay 2.0
 
       - name: Checkpoint DB after retry
         if: always()
@@ -99,7 +99,7 @@ jobs:
 
       - name: Run incremental crawl
         continue-on-error: true
-        run: python -m src.cli crawl --limit 1000 --workers 3 --delay 2.0
+        run: python -m src.cli crawl --limit 1500 --workers 3 --delay 2.0
 
       - name: Checkpoint DB after crawl
         if: always()
